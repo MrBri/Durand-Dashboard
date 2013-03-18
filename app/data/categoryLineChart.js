@@ -1,0 +1,119 @@
+
+glb.categoryLineChartData = [{
+    "id": 0,
+    "month": "Sep",
+    "sales": 65,
+    "volume": 40,
+    "margin": -2,
+    "profit": -1,
+    "transactions": 20,
+    "impact": 602
+}, {
+    "id": 1,
+    "month": "Oct",
+    "sales": 80,
+    "volume": 35,
+    "margin": -1,
+    "profit": -1,
+    "transactions": 18,
+    "impact": 550
+}, {
+    "id": 2,
+    "month": "Nov",
+    "sales": 75,
+    "volume": 35,
+    "margin": 0,
+    "profit": 0,
+    "transactions": 20,
+    "impact": 755
+}, {
+    "id": 3,
+    "month": "Dec",
+    "sales": 70,
+    "volume": 38,
+    "margin": -1,
+    "profit": -2,
+    "transactions": 30,
+    "impact": 1220
+}, {
+    "id": 4,
+    "month": "Jan",
+    "sales": 60,
+    "volume": 30,
+    "margin": 0,
+    "profit": 1,
+    "transactions": 33,
+    "impact": 1523
+}, {
+    "id": 5,
+    "month": "Feb",
+    "sales": 58,
+    "volume": 28,
+    "margin": -1,
+    "profit": 0,
+    "transactions": 29,
+    "impact": 1437
+}, {
+    "id": 6,
+    "month": "Mar",
+    "sales": 65,
+    "volume": 35,
+    "margin": 2,
+    "profit": 3,
+    "transactions": 23,
+    "impact": 985
+}, {
+    "id": 7,
+    "month": "Apr",
+    "sales": 65,
+    "volume": 37,
+    "margin": 1,
+    "profit": 2,
+    "transactions": 28,
+    "impact": 1307
+}, {
+    "id": 8,
+    "month": "May",
+    "sales": 75,
+    "volume": 40,
+    "margin": 3,
+    "profit": 2,
+    "transactions": 34,
+    "impact": 1340
+}, {
+    "id": 9,
+    "month": "Jun",
+    "sales": 80,
+    "volume": 35,
+    "margin": 3,
+    "profit": 1,
+    "transactions": 35,
+    "impact": 1573
+}, {
+    "id": 10,
+    "month": "Jul",
+    "sales": 73,
+    "volume": 32,
+    "margin": 1,
+    "profit": 0,
+    "transactions": 28,
+    "impact": 1245
+}, {
+    "id": 11,
+    "month": "Aug",
+    "sales": 75,
+    "volume": 30,
+    "margin": 2,
+    "profit": 1,
+    "transactions": 28,
+    "impact": 1354
+}, {
+    "id": 12,
+    "month": "Target",
+    "sales": 70,
+    "volume": 40,
+    "margin": 3,
+    "profit": 5,
+    "transactions": 30,
+    "impact": 1500
+}]
