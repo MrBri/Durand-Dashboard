@@ -3,18 +3,38 @@
 <head>
   <meta charset="utf-8">
   <title>My AngularJS App</title>
-  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js">
+  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
 <body>
-  <ul class="menu">
-    <li><a href="#/view1">view1</a></li>
-    <li><a href="#/view2">view2</a></li>
-  </ul>
-
-  <div ng-view></div>
-
-  <div>Angular seed app: v<span app-version></span></div>
+  <div class="container">
+    <div class="header">
+      <a class="brand" href="#">Durand</a>
+      <ul class="username pull-right">
+        <li>John Smith</li>
+        <li>|</li>
+        <li>Logout</li>
+        <i class="icon-play"></i>
+      </ul>
+    </div>
+    <form class="form-horizontal sign-in">
+      <div class="control-group">
+        <div class="controls">
+          <input type="text" id="inputEmail" class="span3" placeholder="Username">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <input type="password" id="inputPassword" class="span3" placeholder="Password">
+        </div>
+      </div>
+      <div class="control-group">
+        <div class="controls">
+          <button type="submit" class="btn span3 ">Sign in</button>
+        </div>
+      </div>
+    </form>
+  </div>
 
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
@@ -29,5 +49,6 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
+  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>

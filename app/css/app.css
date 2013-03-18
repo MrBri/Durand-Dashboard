@@ -1,30 +1,84 @@
 /* app css stylesheet */
 
-.menu {
+body {
+  background: #d4f0ff;
+  font-family: Helvetica;
+}
+
+ul {
   list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
 }
 
-.menu:before {
-  content: "[";
+/* HEADER */
+
+.header {
+  padding: 30px 0 15px 0;
+  border-bottom: 1.5px solid #bed8e5;
 }
 
-.menu:after {
-  content: "]";
+.brand {
+  font-family: "Bauhaus 93", Verdana, Helvetica, sans-serif;
+  font-size: 70px;
+  color: white;
+  text-decoration: none;
 }
 
-.menu > li {
+.brand:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.username li{
+  font-size:16px;
   display: inline;
+  padding:10px;
+  color: white;
 }
 
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
+.controls input {
+  height: 40px;
+  font-size: 18px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px 0px #999;
+  -moz-box-shadow: inset 1px 1px 1px 0px #999;
+  box-shadow: inset 1px 1px 1px 0px #999;
 }
 
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.sign-in {
+  margin: 10% auto 0 auto;
+  width: 50%;
+}
+
+.sign-in button {
+  margin-left: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #363636;
+  padding: 10px 20px;
+  background: -moz-linear-gradient(
+    top,
+    #ffcf70 0%,
+    #ffca61 50%,
+    #fdb931 50%,
+    #ffc551);
+  background: -webkit-gradient(
+    linear, left top, left bottom, 
+    from(#ffcf70),
+    color-stop(0.50, #ffca61),
+    color-stop(0.50, #fdb931),
+    to(#ffc551));
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  border: none;
+  -webkit-box-shadow: inset 1px 1px 1px 0px #999;
+  -moz-box-shadow: inset 1px 1px 1px 0px #999;
+  box-shadow: inset 1px 1px 1px 0px #999;
+  text-shadow:
+    0px -1px 0px rgba(000,000,000,0.2),
+    0px 1px 0px rgba(255,255,255,1);
 }
