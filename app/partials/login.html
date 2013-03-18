@@ -1,0 +1,19 @@
+<form class="form-horizontal sign-in">
+  <div class="control-group">
+    <div class="controls">
+      <input type="text" id="inputEmail" ng-model="user.email" class="span3" placeholder="Username">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <input type="password" id="inputPassword" ng-model="user.password" class="span3" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn span3 " ng-click="update(user)">Sign in</button>
+    </div>
+  </div>
+<p>{{user | json}}</p>
+<p>{{master | json}}</p>
+</form>
