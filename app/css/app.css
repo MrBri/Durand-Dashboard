@@ -12,7 +12,7 @@ ul {
 /* HEADER */
 
 .header {
-  padding: 30px 0 15px 0;
+  padding: 3% 0 1.5% 0;
   border-bottom: 1.5px solid #bed8e5;
 }
 
@@ -81,4 +81,63 @@ ul {
   text-shadow:
     0px -1px 0px rgba(000,000,000,0.2),
     0px 1px 0px rgba(255,255,255,1);
+}
+
+/* SUBHEADER */
+
+.subheader {
+  font-family: Helvetica Neue, Helvetica;
+  margin-left:0;
+  margin-top:2%;
+  color:white;
+  font-size:18px;
+}
+
+.selector:first-child {
+  margin-left:0;
+}
+
+.icon-chevron-right {
+  background-color: #5a656b;
+  border-radius: 10px;
+}
+
+.tactic-detail {
+   border-top: 1px solid #73c3f5;
+   background: #4987df;
+   background: -webkit-gradient(linear, left top, left bottom, from(#75a4e6), to(#4987df));
+   background: -webkit-linear-gradient(top, #75a4e6, #4987df);
+   background: -moz-linear-gradient(top, #75a4e6, #4987df);
+   background: -ms-linear-gradient(top, #75a4e6, #4987df);
+   background: -o-linear-gradient(top, #75a4e6, #4987df);
+   padding: 10px 30px;
+   -webkit-border-radius: 50px;
+   -moz-border-radius: 50px;
+   border-radius: 50px;
+   -webkit-box-shadow: rgba(51,51,51,.5) 2px 1px 0;
+   -moz-box-shadow: rgba(51,51,51,.5) 2px 1px 0;
+   box-shadow: rgba(51,51,51,.5) 2px 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 19px;
+   font-family: Helvetica Neue, Helvetica;
+   text-decoration: none;
+   vertical-align: middle;
+}
+
+.tactic-detail:hover {
+   border-top-color: #4987df;
+   background: #4987df;
+   color: #ccc;
+}
+
+.tactic-detail:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+}
+
+.select-one {
+  font-size:30px;
+  width: 150px;
 }
