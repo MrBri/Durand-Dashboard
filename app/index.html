@@ -17,23 +17,9 @@
         <i class="icon-play"></i>
       </ul>
     </div>
-    <form class="form-horizontal sign-in">
-      <div class="control-group">
-        <div class="controls">
-          <input type="text" id="inputEmail" class="span3" placeholder="Username">
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <input type="password" id="inputPassword" class="span3" placeholder="Password">
-        </div>
-      </div>
-      <div class="control-group">
-        <div class="controls">
-          <button type="submit" class="btn span3 ">Sign in</button>
-        </div>
-      </div>
-    </form>
+
+    <div ng-view></div>
+
   </div>
 
   <!-- In production use:
@@ -49,6 +35,5 @@
   <script src="js/controllers.js"></script>
   <script src="js/filters.js"></script>
   <script src="js/directives.js"></script>
-  <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 </html>
