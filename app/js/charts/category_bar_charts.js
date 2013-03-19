@@ -63,6 +63,7 @@ var drawColumn = function(title, data, colNumber) {
 };
 
 var setupFileFormat = function(string) {
+  debugger;
   var fixedFormat = JSON.stringify(string);
   var brands = JSON.parse(string);
 
@@ -98,7 +99,7 @@ var setupFileFormat = function(string) {
 
 
 $.ajax({
-  url: 'category.js',
+  url: '../../data/mod_category_data_total.js',
   success: function(data) {
     console.log("SUCCESS");
     setupFileFormat(data);
