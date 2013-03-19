@@ -1,0 +1,12 @@
+<table ng-repeat="cell in twoBytwo.cells" class="{{cell.position}} {{cell.condition}}">
+  <tr>
+    <th>Events</th>
+    <th>Incremental Sales $</th>
+    <th>Incremental Margin $</th>
+  </tr>
+  <tr>
+    <td>{{cell.events}}<br>({{cell.events_sub}}%)</td>
+    <td>{{cell.incremental_sales}}M</td>
+    <td>{{cell.incremental_margin}}M</td>
+  </tr>
+</table>

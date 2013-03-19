@@ -1,5 +1,4 @@
-var glb = glb || {};
-glb.twoByTwoData	= {
+{
 "title" : "100% = 110Ads",
 "cells":
 [

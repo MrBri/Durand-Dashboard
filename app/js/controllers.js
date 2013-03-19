@@ -3,10 +3,19 @@
 /* Controllers */
 
 
-function MyCtrl1() {}
-MyCtrl1.$inject = [];
+function loginCtrl($scope) {
+  $scope.master = [];
 
-
-function MyCtrl2() {
+  $scope.update = function(user) {
+    $scope.master.push(user);
+  }
 }
-MyCtrl2.$inject = [];
+loginCtrl.$inject = ['$scope'];
+
+
+function twoBytwoCtrl($scope, $http) {
+  $http.get('data/twoBytwoData.js').success(function(data){
+    $scope.twoBytwo = data;
+  });
+}
+twoBytwoCtrl.$inject = ['$scope', '$http'];
