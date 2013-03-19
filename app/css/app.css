@@ -2,7 +2,7 @@
 
 body {
   background: #d4f0ff;
-  font-family: Helvetica;
+  font-family: Helvetica Neue, Helvetica;
 }
 
 ul {
@@ -12,26 +12,26 @@ ul {
 /* HEADER */
 
 .header {
-  padding: 3% 0 1.5% 0;
+  padding: 1.5% 0 1.5% 0;
   border-bottom: 1.5px solid #bed8e5;
+  margin-left:0;
 }
 
 .brand {
-  font-family: "Bauhaus 93", Verdana, Helvetica, sans-serif;
-  font-size: 70px;
-  color: white;
-  text-decoration: none;
+  margin-left:0;
 }
 
-.brand:hover {
-  text-decoration: none;
-  color: white;
+.brand img{
+  height:60px;
+}
+
+.username {
+  margin-top: 25px;
 }
 
 .username li{
   font-size:16px;
   display: inline;
-  padding:10px;
   color: white;
 }
 
@@ -54,7 +54,6 @@ ul {
 
 .sign-in button {
   margin-left: 0;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: bold;
   color: #363636;
@@ -120,7 +119,6 @@ ul {
    text-shadow: rgba(0,0,0,.4) 0 1px 0;
    color: white;
    font-size: 19px;
-   font-family: Helvetica Neue, Helvetica;
    text-decoration: none;
    vertical-align: middle;
 }
@@ -140,4 +138,41 @@ ul {
 .select-one {
   font-size:30px;
   width: 150px;
+}
+
+/* MAIN CONTENT */
+
+.main-content {
+  margin: 20px 0;
+  padding: 0px;
+}
+
+.content-containers {
+  background: white;
+  height: 700px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(116, 179, 233, 1);
+  -webkit-box-shadow: 0 0 8px rgba(116, 179, 233, 1); 
+  -moz-box-shadow: 0 0 8px rgba(116, 179, 233, 1);
+  border:1px solid rgba(116, 179, 233, 0.8); 
+}
+
+.content-container-header {
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  background: #e1e1e1;
+  height: 60px;
+  color: #464646;
+}
+
+.content-container-header p {
+  font-size: 30px;
+  text-shadow: rgba(0,0,0,.4) -1px 0px 0;
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+input.calendar {
+  margin-top: 10px;
+  height: 40px;
 }
