@@ -3,7 +3,8 @@ var $containers = $('div.data');
 var datasets = [{}];
 var min = -500;
 var max = 1000;
-var NEGATIVE_COLOR = '#E2922C';
+var NEGATIVE_COLOR = '#D7772A';
+var WARNING_COLOR = '#E9AA35';
 var POSITIVE_COLOR = '#206CA3';
 
 //Default options for the Category Barcharts
@@ -52,16 +53,30 @@ var createChart = function(options) {
   var chart = new Highcharts.Chart(options);
 };
 
+var getAverage = function(data) {
+
+  var average = 0;
+  for (var j=0; j < data.length; j++) {
+    average += data[j];
+  }
+  return average = average / data.length;
+
+}
 //Sets the size, color, and datapoint of the data array
 var setDataObj = function(data) {
 
   var dataArr = [];
+  var average = getAverage(data);
+
   for (var i=0; i < data.length; i++) {
     var dataObj = {};
     dataObj["y"] = data[i];
     dataObj["pointWidth"] = 25;
     if (data[i] < 0) {
       dataObj["color"] = NEGATIVE_COLOR;
+    }
+    else if (data[i] < average) {
+      dataObj["color"] = WARNING_COLOR;
     }
     else {
       dataObj["color"] = POSITIVE_COLOR;
