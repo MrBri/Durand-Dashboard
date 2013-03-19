@@ -3,7 +3,10 @@ var $containers = $('div.data');
 var datasets = [{}];
 var min = -500;
 var max = 1000;
+var NEGATIVE_COLOR = '#E2922C';
+var POSITIVE_COLOR = '#206CA3';
 
+//Default options for the Category Barcharts
 var options = {
         credits: {
           enabled: false
@@ -49,21 +52,39 @@ var createChart = function(options) {
   var chart = new Highcharts.Chart(options);
 };
 
+//Sets the size, color, and datapoint of the data array
+var setDataObj = function(data) {
+
+  var dataArr = [];
+  for (var i=0; i < data.length; i++) {
+    var dataObj = {};
+    dataObj["y"] = data[i];
+    dataObj["pointWidth"] = 25;
+    if (data[i] < 0) {
+      dataObj["color"] = NEGATIVE_COLOR;
+    }
+    else {
+      dataObj["color"] = POSITIVE_COLOR;
+    }
+    dataArr.push(dataObj);
+  }
+
+  return dataArr;
+};
+
 var drawColumn = function(title, data, colNumber) {
 
   options.title.text = title; 
   options.chart.renderTo = $containers[colNumber];
-  options.series = [{}];
-  var dataInfo = [];
-  dataInfo["data"] = data;
-  dataInfo["color"] = '#206CA3';
-  dataInfo["pointWidth"] = 25;
-  options.series.push(dataInfo);
+  options.series = [];
+  var seriesObj = {};
+  seriesObj["data"] = setDataObj(data);
+
+  options.series.push(seriesObj);
   createChart(options);
 };
 
-var setupFileFormat = function(string) {
-  debugger;
+var loadDataFile = function(string) {
   var fixedFormat = JSON.stringify(string);
   var brands = JSON.parse(string);
 
@@ -79,6 +100,10 @@ var setupFileFormat = function(string) {
 
   //Load up data in proper arrays
   for (var item in brands) {
+    if (brands[item]['id'] === null) {
+      continue;
+    }
+
     brandNames.push(brands[item]['item']);
     numEvents.push(brands[item]['numEvents']);
     salesData.push(brands[item]['sales']);
@@ -99,13 +124,12 @@ var setupFileFormat = function(string) {
 
 
 $.ajax({
-  url: '../../data/mod_category_data_total.js',
+  url: '../../data/mod_category_data_inc.js',
   success: function(data) {
-    console.log("SUCCESS");
-    setupFileFormat(data);
+    loadDataFile(data);
   },
   error: function() {
-    console.log("ERROR");
+    console.log("ERROR loading data!");
   }
 });
 
