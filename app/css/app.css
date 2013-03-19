@@ -166,7 +166,7 @@ ul {
 }
 
 .content-container-header p {
-  font-size: 30px;
+  font-size: 25px;
   text-shadow: rgba(0,0,0,.4) -1px 0px 0;
   margin-top: 20px;
   padding-left: 20px;
@@ -175,4 +175,110 @@ ul {
 input.calendar {
   margin-top: 10px;
   height: 40px;
+}
+
+/* Table Header */
+
+.table-header {
+  margin: 20px;
+  height: 50px;
+}
+
+.pill-left {
+  border-top-left-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
+  padding: 4px 35px;
+  font-size:20px;
+  font-weight: bold;
+  color:#4f5459;
+}
+
+.pill-right {
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  padding: 4px 35px;
+  font-size:20px;
+  font-weight: bold;
+  color:#4f5459;
+}
+
+.excel {
+  margin-top:0px;
+  padding: 0 20px;
+  border-left:2px solid #ccc;
+  border-right:2px solid #ccc;
+}
+
+.legend {
+  display:inline;
+  margin-left: 0;
+}
+
+.legend li{
+  float:left;
+  display:inline;
+  font-size:12px;
+  width:50px;
+  padding-left:10px;
+}
+
+.legend-bar {
+  height: 5px;
+  width: 50px;
+}
+
+.plus-avg {
+  background-image: linear-gradient(bottom, rgb(0,101,155) 0%, rgb(0,118,186) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(0,101,155) 0%, rgb(0,118,186) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(0,101,155) 0%, rgb(0,118,186) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(0,101,155) 0%, rgb(0,118,186) 100%);
+}
+
+.minus-avg {
+  background-image: linear-gradient(bottom, rgb(234,157,4) %, rgb(251,182,45) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
+}
+
+.negative {
+  background-image: linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
+  background-image: -o-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
+  background-image: -moz-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
+  background-image: -webkit-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
+}
+
+.best {
+  background: rgb(185,222,144);
+}
+
+/* RIGHT BAR */
+
+.action-item {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.action-item span {
+  font-weight: bold;
+}
+
+.green {
+  border:2px solid #8dc63f;
+  background-color: #f1f6e9;
+}
+
+.red {
+  border:2px solid #ff0000;
+  background-color: #ffeeee;
+}
+
+.yellow {
+  border:2px solid #d9cb00;
+  background-color: #fffcdd;
+}
+
+.follow-up {
+  border-width: 3px
 }
