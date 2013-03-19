@@ -1,8 +1,4 @@
-var charts = [];
 var $containers = $('div.data');
-var datasets = [{}];
-var min = -500;
-var max = 1000;
 var NEGATIVE_COLOR = '#D7772A';
 var WARNING_COLOR = '#E9AA35';
 var POSITIVE_COLOR = '#206CA3';
@@ -34,10 +30,8 @@ var options = {
         yAxis: {
           gridLineWidth: 0,
           tickLength: 0,
-          minorGridLineWidth: 1,
-          minorGridLineColor: 'green',
           labels: {
-            enabled: false 
+            enabled: false
           },
           title: {
             text: ''
@@ -89,7 +83,7 @@ var setDataObj = function(data) {
 
 var drawColumn = function(title, data, colNumber) {
 
-  options.title.text = title; 
+  options.title.text = title;
   options.chart.renderTo = $containers[colNumber];
   options.series = [];
   var seriesObj = {};
@@ -97,21 +91,19 @@ var drawColumn = function(title, data, colNumber) {
 
   options.series.push(seriesObj);
   createChart(options);
+  console.log(options.series);
 };
 
 var loadDataFile = function(string) {
-  var fixedFormat = JSON.stringify(string);
   var brands = JSON.parse(string);
 
-  var brandNames = [];
-  var numEvents = [];
   var salesData = [];
   var marginData = [];
-  var volumeData = []; 
+  var volumeData = [];
   var profitData = [];
   var transactionsData = [];
   var impactData = [];
-  var count = 0; 
+  var count = 0;
 
   //Load up data in proper arrays
   for (var item in brands) {
@@ -119,8 +111,6 @@ var loadDataFile = function(string) {
       continue;
     }
 
-    brandNames.push(brands[item]['item']);
-    numEvents.push(brands[item]['numEvents']);
     salesData.push(brands[item]['sales']);
     marginData.push(brands[item]['volume']);
     volumeData.push(brands[item]['margin']);
