@@ -5,7 +5,8 @@
 angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
   config(['$routeProvider', function($routeProvider) {
     $routeProvider.when('/', {templateUrl: 'partials/login.html', controller: loginCtrl});
-    $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: loginCtrl});
+    $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: homeCtrl});
     $routeProvider.when('/twoBytwo', {templateUrl: 'partials/twoBytwo.html', controller: twoBytwoCtrl});
+    $routeProvider.when('/brand', {templateUrl: 'partials/brand.html', controller: homeCtrl});
     $routeProvider.otherwise({redirectTo: '/view1'});
   }]);
