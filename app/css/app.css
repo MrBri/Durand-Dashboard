@@ -3,10 +3,7 @@
 body {
   background: #d4f0ff;
   font-family: Helvetica Neue, Helvetica;
-}
-
-ul {
-  list-style: none;
+  margin: 0 40px;
 }
 
 /* HEADER */
@@ -14,11 +11,7 @@ ul {
 .header {
   padding: 1.5% 0 1.5% 0;
   border-bottom: 1.5px solid #bed8e5;
-  margin-left:0;
-}
-
-.brand {
-  margin-left:0;
+  /*margin-left:0;*/
 }
 
 .brand img{
@@ -26,7 +19,9 @@ ul {
 }
 
 .username {
+  text-align: right;
   margin-top: 15px;
+  list-style: none;
 }
 
 .username li{
@@ -35,9 +30,12 @@ ul {
   color: white;
 }
 
+/* LOGIN SCREEN */
+
 .controls input {
   height: 40px;
-  font-size: 18px;
+  font-size: 14pt;
+  padding: 6px 0 0 10px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
@@ -48,12 +46,10 @@ ul {
 }
 
 .sign-in {
-  margin: 10% auto 0 auto;
-  width: 50%;
+  margin-top: 25%;
 }
 
 .sign-in button {
-  margin-left: 0;
   font-size: 20px;
   font-weight: bold;
   color: #363636;
@@ -350,4 +346,41 @@ td {
 
 .follow-up {
   border-width: 3px
+}
+
+/************/
+/* 2x2 Page */
+/************/
+
+.sectionTitle {
+  text-align: center;
+  color: #0078bb;
+}
+
+.yaxis-label {
+  /*rotate text here*/
+  border: 1px solid red;
+}
+
+.matrix {
+  border: 1px solid red;
+}
+
+.top_left {
+  border: 1px solid blue;
+}
+.top_right {
+  border: 1px solid blue;
+  display: block;
+}
+table.bottom_left.span5 {
+  /*clear:both;*/
+  border: 1px solid blue;
+  margin-left: 0;
+}
+.bottom_right {
+  border: 1px solid blue;
+}
+.visible {
+ border: 1px solid red; 
 }
