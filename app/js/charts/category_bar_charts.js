@@ -1,8 +1,6 @@
 var charts = [];
 var $containers = $('div.data');
 var datasets = [{}];
-var min = -500;
-var max = 1000;
 var NEGATIVE_COLOR = '#D7772A';
 var WARNING_COLOR = '#E9AA35';
 var POSITIVE_COLOR = '#206CA3';
@@ -34,8 +32,6 @@ var options = {
         yAxis: {
           gridLineWidth: 0,
           tickLength: 0,
-          minorGridLineWidth: 1,
-          minorGridLineColor: 'green',
           labels: {
             enabled: false 
           },
@@ -95,13 +91,20 @@ var drawColumn = function(title, data, colNumber) {
   var seriesObj = {};
   seriesObj["data"] = setDataObj(data);
 
+  var average = getAverage(data);
+  options.yAxis.plotLines = [{
+    color: 'gray',
+    width: 1,
+    value: average,
+    dashStyle: 'longdashdot'
+  }];
   options.series.push(seriesObj);
   createChart(options);
 };
 
 var loadDataFile = function(string) {
   var fixedFormat = JSON.stringify(string);
-  var brands = JSON.parse(string);
+  var brans = JSON.parse(string);
 
   var brandNames = [];
   var numEvents = [];
