@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 /* Creates the bar charts for the Category page
  *
  * */
 
-//Globals
 var charts = {};
 charts.settings = {
   $container: $('div.data'),
@@ -11,51 +9,45 @@ charts.settings = {
   WARNING_COLOR:  '#E9AA35',
   POSITIVE_COLOR:  '#206CA3'
 };
-=======
-var $containers = $('div.data');
-var NEGATIVE_COLOR = '#D7772A';
-var WARNING_COLOR = '#E9AA35';
-var POSITIVE_COLOR = '#206CA3';
->>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
 
-//Default options for the Category Barcharts
-var options = {
-        credits: {
-          enabled: false
-        },
-        chart: {
-            type: 'bar',
-            backgroundColor: 'transparent'
-        },
-        title: {
-          text: ''
-        },
-        plotOptions: {
-          series: {
-            borderWidth: 0,
-            shadow: false
-          }
-        },
-        xAxis: {
-          labels: {
-            enabled: false
-          },
-          tickLength: 0
-        },
-        yAxis: {
-          gridLineWidth: 0,
-          tickLength: 0,
-          labels: {
-            enabled: false
-          },
-          title: {
-            text: ''
-          }
-        },
-        legend: {
-          enabled: false
-        },
-        series: [{}]
+//Default options hash used by HighCharts
+charts.barOptions = {
+  credits: {
+    enabled: false
+  },
+  chart: {
+    type: 'bar',
+    backgroundColor: 'transparent'
+  },
+  title: {
+    text: ''
+  },
+  plotOptions: {
+    series: {
+      borderWidth: 0,
+      shadow: false
+    }
+  },
+  xAxis: {
+    labels: {
+      enabled: false
+    },
+    tickLength: 0
+  },
+  yAxis: {
+    gridLineWidth: 0,
+    tickLength: 0,
+    labels: {
+      enabled: false
+    },
+    title: {
+      text: ''
+    }
+  },
+  legend: {
+    enabled: false
+  },
+  series: [{}]
 };
 
 var createChart = function(options) {
@@ -96,40 +88,26 @@ var setDataObj = function(data) {
   return dataArr;
 };
 
-var drawColumn = function(title, data, colNumber) {
+var drawColumn = function(data, colNumber) {
 
-<<<<<<< HEAD
-  options.title.text = title; 
-  options.chart.renderTo = charts.settings.$container[colNumber];
-=======
-  options.title.text = title;
-  options.chart.renderTo = $containers[colNumber];
->>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
-  options.series = [];
+  charts.barOptions.chart.renderTo = charts.settings.$container[colNumber];
+  charts.barOptions.series = [];
   var seriesObj = {};
   seriesObj["data"] = setDataObj(data);
 
   var average = getAverage(data);
-  options.yAxis.plotLines = [{
+  charts.barOptions.yAxis.plotLines = [{
     color: 'gray',
-    width: 1,
-    value: average,
-    dashStyle: 'longdashdot'
+      width: 1,
+      value: average,
+      dashStyle: 'longdashdot'
   }];
-  options.series.push(seriesObj);
-  createChart(options);
-  console.log(options.series);
+  charts.barOptions.series.push(seriesObj);
+  createChart(charts.barOptions);
 };
 
 var loadDataFile = function(string) {
   var brands = JSON.parse(string);
-<<<<<<< HEAD
-  debugger;
-  var brandNames = [];
-  var numEvents = [];
-=======
-
->>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
   var salesData = [];
   var marginData = [];
   var volumeData = [];
@@ -152,12 +130,12 @@ var loadDataFile = function(string) {
     impactData.push(brands[item]['impact']);
   }
 
-  drawColumn('', salesData, 0);
-  drawColumn('', volumeData, 1);
-  drawColumn('', marginData, 2);
-  drawColumn('', profitData, 3);
-  drawColumn('', transactionsData, 4);
-  drawColumn('', impactData, 5);
+  drawColumn(salesData, 0);
+  drawColumn(volumeData, 1);
+  drawColumn(marginData, 2);
+  drawColumn(profitData, 3);
+  drawColumn(transactionsData, 4);
+  drawColumn(impactData, 5);
 };
 
 
