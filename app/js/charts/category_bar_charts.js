@@ -30,7 +30,6 @@ var setDataObj = function(data) {
     else {
       dataObj["color"] = charts.settings.POSITIVE_COLOR;
     }
-
     dataArr.push(dataObj);
   }
 
@@ -63,9 +62,7 @@ var drawColumn = function(data, colNumber) {
 };
 
 //Convert the data into JSON objects and store it in an array
-var loadDataFile = function(string) {
-
-  var brands = JSON.parse(string);
+var setupBarGraph = function(brands) {
 
   var salesData = [];
   var marginData = [];
@@ -96,14 +93,5 @@ var loadDataFile = function(string) {
   drawColumn(impactData, 5);
 };
 
-//Load the Incremental Category file from the server
-$.ajax({
-  url: '../../data/mod_category_data_inc.js',
-  success: function(data) {
-    loadDataFile(data);
-  },
-  error: function() {
-    console.log("ERROR loading data!");
-  }
-});
-
+//Load up data file and process it
+charts.loadDataFile('../../data/mod_category_data_inc.js', setupBarGraph);

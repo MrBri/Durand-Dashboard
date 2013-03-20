@@ -2,6 +2,7 @@
  *
  */
 
+//Setup the array which contains attributes for the data points
 var setDataObj = function(data, graphLabel) {
 
   var dataArr = [];
@@ -9,8 +10,10 @@ var setDataObj = function(data, graphLabel) {
   for (var i=0; i < data.length; i++) {
     var dataObj = {};
     var propertyObj = {};
+
     propertyObj['radius'] = charts.settings.POINT_RADIUS;
     dataObj["y"] = data[i];
+
     if (data[i] < 0) {
       propertyObj['fillColor'] = charts.settings.NEGATIVE_COLOR;
       dataObj["marker"] = propertyObj;
@@ -30,21 +33,12 @@ var setDataObj = function(data, graphLabel) {
   return dataArr;
 };
 
+//Setup options for graph
 var setupGraph = function(data, graphLabel) {
   var options = charts.lineGraphOptions();
   options.series = [];
-  options.yAxis.plotLines.push({
-    color: '#8DC63F',
-    value: target[graphLabel],
-    width: 2,
-    dashStyle: 'dash',
-    label: {
-      text: 'Target',
-      style: {
-        color: '#8DC63F'
-      }
-    }
-  });
+  var plotLineProperties = charts.lineGraphYProps(graphLabel);
+  options.yAxis.plotlines = plotLineProperties;
   var seriesObj = {};
   seriesObj["data"] = setDataObj(data, graphLabel);
   options.series.push(seriesObj);
@@ -53,8 +47,7 @@ var setupGraph = function(data, graphLabel) {
 };
 
 //Load data file into arrays
-var loadDataFile = function(string) {
-  var data = JSON.parse(string);
+var setupLineGraph = function(data) {
 
   var sales = [];
   var volume = [];
@@ -87,7 +80,7 @@ var loadDataFile = function(string) {
     impact.push(data[item]['impact']);
   }
 
-  //load graphs
+  //load graphs - only one shown for now
   // setupGraph(sales, 'sales');
   // setupGraph(volume, 'volume');
   setupGraph(margin, 'margin');
@@ -100,13 +93,5 @@ var loadDataFile = function(string) {
 //Store target data
 var target = {};
 
-//Load the data file
-$.ajax({
-  url: '../../data/mod_category_linechart.js',
-  success: function(data) {
-    loadDataFile(data);
-  },
-  error: function() {
-    console.log("ERROR loading data!");
-  }
-});
+//Load the data then create the chart
+charts.loadDataFile('../../data/mod_category_linechart.js', setupLineGraph);
