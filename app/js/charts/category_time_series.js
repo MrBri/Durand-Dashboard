@@ -1,4 +1,8 @@
-// var $container = $('#durand1');
+/* Create a time-series graph using High Charts.  */
+var NEGATIVE_COLOR = '#D7772A';
+var WARNING_COLOR = '#E9AA35';
+var POSITIVE_COLOR = '#206CA3';
+var POINT_RADIUS = 8;
 
 var options = {
         credits: {
@@ -57,12 +61,40 @@ var createChart = function(options) {
   var chart = new Highcharts.Chart(options);
 };
 
-var setupGraph = function(data) {
+var setDataObj = function(data, graphLabel) {
+
+  var dataArr = [];
+
+  for (var i=0; i < data.length; i++) {
+    var dataObj = {};
+    var propertyObj = {};
+    propertyObj['radius'] = POINT_RADIUS;
+    dataObj["y"] = data[i];
+    if (data[i] < 0) {
+      propertyObj['fillColor'] = NEGATIVE_COLOR;
+      dataObj["marker"] = propertyObj;
+    }
+    else if (data[i] < target[graphLabel]) {
+      var obj = {};
+      propertyObj['fillColor'] = WARNING_COLOR;
+      dataObj["marker"] = propertyObj;
+    }
+    else {
+      propertyObj['fillColor'] = POSITIVE_COLOR;
+      dataObj["marker"] = propertyObj;
+    }
+    dataArr.push(dataObj);
+  }
+
+  return dataArr;
+};
+
+var setupGraph = function(data, graphLabel) {
   // options.chart.renderTo = $container;
   options.series = [];
   options.yAxis.plotLines = [{
     color: '#8DC63F',
-    value: target['sales'],
+    value: target[graphLabel],
     width: 2,
     dashStyle: 'dash',
     label: {
@@ -73,12 +105,15 @@ var setupGraph = function(data) {
     }
   }];
   var seriesObj = {};
-  seriesObj["data"] = data;
+  seriesObj["data"] = setDataObj(data, graphLabel);
+  // seriesObj["data"] = data;
   options.series.push(seriesObj);
   // debugger;
   createChart(options);
 
 };
+
+var graphTypes = ['sales', 'volume', 'margin', 'profit', 'transactions', 'impact'];
 
 //Load data file into arrays
 var loadDataFile = function(string) {
@@ -113,14 +148,13 @@ var loadDataFile = function(string) {
     profit.push(data[item]['profit']);
     transactions.push(data[item]['transactions']);
     impact.push(data[item]['impact']);
-
   }
 
   //load graphs
-  // setupGraph(sales);
-  // setupGraph(volume);
-  // setupGraph(margin);
-  setupGraph(profit);
+  // setupGraph(sales, 'sales');
+  // setupGraph(volume, 'volume');
+  setupGraph(margin, 'margin');
+  // setupGraph(profit);
   // setupGraph(transactions);
   // setupGraph(impact);
 
