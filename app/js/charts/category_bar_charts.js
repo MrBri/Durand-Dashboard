@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Creates the bar charts for the Category page
  *
  * */
@@ -10,6 +11,12 @@ charts.settings = {
   WARNING_COLOR:  '#E9AA35',
   POSITIVE_COLOR:  '#206CA3'
 };
+=======
+var $containers = $('div.data');
+var NEGATIVE_COLOR = '#D7772A';
+var WARNING_COLOR = '#E9AA35';
+var POSITIVE_COLOR = '#206CA3';
+>>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
 
 //Default options for the Category Barcharts
 var options = {
@@ -39,7 +46,7 @@ var options = {
           gridLineWidth: 0,
           tickLength: 0,
           labels: {
-            enabled: false 
+            enabled: false
           },
           title: {
             text: ''
@@ -91,8 +98,13 @@ var setDataObj = function(data) {
 
 var drawColumn = function(title, data, colNumber) {
 
+<<<<<<< HEAD
   options.title.text = title; 
   options.chart.renderTo = charts.settings.$container[colNumber];
+=======
+  options.title.text = title;
+  options.chart.renderTo = $containers[colNumber];
+>>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
   options.series = [];
   var seriesObj = {};
   seriesObj["data"] = setDataObj(data);
@@ -106,21 +118,25 @@ var drawColumn = function(title, data, colNumber) {
   }];
   options.series.push(seriesObj);
   createChart(options);
+  console.log(options.series);
 };
 
 var loadDataFile = function(string) {
-  var fixedFormat = JSON.stringify(string);
   var brands = JSON.parse(string);
+<<<<<<< HEAD
   debugger;
   var brandNames = [];
   var numEvents = [];
+=======
+
+>>>>>>> f76ed1edc49a13247c7a331dc4160d366f3fa48d
   var salesData = [];
   var marginData = [];
-  var volumeData = []; 
+  var volumeData = [];
   var profitData = [];
   var transactionsData = [];
   var impactData = [];
-  var count = 0; 
+  var count = 0;
 
   //Load up data in proper arrays
   for (var item in brands) {
@@ -128,8 +144,6 @@ var loadDataFile = function(string) {
       continue;
     }
 
-    brandNames.push(brands[item]['item']);
-    numEvents.push(brands[item]['numEvents']);
     salesData.push(brands[item]['sales']);
     marginData.push(brands[item]['volume']);
     volumeData.push(brands[item]['margin']);
