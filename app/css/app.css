@@ -88,13 +88,29 @@ body {
   font-size:18px;
 }
 
+.select-one {
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.dropdown-toggle {
+  width: 20%;
+  box-sizing: border-box;
+
+}
+
 .selector:first-child {
   margin-left:0;
+}
+
+.dropdownLabel {
+  text-transform: uppercase;
 }
 
 .icon-chevron-right {
   background-color: #5a656b;
   border-radius: 10px;
+  margin-top: 2%;
 }
 
 .tactic-detail {
