@@ -6,18 +6,38 @@
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css"/>
 </head>
-<body>
-  <div class="container">
+<body class=>
+<!--   <div class="row-fluid visible">
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+  </div> -->
+  <div class="container row-fluid">
     <div class="span12 header">
-      <a class="span9 brand" href="#"><img src="img/durand.png"></a>
-      <ul class="span2 username">
-        <li>John Smith</li>
-        <li>|</li>
-        <li>Logout</li>
-        <i class="icon-play icon-white"></i>
-      </ul>
+      <div class="row-fluid">
+        <a class="span9 brand" href="#"><img src="img/durand.png"></a>
+        <!-- DISPLAY ONLY WHEN LOGGED IN: NEEDS TO BE MOVED TO PARTIAL -->
+        <ul class="span3 username">
+          <li>John Smith</li>
+          <li>|</li>
+          <li>Logout</li>
+          <i class="icon-play icon-white"></i>
+        </ul>
+        <!-- END PARTIAL -->
+      </div>
     </div>
-    <div ng-view></div>
+  </div>
+  <div class="container row-fluid">
+    <div ng-view class="span12"></div>
   </div>
   <!-- In production use:
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
