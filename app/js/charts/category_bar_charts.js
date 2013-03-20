@@ -9,9 +9,9 @@ var getAverage = function(data) {
     average += data[j];
   }
   return average = average / data.length;
-
 }
-//Sets the size, color, and datapoint of the data array
+
+//Setup the attributes of the data points
 var setDataObj = function(data) {
 
   var dataArr = [];
@@ -30,6 +30,7 @@ var setDataObj = function(data) {
     else {
       dataObj["color"] = charts.settings.POSITIVE_COLOR;
     }
+
     dataArr.push(dataObj);
   }
 
@@ -51,6 +52,12 @@ var drawColumn = function(data, colNumber) {
       value: average,
       dashStyle: 'longdashdot'
   }];
+
+  //! FIX - trying to get negative numbers to attach to axis
+  var lowestValue = _.min(data);
+  var highestValue = _.max(data);
+  //graphOptions.xAxis.min = lowestValue;
+
   graphOptions.series.push(seriesObj);
   charts.createChart(graphOptions);
 };
