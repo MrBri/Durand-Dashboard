@@ -1,9 +1,15 @@
-var charts = [];
-var $containers = $('div.data');
-var datasets = [{}];
-var NEGATIVE_COLOR = '#D7772A';
-var WARNING_COLOR = '#E9AA35';
-var POSITIVE_COLOR = '#206CA3';
+/* Creates the bar charts for the Category page
+ *
+ * */
+
+//Globals
+var charts = {};
+charts.settings = {
+  $container: $('div.data'),
+  NEGATIVE_COLOR:  '#D7772A',
+  WARNING_COLOR:  '#E9AA35',
+  POSITIVE_COLOR:  '#206CA3'
+};
 
 //Default options for the Category Barcharts
 var options = {
@@ -69,13 +75,13 @@ var setDataObj = function(data) {
     dataObj["y"] = data[i];
     dataObj["pointWidth"] = 25;
     if (data[i] < 0) {
-      dataObj["color"] = NEGATIVE_COLOR;
+      dataObj["color"] = charts.settings.NEGATIVE_COLOR;
     }
     else if (data[i] < average) {
-      dataObj["color"] = WARNING_COLOR;
+      dataObj["color"] = charts.settings.WARNING_COLOR;
     }
     else {
-      dataObj["color"] = POSITIVE_COLOR;
+      dataObj["color"] = charts.settings.POSITIVE_COLOR;
     }
     dataArr.push(dataObj);
   }
@@ -86,7 +92,7 @@ var setDataObj = function(data) {
 var drawColumn = function(title, data, colNumber) {
 
   options.title.text = title; 
-  options.chart.renderTo = $containers[colNumber];
+  options.chart.renderTo = charts.settings.$container[colNumber];
   options.series = [];
   var seriesObj = {};
   seriesObj["data"] = setDataObj(data);
@@ -104,8 +110,8 @@ var drawColumn = function(title, data, colNumber) {
 
 var loadDataFile = function(string) {
   var fixedFormat = JSON.stringify(string);
-  var brans = JSON.parse(string);
-
+  var brands = JSON.parse(string);
+  debugger;
   var brandNames = [];
   var numEvents = [];
   var salesData = [];
