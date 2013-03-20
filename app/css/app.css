@@ -236,28 +236,28 @@ input.calendar {
 }
 
 .plus-avg {
-  background-image: linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background-image: -o-linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background-image: -moz-linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background-image: -webkit-linear-gradient(bottom, #0079bc 0%, #006196 100%);
+  background: linear-gradient(bottom, #0079bc 0%, #006196 100%);
+  background: -o-linear-gradient(bottom, #0079bc 0%, #006196 100%);
+  background: -moz-linear-gradient(bottom, #0079bc 0%, #006196 100%);
+  background: -webkit-linear-gradient(bottom, #0079bc 0%, #006196 100%);
 }
 
 .minus-avg {
-  background-image: linear-gradient(bottom, rgb(234,157,4) %, rgb(251,182,45) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(234,157,4) 0%, rgb(251,182,45) 100%);
+  background: linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
+  background: -o-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
+  background: -moz-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
+  background: -webkit-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
 }
 
 .negative {
-  background-image: linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
-  background-image: -o-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
-  background-image: -moz-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
-  background-image: -webkit-linear-gradient(bottom, rgb(197,92,0) 0%, rgb(247,124,0) 100%);
+  background: linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
+  background: -o-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
+  background: -moz-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
+  background: -webkit-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
 }
 
 .best {
-  background: rgb(185,222,144);
+  background: #bade90;
 }
 
 /* TABLE */
