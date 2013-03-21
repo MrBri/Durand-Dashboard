@@ -1,0 +1,145 @@
+/* Settings for creating bar/line graphs using Charts 
+ *
+ * */
+
+var charts = {};
+
+//Commonly used settings.
+charts.settings = {
+  $container: $('div.data'),
+  NEGATIVE_COLOR:  '#D7772A',
+  WARNING_COLOR:  '#E9AA35',
+  POSITIVE_COLOR:  '#206CA3',
+  POINT_RADIUS: 8,
+  TARGET_COLOR_GREEN: '#8DC63F'
+};
+
+//Default options for the bar graph 
+charts.barOptions = function() {
+  var defaultOptions = {
+    credits: {
+      enabled: false
+    },
+    chart: {
+      type: 'bar',
+      backgroundColor: 'transparent'
+    },
+    title: {
+      text: ''
+    },
+    plotOptions: {
+      series: {
+        borderWidth: 0,
+        shadow: false
+      }
+    },
+    xAxis: {
+      labels: {
+        enabled: false
+      },
+      tickLength: 0,
+      lineColor: 'green',
+      lineWidth: 1
+
+    },
+    yAxis: {
+      //gridLineWidth: 0,
+      tickLength: 0,
+      labels: {
+        enabled: false
+      },
+      title: {
+        text: ''
+      },
+      lineColor: 'red',
+      lineWidth: 1,
+
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{}]
+  };
+
+  return defaultOptions;
+};
+
+//Default options for the line graph
+charts.lineGraphOptions = function() {
+  var defaultOptions = {
+    credits: {
+      enabled: false
+    },
+    chart: {
+      type: 'line',
+      backgroundColor: 'transparent',
+      renderTo: 'container'
+    },
+    title: {
+      text: ''
+    },
+    plotOptions: {
+      series: {
+        borderWidth: 0,
+        shadow: false
+      }
+    },
+    xAxis: {
+      labels: {
+        enabled: true
+      },
+      tickLength: 0,
+      categories: ['Sep', 'Oct', 'Nov','Dec',
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug']
+    },
+    yAxis: {
+      gridLineWidth: 1,
+      tickLength: 0,
+      title: {
+        text: ''
+      },
+      plotLines: [] 
+    },
+    legend: {
+      enabled: false
+    },
+    series: [{}]
+  };
+  return defaultOptions;
+};
+
+//Properties for the Y Axis of the Line Graph
+charts.lineGraphYProps = function(graphLabel) {
+  var properties = {
+    color: charts.settings.TARGET_COLOR_GREEN, 
+    value: target[graphLabel],
+    width: 2,
+    dashStyle: 'dash',
+    label: {
+      text: 'Target',
+      style: {
+        color: charts.settings.TARGET_COLOR_GREEN 
+      }
+    }
+  };
+  return properties;
+};
+
+//Create a graph with passed in options 
+charts.createChart = function(options) {
+  var chart = new Highcharts.Chart(options);
+};
+
+//Load data file and convert it to an object
+charts.loadDataFile = function(filepath, callback) {
+  $.ajax({
+    url: filepath,
+    success: function(result) {
+      var data = JSON.parse(result);
+      callback(data);
+    },
+    error: function() {
+      console.log("ERROR loading data!");
+    }
+  });
+};
