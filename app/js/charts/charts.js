@@ -38,7 +38,6 @@ charts.barOptions = function() {
         enabled: false
       },
       tickLength: 0,
-      lineColor: 'green',
       lineWidth: 1
 
     },
@@ -51,7 +50,6 @@ charts.barOptions = function() {
       title: {
         text: ''
       },
-      lineColor: 'red',
       lineWidth: 1,
 
     },
