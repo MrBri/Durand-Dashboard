@@ -71,7 +71,7 @@ charts.lineGraphOptions = function() {
       enabled: false
     },
     chart: {
-      type: 'line',
+      type: 'spline',
       backgroundColor: 'transparent',
       renderTo: 'container'
     },
