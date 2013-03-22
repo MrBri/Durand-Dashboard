@@ -38,11 +38,11 @@ charts.barOptions = function() {
         enabled: false
       },
       tickLength: 0,
-      lineWidth: 1
+      lineWidth: 0
 
     },
     yAxis: {
-      //gridLineWidth: 0,
+      gridLineWidth: 0,
       tickLength: 0,
       labels: {
         enabled: false
@@ -50,7 +50,7 @@ charts.barOptions = function() {
       title: {
         text: ''
       },
-      lineWidth: 1,
+      lineWidth: 0,
     },
     legend: {
       enabled: false
@@ -91,7 +91,7 @@ charts.lineGraphOptions = function() {
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug']
     },
     yAxis: {
-      gridLineWidth: 1,
+      gridLineWidth: 0,
       tickLength: 0,
       title: {
         text: ''
@@ -127,6 +127,7 @@ charts.lineGraphYProps = function(graphLabel) {
 charts.createChart = function(options) {
   var chart = new Highcharts.Chart(options);
 };
+
 
 //Return the average of a passed in array
 charts.getAverage = function(data) {

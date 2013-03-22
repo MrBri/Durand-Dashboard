@@ -38,10 +38,16 @@ charts.drawColumn = function(data, $container, colNumber) {
   var average = charts.getAverage(data);
 
   graphOptions.yAxis.plotLines = [{
-    color: 'gray',
+    color: 'grey',
       width: 1,
       value: average,
-      dashStyle: 'longdashdot'
+      dashStyle: 'dash'
+  },
+  {
+    color: 'black',
+      width: 1.5,
+      value: 0,
+      dashStyle: 'line'
   }];
 
   //! FIX - trying to get negative numbers to attach to axis
