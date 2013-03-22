@@ -1,16 +1,16 @@
-/* Settings for creating bar/line graphs using Charts 
- *
+/* Settings and utility functions for creating bar/line graphs using
+ * High Charts
  * */
 
 var charts = {};
 
 //Commonly used settings.
 charts.settings = {
-  $container: $('div.data'),
   NEGATIVE_COLOR:  '#D7772A',
   WARNING_COLOR:  '#E9AA35',
   POSITIVE_COLOR:  '#206CA3',
   POINT_RADIUS: 8,
+  BAR_WIDTH: 25,
   TARGET_COLOR_GREEN: '#8DC63F'
 };
 
@@ -128,6 +128,13 @@ charts.lineGraphYProps = function(graphLabel) {
 //Create a graph with passed in options 
 charts.createChart = function(options) {
   var chart = new Highcharts.Chart(options);
+};
+
+//Return the average of a passed in array
+charts.getAverage = function(data) {
+    return _.reduce(data, function(memo, num) {
+      return memo + num;
+    }, 0) / data.length;
 };
 
 //Load data file and convert it to an object

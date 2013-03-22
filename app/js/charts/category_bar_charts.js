@@ -1,26 +1,18 @@
-/* Creates the bar charts for the Category page
+/* Creates the bar charts for the Category and Brands pages
  *
  * */
 
-var getAverage = function(data) {
-
-  var average = 0;
-  for (var j=0; j < data.length; j++) {
-    average += data[j];
-  }
-  return average = average / data.length;
-}
-
 //Setup the attributes of the data points
-var setDataObj = function(data) {
+var setupBarDataObj = function(data) {
 
   var dataArr = [];
-  var average = getAverage(data);
+  var average = charts.getAverage(data);
 
   for (var i=0; i < data.length; i++) {
     var dataObj = {};
     dataObj["y"] = data[i];
-    dataObj["pointWidth"] = 25;
+
+    dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
     if (data[i] < 0) {
       dataObj["color"] = charts.settings.NEGATIVE_COLOR;
     }
@@ -36,15 +28,15 @@ var setDataObj = function(data) {
   return dataArr;
 };
 
-var drawColumn = function(data, colNumber) {
+var drawColumn = function(data, $container, colNumber) {
 
   var graphOptions = charts.barOptions();
-  graphOptions.chart.renderTo = charts.settings.$container[colNumber];
+  graphOptions.chart.renderTo = $container[colNumber];
   graphOptions.series = [];
   var seriesObj = {};
-  seriesObj["data"] = setDataObj(data);
+  seriesObj["data"] = setupBarDataObj(data);
+  var average = charts.getAverage(data);
 
-  var average = getAverage(data);
   graphOptions.yAxis.plotLines = [{
     color: 'gray',
       width: 1,
@@ -53,15 +45,15 @@ var drawColumn = function(data, colNumber) {
   }];
 
   //! FIX - trying to get negative numbers to attach to axis
-  var lowestValue = _.min(data);
-  var highestValue = _.max(data);
+  //var lowestValue = _.min(data);
+  //var highestValue = _.max(data);
   //graphOptions.xAxis.min = lowestValue;
 
   graphOptions.series.push(seriesObj);
   charts.createChart(graphOptions);
 };
 
-//Convert the data into JSON objects and store it in an array
+//Setup for incremental bar graph
 var setupBarGraph = function(brands) {
 
   var salesData = [];
@@ -85,13 +77,34 @@ var setupBarGraph = function(brands) {
     impactData.push(brands[item]['impact']);
   }
 
-  drawColumn(salesData, 0);
-  drawColumn(volumeData, 1);
-  drawColumn(marginData, 2);
-  drawColumn(profitData, 3);
-  drawColumn(transactionsData, 4);
-  drawColumn(impactData, 5);
+  var $container = $('div.data');
+  drawColumn(salesData, $container, 0);
+  drawColumn(volumeData, $container, 1);
+  drawColumn(marginData, $container, 2);
+  drawColumn(profitData, $container, 3);
+  drawColumn(transactionsData, $container, 4);
+  drawColumn(impactData, $container, 5);
 };
 
-//Load up data file and process it
+//setup for brand bar graphs
+var setupBrandBarData = function(data) {
+  var incSales  = [],
+      incVol    = [],
+      incMargin = [];
+
+  //! TODO This is prob not the right data file
+  for (var item in data) {
+    incSales.push(data[item]['IncSalesMean']);
+    incVol.push(data[item]['VolSalesMean']);
+    incMargin.push(data[item]['MarSalesMean']);
+  }
+
+  var $container =  $('.brand-sales');
+  drawColumn(incSales, $container, 0);
+  drawColumn(incVol, $container, 1);
+  drawColumn(incMargin, $container, 2);
+};
+
+//Load data files and begin creating the bar graphs
 charts.loadDataFile('../../data/mod_category_data_inc.js', setupBarGraph);
+charts.loadDataFile('../../data/mod_brand_data.js', setupBrandBarData);
