@@ -112,7 +112,7 @@ charts.lineGraphOptions = function() {
 charts.lineGraphYProps = function(graphLabel) {
   var properties = {
     color: charts.settings.TARGET_COLOR_GREEN, 
-    value: target[graphLabel],
+    value: charts.target[graphLabel],
     width: 2,
     dashStyle: 'dash',
     label: {

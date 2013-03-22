@@ -3,7 +3,7 @@
  */
 
 //Setup the array which contains attributes for the data points
-var setDataObj = function(data, graphLabel) {
+charts.setDataObj = function(data, graphLabel) {
 
   var dataArr = [];
 
@@ -18,7 +18,7 @@ var setDataObj = function(data, graphLabel) {
       propertyObj['fillColor'] = charts.settings.NEGATIVE_COLOR;
       dataObj["marker"] = propertyObj;
     }
-    else if (data[i] < target[graphLabel]) {
+    else if (data[i] < charts.target[graphLabel]) {
       var obj = {};
       propertyObj['fillColor'] = charts.settings.WARNING_COLOR;
       dataObj["marker"] = propertyObj;
@@ -34,20 +34,20 @@ var setDataObj = function(data, graphLabel) {
 };
 
 //Setup options for graph
-var setupGraph = function(data, graphLabel) {
+charts.setupGraph = function(data, graphLabel) {
   var options = charts.lineGraphOptions();
   options.series = [];
   var plotLineProperties = charts.lineGraphYProps(graphLabel);
   options.yAxis.plotlines = plotLineProperties;
   var seriesObj = {};
-  seriesObj["data"] = setDataObj(data, graphLabel);
+  seriesObj["data"] = charts.setDataObj(data, graphLabel);
   options.series.push(seriesObj);
   charts.createChart(options);
 
 };
 
 //Load data file into arrays
-var setupLineGraph = function(data) {
+charts.setupLineGraph = function(data) {
 
   var sales = [];
   var volume = [];
@@ -63,12 +63,12 @@ var setupLineGraph = function(data) {
 
     //if this is target data instead of monthly data
     if (data[item]['month'] === 'Target') {
-      target['sales'] = data[item]['sales'];
-      target['volume'] = data[item]['volume'];
-      target['margin'] = data[item]['margin'];
-      target['profit'] = data[item]['profit'];
-      target['transactions'] = data[item]['transactions'];
-      target['impact'] = data[item]['impact'];
+      charts.target['sales'] = data[item]['sales'];
+      charts.target['volume'] = data[item]['volume'];
+      charts.target['margin'] = data[item]['margin'];
+      charts.target['profit'] = data[item]['profit'];
+      charts.target['transactions'] = data[item]['transactions'];
+      charts.target['impact'] = data[item]['impact'];
       continue;
     }
 
@@ -83,7 +83,7 @@ var setupLineGraph = function(data) {
   //load graphs - only one shown for now
   // setupGraph(sales, 'sales');
   // setupGraph(volume, 'volume');
-  setupGraph(margin, 'margin');
+  charts.setupGraph(margin, 'margin');
   // setupGraph(profit);
   // setupGraph(transactions);
   // setupGraph(impact);
@@ -91,7 +91,7 @@ var setupLineGraph = function(data) {
 };
 
 //Store target data
-var target = {};
+charts.target = {};
 
 //Load the data then create the chart
-charts.loadDataFile('../../data/mod_category_linechart.js', setupLineGraph);
+charts.loadDataFile('../../data/mod_category_linechart.js', charts.setupLineGraph);
