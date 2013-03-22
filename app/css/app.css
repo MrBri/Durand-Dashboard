@@ -186,7 +186,7 @@ body {
 
 input.calendar {
   margin-top: 10px;
-  height: 40px;
+  /*height: 40px;*/
 }
 
 .left-container {
@@ -368,35 +368,150 @@ td {
 /* 2x2 Page */
 /************/
 
-.sectionTitle {
+.matrixTitle {
+  /*font-weight: lighter !important;*/
   text-align: center;
   color: #0078bb;
 }
 
-.yaxis-label {
-  /*rotate text here*/
-  border: 1px solid red;
+.y-axis-label {
+  border-right: 2px solid #e5e5e5;
+  height:465px;
+  /*margin-top: -15px !important;*/
+  margin-right: 0 !important;
 }
 
-.matrix {
-  border: 1px solid red;
+.y-axis-label p {
+  width: 430px;
+  text-align: center;
+  font-size: 12pt;
+  color: #4f5459;
+  -webkit-transform-origin: 50% 0;
+  -webkit-transform:rotate(270deg) translate(-200px, -180px);
 }
 
-.top_left {
-  border: 1px solid blue;
+.x-axis-label {
+  margin: 0 6.5%;
+  border-top: 2px solid #e5e5e5;
+  text-align: center;
+  font-size: 12pt;
+  padding-top: 10px;
+  color: #4f5459;
 }
-.top_right {
-  border: 1px solid blue;
-  display: block;
+
+.axisCircle {
+  display: inline;
+  position: absolute;
+  text-align: center;
+  font-size: 14pt;
+  padding-bottom: 2px !important;
+  width: 20px;
+  border-radius: 20px;
+  border: 2px solid #e5e5e5;
+  background-color: white;
 }
-table.bottom_left.span5 {
-  /*clear:both;*/
-  border: 1px solid blue;
-  margin-left: 0;
+
+.yAxisTop {
+  bottom: 525px;
+  left: 92px;
 }
-.bottom_right {
-  border: 1px solid blue;
+
+.yAxisBottom {
+  bottom: 49px;
+  left: 92px;
 }
+
+.xAxisRight {
+  bottom: 49px;
+  /*left: 92px;*/
+  right: 103px;
+}
+
+.matrixColumn {
+  /*margin: 0 5px !important;*/
+}
+
+.quadrant {
+  margin-bottom: 20px;
+  /*margin-left: -15px;*/
+  color: white;
+  text-align: center;
+  text-shadow: rgba(0,0,0,0.5) 0 1px;
+}
+
+.qLabels {
+  overflow: auto;
+  border-bottom: 1px solid rgba(100,100,100,0.2);
+}
+
+.qNums {
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.qLabel {
+  height: 60px;
+  padding: 10px 0 0;
+  font-size: 12pt;
+  margin: 0 !important;
+}
+
+.qNum {
+  height: 150px;
+  width: 33.3% !important;
+  font-size: 40pt;
+  margin: 0 !important;
+}
+
+div .qNum:nth-child(1),div .qNum:nth-child(2) {
+  border-right: 1px solid rgba(100,100,100,0.2);
+}
+
+div .qNum:nth-child(2),div .qNum:nth-child(3) {
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.qNum p {
+  padding-top: 40px;
+}
+
+p.qSub {
+  font-size: 18pt;
+  padding-top: 20px;
+}
+
+
+.success {
+  background: #005f94; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #005f94 0%, #0079bd 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#005f94), color-stop(100%,#0079bd)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #005f94 0%,#0079bd 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #005f94 0%,#0079bd 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #005f94 0%,#0079bd 100%); /* IE10+ */
+  background: linear-gradient(45deg, #005f94 0%,#0079bd 100%); /* W3C */
+}
+
+.warning {
+  background: #e89c00; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #e89c00 0%, #fdba31 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#e89c00), color-stop(100%,#fdba31)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #e89c00 0%,#fdba31 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #e89c00 0%,#fdba31 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #e89c00 0%,#fdba31 100%); /* IE10+ */
+  background: linear-gradient(45deg, #e89c00 0%,#fdba31 100%); /* W3C */
+}
+
+.danger {
+  background: #c15a00; /* Old browsers */
+  background: -moz-linear-gradient(45deg, #c15a00 0%, #f77b00 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#c15a00), color-stop(100%,#f77b00)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* IE10+ */
+  background: linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* W3C */
+}
+
+
+/* DEBUGGING */
 .visible {
- border: 1px solid red; 
+  border: 1px solid red; 
 }

@@ -1,12 +1,140 @@
-<table ng-repeat="cell in twoBytwo.cells" class="{{cell.position}} {{cell.condition}}">
-  <tr>
-    <th>Events</th>
-    <th>Incremental Sales $</th>
-    <th>Incremental Margin $</th>
-  </tr>
-  <tr>
-    <td>{{cell.events}}<br>({{cell.events_sub}}%)</td>
-    <td>{{cell.incremental_sales}}M</td>
-    <td>{{cell.incremental_margin}}M</td>
-  </tr>
-</table>
+<div class="subheader row-fluid">
+  <div class="span2 selector">
+    <p class="dropdownLabel">Department <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one ">Dry Grocery</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Another category</a></li>
+        <li><a href="#">Another category</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Category <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Category</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Brand <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Category</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Item <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Select one</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Item Tactic <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Select one</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2">
+    <button class="tactic-detail">
+      <p>View by Tactic Detail</p>
+    </button>
+  </div>
+</div>
+
+<div class="container-fluid main-content">
+  <div class="span12 content-containers">
+    <div class="row-fluid content-container-header">
+      <p class="span8">Department</p>
+      <input class="span2 calendar" type="date">
+      <input class="span2 calendar" type="date">
+    </div>
+    <div class="row-fluid main-content-header">
+      <div class="span10">
+      </div>
+      <div class="span1 excel">
+        <i class="icon-th-large"></i>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span12 matrixTitle"><h3>{{twoBytwo.title}}</h3>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span1 y-axis-label">
+        <p>Incremental Sales</p>
+        <div class="axisCircle yAxisTop">+</div>
+        <div class="axisCircle yAxisBottom">-</div>
+      </div>
+      <!-- LEFT QUADRANTS -->
+      <div class="span5 matrixColumn">
+        <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 0 || $index == 2 " class="fluid-row">
+          <div class=" {{cell.position}} {{cell.condition}} span12 quadrant">
+            <div class="fluid-row qLabels">
+              <div class="span4 qLabel"><p>Events</p></div>
+              <div class="span4 qLabel"><p>Incremental<br>Sales $</p></div>
+              <div class="span4 qLabel"><p>Incremental<br>Margin $</p></div>
+            </div>
+            <div class="fluid-row qNums">
+              <div class="span4 qNum">
+                <p>{{cell.events}}</p>
+                <p class="qSub">({{cell.events_sub}}%)</p></div>
+              <div class="span4 qNum"><p>{{cell.incremental_sales}}M</p></div>
+              <div class="span4 qNum"><p>{{cell.incremental_margin}}M</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- RIGHT QUADRANTS -->
+      <div class="span5 matrixColumn">
+        <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 1 || $index == 3 " class="fluid-row">
+          <div class=" {{cell.position}} {{cell.condition}} span12 quadrant">
+            <div class="fluid-row qLabels">
+              <div class="span4 qLabel"><p>Events</p></div>
+              <div class="span4 qLabel"><p>Incremental<br>Sales $</p></div>
+              <div class="span4 qLabel"><p>Incremental<br>Margin $</p></div>
+            </div>
+            <div class="fluid-row qNums">
+              <div class="span4 qNum">
+                <p>{{cell.events}}</p>
+                <p class="qSub">({{cell.events_sub}}%)</p></div>
+              <div class="span4 qNum"><p>{{cell.incremental_sales}}M</p></div>
+              <div class="span4 qNum"><p>{{cell.incremental_margin}}M</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="x-axis-label">Incremental Margin</p>
+        <div class="axisCircle xAxisRight">+</div>
+      </div>
+    </div>
+  </div>
+</div>
