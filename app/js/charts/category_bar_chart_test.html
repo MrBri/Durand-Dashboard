@@ -4,14 +4,27 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
     <script src="../../lib/highcharts_nonmin.js"></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
 <body>
+  <table>
+    <tr>
+      <td>Incremental Sales</td>
+      <td>Incremental Volume</td>
+      <td>Incremental Margin</td>
+    </tr>
+    <tr>
+      <td class="brand-sales"></td>
+      <td class="brand-sales"></td>
+      <td class="brand-sales"></td>
+    </tr>
+  </table>
 <div id="container"></div>
   <div id="durand1">
   </div>
-  <!-- <table id="categories">
+   <table id="categories">
     <tr>
       <td>Parity</td>
       <td># of Events</td>
@@ -124,7 +137,9 @@
       <td></td>
     </tr>
 
-  </table> -->
+  </table>
+  <script src="charts.js"></script>
+  <script src="category_bar_charts.js"></script>
   <script src="category_time_series.js"></script>
 </body>
 </html>

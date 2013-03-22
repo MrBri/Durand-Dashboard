@@ -1,79 +1,26 @@
-var $containers = $('div.data');
-var NEGATIVE_COLOR = '#D7772A';
-var WARNING_COLOR = '#E9AA35';
-var POSITIVE_COLOR = '#206CA3';
+/* Creates the bar charts for the Category and Brands pages
+ *
+ * */
 
-//Default options for the Category Barcharts
-var options = {
-        credits: {
-          enabled: false
-        },
-        chart: {
-            type: 'bar',
-            backgroundColor: 'transparent'
-        },
-        title: {
-          text: ''
-        },
-        plotOptions: {
-          series: {
-            borderWidth: 0,
-            shadow: false
-          }
-        },
-        xAxis: {
-          labels: {
-            enabled: false
-          },
-          tickLength: 0
-        },
-        yAxis: {
-          gridLineWidth: 0,
-          tickLength: 0,
-          labels: {
-            enabled: false
-          },
-          title: {
-            text: ''
-          }
-        },
-        legend: {
-          enabled: false
-        },
-        series: [{}]
-};
-
-var createChart = function(options) {
-  var chart = new Highcharts.Chart(options);
-};
-
-var getAverage = function(data) {
-
-  var average = 0;
-  for (var j=0; j < data.length; j++) {
-    average += data[j];
-  }
-  return average = average / data.length;
-
-}
-//Sets the size, color, and datapoint of the data array
-var setDataObj = function(data) {
+//Setup the attributes of the data points
+charts.setupBarDataObj = function(data) {
 
   var dataArr = [];
-  var average = getAverage(data);
+  var average = charts.getAverage(data);
 
   for (var i=0; i < data.length; i++) {
     var dataObj = {};
     dataObj["y"] = data[i];
-    dataObj["pointWidth"] = 25;
+
+    dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
     if (data[i] < 0) {
-      dataObj["color"] = NEGATIVE_COLOR;
+      dataObj["color"] = charts.settings.NEGATIVE_COLOR;
     }
     else if (data[i] < average) {
-      dataObj["color"] = WARNING_COLOR;
+      dataObj["color"] = charts.settings.WARNING_COLOR;
     }
     else {
-      dataObj["color"] = POSITIVE_COLOR;
+      dataObj["color"] = charts.settings.POSITIVE_COLOR;
     }
     dataArr.push(dataObj);
   }
@@ -81,21 +28,33 @@ var setDataObj = function(data) {
   return dataArr;
 };
 
-var drawColumn = function(title, data, colNumber) {
+charts.drawColumn = function(data, $container, colNumber) {
 
-  options.title.text = title;
-  options.chart.renderTo = $containers[colNumber];
-  options.series = [];
+  var graphOptions = charts.barOptions();
+  graphOptions.chart.renderTo = $container[colNumber];
+  graphOptions.series = [];
   var seriesObj = {};
-  seriesObj["data"] = setDataObj(data);
+  seriesObj["data"] = charts.setupBarDataObj(data);
+  var average = charts.getAverage(data);
 
-  options.series.push(seriesObj);
-  createChart(options);
-  console.log(options.series);
+  graphOptions.yAxis.plotLines = [{
+    color: 'gray',
+      width: 1,
+      value: average,
+      dashStyle: 'longdashdot'
+  }];
+
+  //! FIX - trying to get negative numbers to attach to axis
+  //var lowestValue = _.min(data);
+  //var highestValue = _.max(data);
+  //graphOptions.xAxis.min = lowestValue;
+
+  graphOptions.series.push(seriesObj);
+  charts.createChart(graphOptions);
 };
 
-var loadDataFile = function(string) {
-  var brands = JSON.parse(string);
+//Setup for incremental bar graph
+charts.setupBarGraph = function(brands) {
 
   var salesData = [];
   var marginData = [];
@@ -103,7 +62,6 @@ var loadDataFile = function(string) {
   var profitData = [];
   var transactionsData = [];
   var impactData = [];
-  var count = 0;
 
   //Load up data in proper arrays
   for (var item in brands) {
@@ -119,22 +77,34 @@ var loadDataFile = function(string) {
     impactData.push(brands[item]['impact']);
   }
 
-  drawColumn('', salesData, 0);
-  drawColumn('', volumeData, 1);
-  drawColumn('', marginData, 2);
-  drawColumn('', profitData, 3);
-  drawColumn('', transactionsData, 4);
-  drawColumn('', impactData, 5);
+  var $container = $('div.data');
+  charts.drawColumn(salesData, $container, 0);
+  charts.drawColumn(volumeData, $container, 1);
+  charts.drawColumn(marginData, $container, 2);
+  charts.drawColumn(profitData, $container, 3);
+  charts.drawColumn(transactionsData, $container, 4);
+  charts.drawColumn(impactData, $container, 5);
 };
 
+//setup for brand bar graphs
+charts.setupBrandBarData = function(data) {
+  var incSales  = [],
+      incVol    = [],
+      incMargin = [];
 
-$.ajax({
-  url: '../../data/mod_category_data_inc.js',
-  success: function(data) {
-    loadDataFile(data);
-  },
-  error: function() {
-    console.log("ERROR loading data!");
+  //! TODO This is prob not the right data file
+  for (var item in data) {
+    incSales.push(data[item]['IncSalesMean']);
+    incVol.push(data[item]['VolSalesMean']);
+    incMargin.push(data[item]['MarSalesMean']);
   }
-});
 
+  var $container =  $('.brand-sales');
+  charts.drawColumn(incSales, $container, 0);
+  charts.drawColumn(incVol, $container, 1);
+  charts.drawColumn(incMargin, $container, 2);
+};
+
+//Load data files and begin creating the bar graphs
+charts.loadDataFile('../../data/mod_category_data_inc.js', charts.setupBarGraph);
+charts.loadDataFile('../../data/mod_brand_data.js', charts.setupBrandBarData);
