@@ -38,11 +38,12 @@ charts.barOptions = function() {
         enabled: false
       },
       tickLength: 0,
-      lineWidth: 1
+      lineWidth: 1.5,
+      lineColor: 'black'
 
     },
     yAxis: {
-      //gridLineWidth: 0,
+      gridLineWidth: 0,
       tickLength: 0,
       labels: {
         enabled: false
@@ -50,7 +51,7 @@ charts.barOptions = function() {
       title: {
         text: ''
       },
-      lineWidth: 1,
+      lineWidth: 0,
 
     },
     legend: {
@@ -71,7 +72,8 @@ charts.lineGraphOptions = function() {
     chart: {
       type: 'spline',
       backgroundColor: 'transparent',
-      renderTo: 'container'
+      renderTo: 'container',
+      height: 130
     },
     title: {
       text: ''
@@ -96,12 +98,11 @@ charts.lineGraphOptions = function() {
       title: {
         text: ''
       },
-      plotLines: [] 
-    },
-    legend: {
-      enabled: false
-    },
-    series: [{}]
+      legend: {
+        enabled: false
+      },
+      series: [{}]
+    }
   };
   return defaultOptions;
 };
