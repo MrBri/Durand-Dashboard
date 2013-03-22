@@ -1,87 +1,30 @@
-/* Create a time-series graph using High Charts.  */
-var NEGATIVE_COLOR = '#D7772A';
-var WARNING_COLOR = '#E9AA35';
-var POSITIVE_COLOR = '#206CA3';
-var POINT_RADIUS = 8;
+/* Creates the line graph using time charts.
+ *
+ */
 
-var options = {
-        credits: {
-          enabled: false
-        },
-        chart: {
-            type: 'line',
-            backgroundColor: 'transparent',
-            renderTo: 'time-series',
-            height: 130
-        },
-        title: {
-          text: ''
-        },
-        plotOptions: {
-          series: {
-            borderWidth: 0,
-            shadow: false
-          }
-        },
-        xAxis: {
-          labels: {
-            enabled: true
-          },
-          tickLength: 0,
-          categories: ['Sep', 'Oct', 'Nov','Dec',
-                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug']
-        },
-        yAxis: {
-          gridLineWidth: 1,
-          tickLength: 0,
-          title: {
-            text: ''
-          }
-        },
-        legend: {
-          enabled: false
-        },
-        series: [{}]
-};
-
-//Store target data here
-var target = {};
-
-//Get data file
-$.ajax({
-  url: '/app/data/mod_category_linechart.js',
-  success: function(data) {
-    loadDataFile(data);
-  },
-  error: function() {
-    console.log("ERROR loading data!");
-  }
-});
-
-var createChart = function(options) {
-  var chart = new Highcharts.Chart(options);
-};
-
-var setDataObj = function(data, graphLabel) {
+//Setup the array which contains attributes for the data points
+charts.setDataObj = function(data, graphLabel) {
 
   var dataArr = [];
 
   for (var i=0; i < data.length; i++) {
     var dataObj = {};
     var propertyObj = {};
-    propertyObj['radius'] = POINT_RADIUS;
+
+    propertyObj['radius'] = charts.settings.POINT_RADIUS;
     dataObj["y"] = data[i];
+
     if (data[i] < 0) {
-      propertyObj['fillColor'] = NEGATIVE_COLOR;
+      propertyObj['fillColor'] = charts.settings.NEGATIVE_COLOR;
       dataObj["marker"] = propertyObj;
     }
-    else if (data[i] < target[graphLabel]) {
+    else if (data[i] < charts.target[graphLabel]) {
       var obj = {};
-      propertyObj['fillColor'] = WARNING_COLOR;
+      propertyObj['fillColor'] = charts.settings.WARNING_COLOR;
       dataObj["marker"] = propertyObj;
     }
     else {
-      propertyObj['fillColor'] = POSITIVE_COLOR;
+      propertyObj['fillColor'] = charts.settings.POSITIVE_COLOR;
       dataObj["marker"] = propertyObj;
     }
     dataArr.push(dataObj);
@@ -90,35 +33,21 @@ var setDataObj = function(data, graphLabel) {
   return dataArr;
 };
 
-var setupGraph = function(data, graphLabel) {
-  // options.chart.renderTo = $container;
+//Setup options for graph
+charts.setupGraph = function(data, graphLabel) {
+  var options = charts.lineGraphOptions();
   options.series = [];
-  options.yAxis.plotLines = [{
-    color: '#8DC63F',
-    value: target[graphLabel],
-    width: 2,
-    dashStyle: 'dash',
-    label: {
-      text: 'Target',
-      style: {
-        color: '#8DC63F'
-      }
-    }
-  }];
+  var plotLineProperties = charts.lineGraphYProps(graphLabel);
+  options.yAxis.plotlines = plotLineProperties;
   var seriesObj = {};
-  seriesObj["data"] = setDataObj(data, graphLabel);
-  // seriesObj["data"] = data;
+  seriesObj["data"] = charts.setDataObj(data, graphLabel);
   options.series.push(seriesObj);
-  // debugger;
-  createChart(options);
+  charts.createChart(options);
 
 };
 
-var graphTypes = ['sales', 'volume', 'margin', 'profit', 'transactions', 'impact'];
-
 //Load data file into arrays
-var loadDataFile = function(string) {
-  var data = JSON.parse(string);
+charts.setupLineGraph = function(data) {
 
   var sales = [];
   var volume = [];
@@ -134,12 +63,12 @@ var loadDataFile = function(string) {
 
     //if this is target data instead of monthly data
     if (data[item]['month'] === 'Target') {
-      target['sales'] = data[item]['sales'];
-      target['volume'] = data[item]['volume'];
-      target['margin'] = data[item]['margin'];
-      target['profit'] = data[item]['profit'];
-      target['transactions'] = data[item]['transactions'];
-      target['impact'] = data[item]['impact'];
+      charts.target['sales'] = data[item]['sales'];
+      charts.target['volume'] = data[item]['volume'];
+      charts.target['margin'] = data[item]['margin'];
+      charts.target['profit'] = data[item]['profit'];
+      charts.target['transactions'] = data[item]['transactions'];
+      charts.target['impact'] = data[item]['impact'];
       continue;
     }
 
@@ -151,12 +80,18 @@ var loadDataFile = function(string) {
     impact.push(data[item]['impact']);
   }
 
-  //load graphs
+  //load graphs - only one shown for now
   // setupGraph(sales, 'sales');
   // setupGraph(volume, 'volume');
-  setupGraph(margin, 'margin');
+  charts.setupGraph(margin, 'margin');
   // setupGraph(profit);
   // setupGraph(transactions);
   // setupGraph(impact);
 
 };
+
+//Store target data
+charts.target = {};
+
+//Load the data then create the chart
+charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);
