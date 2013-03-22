@@ -179,11 +179,25 @@
     </div>
   </div>
 
+
   <div class="span3 content-containers">
     <div class="row-fluid content-container-header">
       <p>Action Required</p>
     </div>
-    <div class="action-item green">
+
+    <div ng-repeat="category in catDataInc | action" ng-class="category.actionColor" class="action-item">
+      <p><span>Action: </span>Promote <span>{{category.item}}</span>
+        {{category.action}}
+      <i class="icon-chevron-down"></i></p>
+    </div>
+
+    <div ng-repeat="category in catDataInc | followUp" ng-class="category.actionColor" class="action-item follow-up">
+      <p><span>Follow Up: </span>Promote <span>{{category.item}}</span>
+        {{category.followUp}}
+      <i class="icon-chevron-up"></i></p>
+    </div>
+
+<!--     <div class="action-item green">
       <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
       <i class="icon-chevron-down"></i>
     </div>
@@ -203,5 +217,6 @@
       <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
       <i class="icon-chevron-down"></i>
     </div>
+ -->
   </div>
 </div>
