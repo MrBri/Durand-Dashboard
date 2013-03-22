@@ -3,7 +3,7 @@
  * */
 
 //Setup the attributes of the data points
-var setupBarDataObj = function(data) {
+charts.setupBarDataObj = function(data) {
 
   var dataArr = [];
   var average = charts.getAverage(data);
@@ -28,13 +28,13 @@ var setupBarDataObj = function(data) {
   return dataArr;
 };
 
-var drawColumn = function(data, $container, colNumber) {
+charts.drawColumn = function(data, $container, colNumber) {
 
   var graphOptions = charts.barOptions();
   graphOptions.chart.renderTo = $container[colNumber];
   graphOptions.series = [];
   var seriesObj = {};
-  seriesObj["data"] = setupBarDataObj(data);
+  seriesObj["data"] = charts.setupBarDataObj(data);
   var average = charts.getAverage(data);
 
   graphOptions.yAxis.plotLines = [{
@@ -54,7 +54,7 @@ var drawColumn = function(data, $container, colNumber) {
 };
 
 //Setup for incremental bar graph
-var setupBarGraph = function(brands) {
+charts.setupBarGraph = function(brands) {
 
   var salesData = [];
   var marginData = [];
@@ -78,16 +78,16 @@ var setupBarGraph = function(brands) {
   }
 
   var $container = $('div.data');
-  drawColumn(salesData, $container, 0);
-  drawColumn(volumeData, $container, 1);
-  drawColumn(marginData, $container, 2);
-  drawColumn(profitData, $container, 3);
-  drawColumn(transactionsData, $container, 4);
-  drawColumn(impactData, $container, 5);
+  charts.drawColumn(salesData, $container, 0);
+  charts.drawColumn(volumeData, $container, 1);
+  charts.drawColumn(marginData, $container, 2);
+  charts.drawColumn(profitData, $container, 3);
+  charts.drawColumn(transactionsData, $container, 4);
+  charts.drawColumn(impactData, $container, 5);
 };
 
 //setup for brand bar graphs
-var setupBrandBarData = function(data) {
+charts.setupBrandBarData = function(data) {
   var incSales  = [],
       incVol    = [],
       incMargin = [];
@@ -100,11 +100,11 @@ var setupBrandBarData = function(data) {
   }
 
   var $container =  $('.brand-sales');
-  drawColumn(incSales, $container, 0);
-  drawColumn(incVol, $container, 1);
-  drawColumn(incMargin, $container, 2);
+  charts.drawColumn(incSales, $container, 0);
+  charts.drawColumn(incVol, $container, 1);
+  charts.drawColumn(incMargin, $container, 2);
 };
 
 //Load data files and begin creating the bar graphs
-charts.loadDataFile('../../data/mod_category_data_inc.js', setupBarGraph);
-charts.loadDataFile('../../data/mod_brand_data.js', setupBrandBarData);
+charts.loadDataFile('../../data/mod_category_data_inc.js', charts.setupBarGraph);
+charts.loadDataFile('../../data/mod_brand_data.js', charts.setupBrandBarData);
