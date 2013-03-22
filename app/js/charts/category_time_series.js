@@ -38,10 +38,12 @@ charts.setupGraph = function(data, graphLabel) {
   var options = charts.lineGraphOptions();
   options.series = [];
   var plotLineProperties = charts.lineGraphYProps(graphLabel);
-  options.yAxis.plotlines = plotLineProperties;
+  options.yAxis.plotLines = [];
+  options.yAxis.plotLines.push(plotLineProperties);
   var seriesObj = {};
   seriesObj["data"] = charts.setDataObj(data, graphLabel);
   options.series.push(seriesObj);
+  debugger;
   charts.createChart(options);
 
 };
