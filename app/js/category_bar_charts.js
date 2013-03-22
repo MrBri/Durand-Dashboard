@@ -106,5 +106,5 @@ charts.setupBrandBarData = function(data) {
 };
 
 //Load data files and begin creating the bar graphs
-charts.loadDataFile('../../data/mod_category_data_inc.js', charts.setupBarGraph);
-charts.loadDataFile('../../data/mod_brand_data.js', charts.setupBrandBarData);
+charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
+charts.loadDataFile('/app/data/mod_brand_data.js', charts.setupBrandBarData);
