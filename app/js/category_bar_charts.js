@@ -46,7 +46,6 @@ charts.setupBrandBarDataObj = function(data, name) {
   for (var i=0; i < data[name].length; i++) {
     var dataObj = {};
     dataObj["y"] = data[name][i];
-
     dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
 
     //if (data[i] < 0) {
@@ -61,12 +60,10 @@ charts.setupBrandBarDataObj = function(data, name) {
                                //[1, charts.settings.WARNING_COLOR]]
                          //}
     //}
-    //else {
-      //dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
-                         //stops: [[0, charts.settings.POSITIVE_COLOR_LIGHT],
-                               //[1, charts.settings.POSITIVE_COLOR]]
-                         //}
-    //}
+   dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         stops: [[0, charts.settings.POSITIVE_COLOR_LIGHT],
+                               [1, charts.settings.POSITIVE_COLOR]]
+                         };
     dataArr.push(dataObj);
   }
 
@@ -114,7 +111,9 @@ charts.drawBrandColumn = function(data, $container, colNumber) {
   //var average = charts.getAverage(data);
   graphOptions.plotOptions = {
     series: {
-      stacking: 'normal'
+      stacking: 'normal',
+      shadow: false,
+      borderWidth: 0
     }
   };
   //graphOptions.yAxis.plotLines = [{
@@ -140,7 +139,6 @@ charts.drawBrandColumn = function(data, $container, colNumber) {
   var secondSeriesObj = {};
   secondSeriesObj["data"] = charts.setupBrandBarDataObj(data, "max");
   graphOptions.series.push(secondSeriesObj);
-  debugger;
   charts.createChart(graphOptions);
 };
 
@@ -196,17 +194,37 @@ charts.setupBrandBarData = function(data, category) {
       incSalesMin.push(data[item]['IncSalesMin']);
       incSalesMax.push(data[item]['IncSalesMax']);
       incSalesMean.push(data[item]['IncSalesMean']);
+      volSalesMin.push(data[item]['VolSalesMin']);
+      volSalesMax.push(data[item]['VolSalesMax']);
+      volSalesMean.push(data[item]['VolSalesMean']);
+      marSalesMin.push(data[item]['MarSalesMin']);
+      marSalesMax.push(data[item]['MarSalesMax']);
+      marSalesMean.push(data[item]['MarSalesMean']);
+
     }
   }
 
-  //stick sales array into object
   var sales = {};
   sales["min"] = incSalesMin;
   sales["max"] = incSalesMax;
   sales["mean"] = incSalesMean;
-  
+
+  var volume = {};
+  volume["min"] = volSalesMin;
+  volume["max"] = volSalesMax;
+  volume["mean"] = volSalesMean;
+
+  var margin = {};
+  margin["min"] = marSalesMin;
+  margin["max"] = marSalesMax;
+  margin["mean"] = marSalesMean;
+
   var $container =  $('.data');
+
+  debugger;
   charts.drawBrandColumn(sales, $container, 0);
+  charts.drawBrandColumn(volume, $container, 1);
+  charts.drawBrandColumn(margin, $container, 2);
 };
 
 
