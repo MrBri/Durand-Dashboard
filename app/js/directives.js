@@ -8,4 +8,13 @@ angular.module('myApp.directives', []).
     return function(scope, elm, attrs) {
       elm.text(version);
     };
-  }]);
+  }]).
+  directive('logout', function () {
+    return {
+      template: '<ul class="span3 username">' +
+          '<li>John Smith</li>' +
+          '<li>|</li>' +
+          '<li>Logout</li>' +
+          '<i class="icon-play icon-white"></i></ul>'
+    }
+  });

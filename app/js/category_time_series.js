@@ -43,7 +43,6 @@ charts.setupGraph = function(data, graphLabel) {
   var seriesObj = {};
   seriesObj["data"] = charts.setDataObj(data, graphLabel);
   options.series.push(seriesObj);
-  debugger;
   charts.createChart(options);
 
 };

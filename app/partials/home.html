@@ -65,7 +65,7 @@
     </div>
   </div>
   <div class="span2">
-    <button class="tactic-detail">
+    <button class="tactic-detail" ng-click="viewTactic()">
       <p>View by Tactic Detail</p>
     </button>
   </div>
@@ -83,7 +83,7 @@
         <span>Duration: </span>
         <div class="btn-group">
           <button class="btn pill pill-left">Week</button>
-          <button class="btn pill pill-right">Total</button>
+          <button class="btn pill pill-right" ng-click="loadTotal()">Total</button>
         </div>
       </div>
       <div class="span1 excel">
