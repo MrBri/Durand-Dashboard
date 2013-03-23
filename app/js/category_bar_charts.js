@@ -13,14 +13,27 @@ charts.setupBarDataObj = function(data) {
     dataObj["y"] = data[i];
 
     dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
+
     if (data[i] < 0) {
-      dataObj["color"] = charts.settings.NEGATIVE_COLOR;
+      // dataObj["color"] = charts.settings.NEGATIVE_COLOR;
+      dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         stops: [[0, charts.settings.NEGATIVE_COLOR_LIGHT],
+                               [1, charts.settings.NEGATIVE_COLOR]]
+                         }
+      // dataObj["linearGradient"] = ;
+      // dataObj["stops"] = 
     }
     else if (data[i] < average) {
-      dataObj["color"] = charts.settings.WARNING_COLOR;
+      dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         stops: [[0, charts.settings.WARNING_COLOR_LIGHT],
+                               [1, charts.settings.WARNING_COLOR]]
+                         }
     }
     else {
-      dataObj["color"] = charts.settings.POSITIVE_COLOR;
+      dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         stops: [[0, charts.settings.POSITIVE_COLOR_LIGHT],
+                               [1, charts.settings.POSITIVE_COLOR]]
+                         }
     }
     dataArr.push(dataObj);
   }
