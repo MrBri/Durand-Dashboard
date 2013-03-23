@@ -126,121 +126,32 @@
         </tr>
        <tbody>
           <tr>
-            <td class="span1">Category 1</td>
-            <td class="span1">128</td>
-            <td class="span1 column">
+          <tr ng-repeat="category in categories">
+            <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
+            <td>{{category.numEvents}}</td>
+            <td class="column">
               <div class="data"></div>
             </td>
-            <td class="span1">
+            <td>
               <div class="data"></div>
             </td>
-            <td class="span1 column">
+            <td class="column">
               <div class="data"></div>
             </td>
-            <td class="span1">
+            <td>
               <div class="data"></div>
             </td>
-            <td class="span1 column">
+            <td class="column">
               <div class="data"></div>
             </td>
-            <td class="span1">
+            <td>
               <div class="data"></div>
             </td>
-          </tr>
-          <tr>
-            <td>Category 2</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Category 3</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Category 4</td>
-            <td>130</td>
-            <td class="column"</td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Category 5</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>Category 6</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-         <tr>
-            <td>Category 7</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-         <tr>
-            <td>Category 8</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-         <tr>
-            <td>Category 9</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-          </tr>
-         <tr>
-            <td>Category 10</td>
-            <td>130</td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
-            <td class="column"></td>
-            <td></td>
           </tr>
 
           <tr>
-            <td class="span1 row-title">Average</td>
-            <td class="span1"></td>
+            <td class="row-title">Average</td>
+            <td></td>
             <td class="average column">80</td>
             <td class="average">80</td>
             <td class="average column">80</td>

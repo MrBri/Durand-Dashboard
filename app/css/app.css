@@ -291,13 +291,17 @@ tr {
   overflow: visible;
   margin-top: -28px;
 }
+
 .column {
   background: rgba(213,213,213,.3);
 }
 
 .row-title {
+  position: relative;
   font-size: 15px;
   font-weight: bold;
+  width: 8%;
+  color: #666;
 }
 
 .best-row {
