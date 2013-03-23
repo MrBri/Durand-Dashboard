@@ -40,7 +40,38 @@ charts.setupBarDataObj = function(data) {
 
   return dataArr;
 };
+charts.setupBrandBarDataObj = function(data, name) {
 
+  var dataArr = [];
+  for (var i=0; i < data[name].length; i++) {
+    var dataObj = {};
+    dataObj["y"] = data[name][i];
+
+    dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
+
+    //if (data[i] < 0) {
+      //dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         //stops: [[0, charts.settings.NEGATIVE_COLOR_LIGHT],
+                               //[1, charts.settings.NEGATIVE_COLOR]]
+                         //}
+    //}
+    //else if (data[i] < average) {
+      //dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         //stops: [[0, charts.settings.WARNING_COLOR_LIGHT],
+                               //[1, charts.settings.WARNING_COLOR]]
+                         //}
+    //}
+    //else {
+      //dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
+                         //stops: [[0, charts.settings.POSITIVE_COLOR_LIGHT],
+                               //[1, charts.settings.POSITIVE_COLOR]]
+                         //}
+    //}
+    dataArr.push(dataObj);
+  }
+
+  return dataArr;
+};
 charts.drawColumn = function(data, $container, colNumber) {
 
   var graphOptions = charts.barOptions();
@@ -69,6 +100,47 @@ charts.drawColumn = function(data, $container, colNumber) {
   //graphOptions.xAxis.min = lowestValue;
 
   graphOptions.series.push(seriesObj);
+  charts.createChart(graphOptions);
+};
+
+charts.drawBrandColumn = function(data, $container, colNumber) {
+
+  var graphOptions = charts.barOptions();
+  graphOptions.chart.renderTo = $container[colNumber];
+  graphOptions.series = [];
+  var seriesObj = {};
+  seriesObj["data"] = charts.setupBrandBarDataObj(data, "min");
+
+  //var average = charts.getAverage(data);
+  graphOptions.plotOptions = {
+    series: {
+      stacking: 'normal'
+    }
+  };
+  //graphOptions.yAxis.plotLines = [{
+    //color: 'grey',
+      //width: 1,
+      //value: average,
+      //dashStyle: 'dash'
+  //},
+  //{
+    //color: 'black',
+      //width: 1.5,
+      //value: 0,
+      //dashStyle: 'line'
+  //}];
+
+  //! FIX - trying to get negative numbers to attach to axis
+  //var lowestValue = _.min(data);
+  //var highestValue = _.max(data);
+  //graphOptions.xAxis.min = lowestValue;
+
+  graphOptions.series.push(seriesObj);
+
+  var secondSeriesObj = {};
+  secondSeriesObj["data"] = charts.setupBrandBarDataObj(data, "max");
+  graphOptions.series.push(secondSeriesObj);
+  debugger;
   charts.createChart(graphOptions);
 };
 
@@ -106,24 +178,39 @@ charts.setupBarGraph = function(brands) {
 };
 
 //setup for brand bar graphs
-charts.setupBrandBarData = function(data) {
-  var incSales  = [],
-      incVol    = [],
-      incMargin = [];
+charts.setupBrandBarData = function(data, category) {
+  var incSalesMin  = [],
+      incSalesMax  = [],
+      incSalesMean = [],
+      volSalesMin  = [],
+      volSalesMax  = [],
+      volSalesMean = [],
+      marSalesMin  = [],
+      marSalesMax  = [],
+      marSalesMean = [];
 
-  //! TODO This is prob not the right data file
+  //Load arrays with data which matches the selected category
+  //If Category is ALL, load everything up
   for (var item in data) {
-    incSales.push(data[item]['IncSalesMean']);
-    incVol.push(data[item]['VolSalesMean']);
-    incMargin.push(data[item]['MarSalesMean']);
+    if ((data[item]['Category'] === category) || (category === "All")) {
+      incSalesMin.push(data[item]['IncSalesMin']);
+      incSalesMax.push(data[item]['IncSalesMax']);
+      incSalesMean.push(data[item]['IncSalesMean']);
+    }
   }
 
-  var $container =  $('.brand-sales');
-  charts.drawColumn(incSales, $container, 0);
-  charts.drawColumn(incVol, $container, 1);
-  charts.drawColumn(incMargin, $container, 2);
+  //stick sales array into object
+  var sales = {};
+  sales["min"] = incSalesMin;
+  sales["max"] = incSalesMax;
+  sales["mean"] = incSalesMean;
+  
+  var $container =  $('.data');
+  charts.drawBrandColumn(sales, $container, 0);
 };
 
+
 //Load data files and begin creating the bar graphs
-charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
-charts.loadDataFile('/app/data/mod_brand_data.js', charts.setupBrandBarData);
+//charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
+charts.loadDataFile('../../data/mod_brand_data.js', charts.setupBrandBarData, 5);
+

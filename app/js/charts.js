@@ -150,12 +150,12 @@ charts.getAverage = function(data) {
 };
 
 //Load data file and convert it to an object
-charts.loadDataFile = function(filepath, callback) {
+charts.loadDataFile = function(filepath, callback, category) {
   $.ajax({
     url: filepath,
     success: function(result) {
       var data = JSON.parse(result);
-      callback(data);
+      callback(data, category);
     },
     error: function() {
       console.log("ERROR loading data!");
