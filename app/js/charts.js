@@ -68,6 +68,9 @@ charts.barOptions = function() {
     legend: {
       enabled: false
     },
+    tooltip: {
+      enabled: false
+    },
     series: [{}]
   };
 
@@ -122,21 +125,21 @@ charts.lineGraphOptions = function() {
 //Properties for the Y Axis of the Line Graph
 charts.lineGraphYProps = function(graphLabel) {
   var properties = {
-    color: charts.settings.TARGET_COLOR_GREEN, 
+    color: charts.settings.TARGET_COLOR_GREEN,
     value: charts.target[graphLabel],
     width: 2,
     dashStyle: 'dash',
     label: {
       text: 'Target',
       style: {
-        color: charts.settings.TARGET_COLOR_GREEN 
+        color: charts.settings.TARGET_COLOR_GREEN
       }
     }
   };
   return properties;
 };
 
-//Create a graph with passed in options 
+//Create a graph with passed in options
 charts.createChart = function(options) {
   var chart = new Highcharts.Chart(options);
 };
