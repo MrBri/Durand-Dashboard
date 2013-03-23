@@ -10,7 +10,7 @@ charts.settings = {
   WARNING_COLOR:  '#E9AA35',
   POSITIVE_COLOR:  '#206CA3',
   POINT_RADIUS: 8,
-  BAR_WIDTH: 25,
+  BAR_WIDTH: 15,
   TARGET_COLOR_GREEN: '#8DC63F'
 };
 
@@ -23,6 +23,7 @@ charts.barOptions = function() {
     chart: {
       type: 'bar',
       backgroundColor: 'transparent'
+      //height: 376 
     },
     title: {
       text: ''
@@ -30,7 +31,10 @@ charts.barOptions = function() {
     plotOptions: {
       series: {
         borderWidth: 0,
-        shadow: false
+        shadow: false,
+        pointPadding: -1,
+        groupPadding: -1,
+        pointWidth: 20
       }
     },
     xAxis: {

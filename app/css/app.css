@@ -282,6 +282,15 @@ table {
 .table-header {
 }
 
+tr {
+  border-bottom: 1px solid gray;
+}
+
+.data {
+  height: 10px;
+  overflow: visible;
+  margin-top: -28px;
+}
 .column {
   background: rgba(213,213,213,.3);
 }
