@@ -139,7 +139,22 @@ charts.drawBrandColumn = function(data, $container, colNumber) {
   var secondSeriesObj = {};
   secondSeriesObj["data"] = charts.setupBrandBarDataObj(data, "max");
   graphOptions.series.push(secondSeriesObj);
-  charts.createChart(graphOptions);
+  var chart = charts.createChart(graphOptions);
+  charts.drawMeanLine(chart, data, graphOptions);
+};
+
+charts.drawMeanLine = function(chart, data, positions) {
+  debugger;
+  chart.renderer.rect(100, 100, 100, 100, 5)
+            .attr({
+                'stroke-width': 1,
+                stroke: 'red',
+                fill: 'yellow',
+                zIndex: 3
+            })
+            .add();
+          debugger;
+
 };
 
 //Setup for incremental bar graph

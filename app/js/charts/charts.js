@@ -127,6 +127,7 @@ charts.lineGraphYProps = function(graphLabel) {
 //Create a graph with passed in options 
 charts.createChart = function(options) {
   var chart = new Highcharts.Chart(options);
+  return chart;
 };
 
 //Return the average of a passed in array
