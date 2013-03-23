@@ -26,9 +26,10 @@ charts.barOptions = function() {
     chart: {
       type: 'bar',
       backgroundColor: 'transparent',
-      //Todo: not responsive
-      //width: 100
-      //height: 376 
+      //Fix - these need to be recalculated depending
+      //on screen size.
+      width: 100,
+      height: 376
     },
     title: {
       text: ''
