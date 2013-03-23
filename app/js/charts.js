@@ -25,7 +25,9 @@ charts.barOptions = function() {
     },
     chart: {
       type: 'bar',
-      backgroundColor: 'transparent'
+      backgroundColor: 'transparent',
+      //Todo: not responsive
+      //width: 100
       //height: 376 
     },
     title: {
@@ -101,7 +103,7 @@ charts.lineGraphOptions = function() {
       'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug']
     },
     yAxis: {
-      gridLineWidth: 0,
+      gridLineWidth: 1,
       tickLength: 0,
       title: {
         text: ''
