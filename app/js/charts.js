@@ -37,7 +37,10 @@ charts.barOptions = function() {
         shadow: false,
         pointPadding: -1,
         groupPadding: -1,
-        pointWidth: 20
+        pointWidth: 20,
+        dataLabels: {
+          enabled: true
+        }
       }
     },
     xAxis: {
