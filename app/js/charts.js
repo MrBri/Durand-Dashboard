@@ -6,15 +6,18 @@ var charts = {};
 
 //Commonly used settings.
 charts.settings = {
-  NEGATIVE_COLOR:  '#D7772A',
-  WARNING_COLOR:  '#E9AA35',
-  POSITIVE_COLOR:  '#206CA3',
+  NEGATIVE_COLOR:  '#F77B00',
+  NEGATIVE_COLOR_LIGHT:  '#C35B00',
+  WARNING_COLOR:  '#FDBA30',
+  WARNING_COLOR_LIGHT:  '#E89C01',
+  POSITIVE_COLOR:  '#007ABE',
+  POSITIVE_COLOR_LIGHT:  '#006095',
   POINT_RADIUS: 8,
   BAR_WIDTH: 15,
   TARGET_COLOR_GREEN: '#8DC63F'
 };
 
-//Default options for the bar graph 
+//Default options for the bar graph
 charts.barOptions = function() {
   var defaultOptions = {
     credits: {

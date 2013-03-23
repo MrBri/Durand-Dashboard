@@ -248,24 +248,24 @@ input.calendar {
 }
 
 .plus-avg {
-  background: linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background: -o-linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background: -moz-linear-gradient(bottom, #0079bc 0%, #006196 100%);
-  background: -webkit-linear-gradient(bottom, #0079bc 0%, #006196 100%);
+  background: linear-gradient(bottom, #0079BC 0%, #006196 100%);
+  background: -o-linear-gradient(bottom, #0079BC 0%, #006196 100%);
+  background: -moz-linear-gradient(bottom, #0079BC 0%, #006196 100%);
+  background: -webkit-linear-gradient(bottom, #0079BC 0%, #006196 100%);
 }
 
 .minus-avg {
-  background: linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
-  background: -o-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
-  background: -moz-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
-  background: -webkit-linear-gradient(bottom, #fdba30 0%, #e89c01 100%);
+  background: linear-gradient(bottom, #FDBA30 0%, #E89C01 100%);
+  background: -o-linear-gradient(bottom, #FDBA30 0%, #E89C01 100%);
+  background: -moz-linear-gradient(bottom, #FDBA30 0%, #E89C01 100%);
+  background: -webkit-linear-gradient(bottom, #FDBA30 0%, #E89C01 100%);
 }
 
 .negative {
-  background: linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
-  background: -o-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
-  background: -moz-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
-  background: -webkit-linear-gradient(bottom, #f77b00 0%, #c35b00 100%);
+  background: linear-gradient(bottom, #F77B00 0%, #C35B00 100%);
+  background: -o-linear-gradient(bottom, #F77B00 0%, #C35B00 100%);
+  background: -moz-linear-gradient(bottom, #F77B00 0%, #C35B00 100%);
+  background: -webkit-linear-gradient(bottom, #F77B00 0%, #C35B00 100%);
 }
 
 .best {
