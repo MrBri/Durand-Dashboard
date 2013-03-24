@@ -38,3 +38,11 @@ twoBytwoCtrl.$inject = ['$scope', '$http'];
 function brandCtrl($scope, $http) {
 
 }
+
+function actionItemCtrl($scope) {
+    $scope.open = false;
+
+  $scope.toggleOpen = function () {
+    $scope.open = ($scope.open) ? false : true;
+  };
+}
