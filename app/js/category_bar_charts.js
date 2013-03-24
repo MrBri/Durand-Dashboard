@@ -105,25 +105,6 @@ charts.setupBarGraph = function(brands) {
   charts.drawColumn(impactData, $container, 5);
 };
 
-//setup for brand bar graphs
-charts.setupBrandBarData = function(data) {
-  var incSales  = [],
-      incVol    = [],
-      incMargin = [];
-
-  //! TODO This is prob not the right data file
-  for (var item in data) {
-    incSales.push(data[item]['IncSalesMean']);
-    incVol.push(data[item]['VolSalesMean']);
-    incMargin.push(data[item]['MarSalesMean']);
-  }
-
-  var $container =  $('.brand-sales');
-  charts.drawColumn(incSales, $container, 0);
-  charts.drawColumn(incVol, $container, 1);
-  charts.drawColumn(incMargin, $container, 2);
-};
 
 //Load data files and begin creating the bar graphs
 charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
-charts.loadDataFile('/app/data/mod_brand_data.js', charts.setupBrandBarData);
