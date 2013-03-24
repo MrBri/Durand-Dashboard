@@ -15,7 +15,6 @@ function homeCtrl ($scope, $http, $location) {
 
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
     $scope.categories = data;
-    console.log($scope.categories);
   });
 
   $scope.viewTactic = function() {

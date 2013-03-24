@@ -82,12 +82,12 @@ charts.setupLineGraph = function(data) {
   }
 
   //load graphs - only one shown for now
-  // setupGraph(sales, 'sales');
-  // setupGraph(volume, 'volume');
-  charts.setupGraph(margin, 'margin');
-  // setupGraph(profit);
-  // setupGraph(transactions);
-  // setupGraph(impact);
+  // charts.setupGraph(sales, 'sales');
+  // charts.setupGraph(volume, 'volume');
+  // charts.setupGraph(margin, 'margin');
+  // charts.setupGraph(profit, 'profit');
+  // charts.setupGraph(transactions, 'transactions');
+  charts.setupGraph(impact, 'impact');
 
 };
 
