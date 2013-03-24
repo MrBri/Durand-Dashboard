@@ -11,10 +11,18 @@ angular.module('myApp.directives', []).
   }]).
   directive('logout', function () {
     return {
-      template: '<ul class="span3 username">' +
-          '<li>John Smith</li>' +
-          '<li>|</li>' +
-          '<li>Logout</li>' +
-          '<i class="icon-play icon-white"></i></ul>'
-    }
+      template:
+          '<ul class="span3 username">' +
+            '<li>John Smith</li>' +
+            '<li> | </li>' +
+            '<li>Logout </li>' +
+            '<i class="icon-play icon-white"></i>' +
+          '</ul>'
+    };
+  }).
+  directive('subHeader', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/subHeader.html'
+    };
   });
