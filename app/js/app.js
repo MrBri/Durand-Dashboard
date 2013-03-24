@@ -8,5 +8,6 @@ angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives'])
     $routeProvider.when('/home', {templateUrl: 'partials/home.html', controller: homeCtrl});
     // $routeProvider.when('/home/:id', {templateUrl: 'partials/brand.html', controller: brandCtrl});
     $routeProvider.when('/twoBytwo', {templateUrl: 'partials/twoBytwo.html', controller: twoBytwoCtrl});
+    $routeProvider.when('/brand', {templateUrl: 'partials/brand.html', controller: brandCtrl});
     $routeProvider.otherwise({redirectTo: '/view1'});
   }]);

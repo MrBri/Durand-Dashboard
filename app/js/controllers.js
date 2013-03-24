@@ -34,3 +34,7 @@ function twoBytwoCtrl($scope, $http) {
   });
 }
 twoBytwoCtrl.$inject = ['$scope', '$http'];
+
+function brandCtrl($scope, $http) {
+
+}

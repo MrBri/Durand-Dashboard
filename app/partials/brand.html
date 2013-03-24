@@ -1,0 +1,196 @@
+<script src="js/charts.js"></script>
+<script src="js/category_time_series.js"></script>
+<script src="js/category_bar_charts.js"></script>
+
+<div class="subheader row-fluid">
+  <div class="span2 selector">
+    <p class="dropdownLabel">Department <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one ">Dry Grocery</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu" role="menu">
+        <li><a href="#">Another category</a></li>
+        <li><a href="#">Another category</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Category <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Category</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Brand <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Category</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Item <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Select one</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2 selector">
+    <p class="dropdownLabel">Item Tactic <i class="icon-chevron-right icon-white"></i></p>
+    <div class="btn-group btn-block">
+      <button class="btn select-one">Select one</button>
+      <button class="btn dropdown-toggle" data-toggle="dropdown">
+        <span class="caret"></span>
+      </button>
+      <ul class="dropdown-menu">
+        <!-- dropdown menu links -->
+      </ul>
+    </div>
+  </div>
+  <div class="span2">
+    <button class="tactic-detail" ng-click="viewTactic()">
+      <p>View by Tactic Detail</p>
+    </button>
+  </div>
+</div>
+
+<div class="container-fluid row-fluid main-content">
+  <div class="span9 content-containers">
+    <div class="row-fluid content-container-header">
+      <p class="span6">Brand</p>
+      <input class="span3 calendar" type="date">
+      <input class="span3 calendar" type="date">
+    </div>
+    <div class="row-fluid main-content-header">
+      <div class="span6 duation">
+        <span>Duration: </span>
+        <div class="btn-group">
+          <button class="btn pill pill-left">Week</button>
+          <button class="btn pill pill-right" ng-click="loadTotal()">Total</button>
+        </div>
+      </div>
+      <div class="span1 excel">
+        <i class="icon-th-large"></i>
+      </div>
+      <ul class="span4 legend">
+        <li>
+          <span>+/= avg.</span>
+          <div class="legend-bar plus-avg"></div>
+        </li>
+        <li>
+          <span>- avg.</span>
+          <div class="legend-bar minus-avg"></div>
+        </li>
+        <li>
+          <span>Negative</span>
+          <div class="legend-bar negative"></div>
+        </li>
+        <li>
+          <span>Best</span>
+          <div class="legend-bar best"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="row-fluid table-header span11">
+      <div class="span3"></div>
+      <div class="span6 upper-header"><h5>Avarage Sales &amp; Profit</h5></div>
+      <div class="span3"></div>
+      <table class="categories">
+        <tr>
+          <th class="span2"><p>Parity</p></th>
+          <th class="span1"><p># of Events</p></th>
+          <th class="column span2"><p>Incremental Sales<br/> $Thousands</p></th>
+          <th class="span2"><p>Incremental Volume<br/> $Thousands</p></th>
+          <th class="column span2"><p>Incremental Margin<br/> $Thousands</p></th>
+          <th></th>
+        </tr>
+       <tbody>
+          <tr>
+          <tr ng-repeat="category in categories">
+            <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
+            <td class="span1">{{category.numEvents}}</td>
+            <td class="span1 column">
+              <div class="data"></div>
+            </td>
+            <td class="span1">
+              <div class="data"></div>
+            </td>
+            <td class="span1 column">
+              <div class="data"></div>
+            </td>
+          </tr>
+
+          <tr>
+            <td class="row-title">Average</td>
+            <td></td>
+            <td class="average column">80</td>
+            <td class="average">80</td>
+            <td class="average column">80</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="row-fluid span11 time-series">
+      <div id="time-series"></div>
+    </div>
+  </div>
+
+
+  <div class="span3 content-containers">
+    <div class="row-fluid content-container-header">
+      <p>Action Required</p>
+    </div>
+
+    <div ng-repeat="category in catDataInc | action" ng-class="category.actionColor" class="action-item">
+      <p><span>Action: </span>Promote <span>{{category.item}}</span>
+        {{category.action}}
+      <i class="icon-chevron-down"></i></p>
+    </div>
+
+    <div ng-repeat="category in catDataInc | followUp" ng-class="category.actionColor" class="action-item follow-up">
+      <p><span>Follow Up: </span>Promote <span>{{category.item}}</span>
+        {{category.followUp}}
+      <i class="icon-chevron-up"></i></p>
+    </div>
+
+<!--     <div class="action-item green">
+      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
+      <i class="icon-chevron-down"></i>
+    </div>
+    <div class="action-item red">
+      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
+      <i class="icon-chevron-down"></i>
+    </div>
+    <div class="action-item red follow-up">
+      <p><span>Follow Up: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
+      <i class="icon-chevron-up"></i>
+    </div>
+    <div class="action-item green">
+      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
+      <i class="icon-chevron-down"></i>
+    </div>
+    <div class="action-item yellow">
+      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
+      <i class="icon-chevron-down"></i>
+    </div>
+ -->
+  </div>
+</div>
+
