@@ -63,6 +63,8 @@ charts.drawColumn = function(data, $container, colNumber) {
       dashStyle: 'line'
   }];
 
+  $('.average:eq('+colNumber+')').html(Math.round(average));
+
   //! FIX - trying to get negative numbers to attach to axis
   //var lowestValue = _.min(data);
   //var highestValue = _.max(data);
