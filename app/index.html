@@ -5,19 +5,20 @@
   <title>My AngularJS App</title>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css"/>
+
 </head>
-<body class=>
-  <div class="container row-fluid">
+<body>
+  <div class="outerContainer container row-fluid">
     <div class="span12 header">
       <div class="row-fluid">
-        <a class="span9 brand" href="#"><img src="img/durand.png"></a>
-        <!-- DISPLAY ONLY WHEN LOGGED IN: NEEDS TO BE MOVED TO PARTIAL -->
+        <a class="span9 brand" href="#"><img src="img/durand-small.png"></a>
+        <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
         <div logout></div>
         <!-- END PARTIAL -->
       </div>
     </div>
   </div>
-  <div class="container row-fluid">
+  <div class="outerContainer container row-fluid">
     <div ng-view class="span12"></div>
   </div>
   <!-- In production use:

@@ -70,42 +70,53 @@ function homeCtrl ($scope, $http, $location) {
     $http.get('/app/data/salesTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.showVolume = function() {
     $http.get('/app/data/volumeTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.showMargin = function() {
     $http.get('/app/data/marginTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.showProfit = function() {
     $http.get('/app/data/profitTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.showTrans = function() {
     $http.get('/app/data/transactionsTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.showImpact = function() {
     $http.get('/app/data/impactTimeSeries.json').success(function(data) {
       $scope.timeseries = data;
     });
-  }
+  };
 
   $scope.viewTactic = function() {
     $location.path("/twoBytwo");
   };
 
+  $scope.concat = function(itemName) {
+    if(itemName.length > 7) {
+      return(itemName.slice(0,7) + "...");
+    } else {
+      return(itemName);
+    }
+  };
+
+  $scope.loadTotal = function() {
+    console.log('loading charts');
+  };
 }
 homeCtrl.$inject = ['$scope', '$http', '$location'];
 

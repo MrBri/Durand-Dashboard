@@ -1,31 +1,40 @@
 /* app css stylesheet */
-
+/*@media (min-width: 1024px) { */
 body {
   background: #d4f0ff;
   font-family: Helvetica Neue, Helvetica;
-  margin: 0 40px;
+  margin: 0 20px;
 }
 
+.outerContainer {
+  min-width: 984px;
+}
 /* HEADER */
 
 .header {
-  padding: 1.5% 0 1.5% 0;
+  /*padding: 1.5% 0 1.5% 0;*/
+  padding-bottom: 8px;
   border-bottom: 1.5px solid #bed8e5;
   /*margin-left:0;*/
 }
 
 .brand img{
-  height:40px;
+  padding-top: 11px;
+  /*height:40px;*/
+}
+
+.logout {
+
 }
 
 .username {
   text-align: right;
-  margin-top: 15px;
+  padding-top: 1.5%;
   list-style: none;
 }
 
 .username li{
-  font-size:16px;
+  font-size:12px;
   display: inline;
   color: white;
 }
@@ -301,12 +310,15 @@ tr {
   background: rgba(213,213,213,.3);
 }
 
-.row-title {
+.row-title p{
   position: relative;
   font-size: 15px;
   font-weight: bold;
   width: 8%;
   color: #666;
+/*  text-overflow : ellipsis;
+  white-space: nowrap;*/
+
 }
 
 .best-row {
@@ -598,3 +610,5 @@ p.qSub {
 .visible {
   border: 1px solid red; 
 }
+
+/*}*/
