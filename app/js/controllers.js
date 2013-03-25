@@ -20,6 +20,7 @@ function homeCtrl ($scope, $http, $location) {
   $http.get('/app/data/category_data_inc.json').success(function(data) {
     var stringified = JSON.stringify(data);
     var colData = JSON.parse(stringified);
+
     $scope.cat_inc_sales = colData[0];
     $scope.cat_inc_vol = colData[1];
     $scope.cat_inc_margin = colData[2];
