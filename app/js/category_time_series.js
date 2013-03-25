@@ -84,7 +84,7 @@ charts.setupLineGraph = function(data) {
   //load graphs - only one shown for now
   // setupGraph(sales, 'sales');
   // setupGraph(volume, 'volume');
-  charts.setupGraph(margin, 'margin');
+  // charts.setupGraph(margin, 'margin');
   // setupGraph(profit);
   // setupGraph(transactions);
   // setupGraph(impact);
@@ -95,4 +95,4 @@ charts.setupLineGraph = function(data) {
 charts.target = {};
 
 //Load the data then create the chart
-charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);
+// charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);
