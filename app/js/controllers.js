@@ -14,8 +14,8 @@ function homeCtrl ($scope, $http, $location) {
   $scope.catDataInc = glb.categoryDataIncremental;
 
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
-    $scope.categories = data;
-    console.log($scope.categories);
+    $scope.modCatDataInc = data;
+    console.log('modeCatDataInc', $scope.modCatDataInc);
   });
 
   $scope.viewTactic = function() {

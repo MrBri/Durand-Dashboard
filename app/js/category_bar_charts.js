@@ -21,7 +21,7 @@ charts.setupBarDataObj = function(data) {
                                [1, charts.settings.NEGATIVE_COLOR]]
                          }
       // dataObj["linearGradient"] = ;
-      // dataObj["stops"] = 
+      // dataObj["stops"] =
     }
     else if (data[i] < average) {
       dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
@@ -109,4 +109,4 @@ charts.setupBarGraph = function(brands) {
 
 
 //Load data files and begin creating the bar graphs
-charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
+// charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);

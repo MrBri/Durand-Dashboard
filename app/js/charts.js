@@ -158,6 +158,7 @@ charts.loadDataFile = function(filepath, callback) {
     url: filepath,
     success: function(result) {
       var data = JSON.parse(result);
+      console.log('data from ajax', data);
       callback(data);
     },
     error: function() {

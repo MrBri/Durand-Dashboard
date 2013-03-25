@@ -1,0 +1,49 @@
+<table class="categories">
+  <tr>
+    <th class="span2"><p>Parity</p></th>
+    <th class="span1"><p># of Events</p></th>
+    <th class="column span2"><p>Incremental Sales<br/> $Thousands</p></th>
+    <th class="span2"><p>Incremental Volume<br/> $Thousands</p></th>
+    <th class="column span2"><p>Incremental Margin<br/> $Thousands</p></th>
+    <th class="span2"><p>Incremental Profit<br/> $Thousands</p></th>
+    <th class="span2 column"><p>Incremental Transactions<br/> $Thousands</p></th>
+    <th class="span2"><p>Incremental Impact<br/> $Thousands</p></th>
+    <th></th>
+  </tr>
+ <tbody>
+    <tr>
+    <tr ng-repeat="category in modCatDataInc">
+      <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
+      <td>{{category.numEvents}}</td>
+      <td class="column">
+        <div class="data"></div>
+      </td>
+      <td>
+        <div class="data"></div>
+      </td>
+      <td class="column">
+        <div class="data"></div>
+      </td>
+      <td>
+        <div class="data"></div>
+      </td>
+      <td class="column">
+        <div class="data"></div>
+      </td>
+      <td>
+        <div class="data"></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td class="row-title">Average</td>
+      <td></td>
+      <td class="average column">80</td>
+      <td class="average">80</td>
+      <td class="average column">80</td>
+      <td class="average">80</td>
+      <td class="average column">80</td>
+      <td class="average">80</td>
+    </tr>
+  </tbody>
+</table>

@@ -25,4 +25,15 @@ angular.module('myApp.directives', []).
       restrict: 'E',
       templateUrl: 'partials/subHeader.html'
     };
+  }).
+  directive('chart', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/barChart.html',
+      link: function(scope, element, attrs) {
+        scope.$watch(function() { return attrs.value; }, function(value) {
+          charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
+        });
+      }
+    };
   });
