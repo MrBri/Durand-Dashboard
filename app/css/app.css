@@ -286,10 +286,15 @@ tr {
   border-bottom: 1px solid gray;
 }
 
-.data {
+#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact {
   height: 10px;
   overflow: visible;
   margin-top: -28px;
+}
+
+#time-series {
+  height: 130px;
+  overflow: visible;
 }
 
 .column {
@@ -325,6 +330,7 @@ tr {
   font-size: 25px;
   font-weight: bold;
   color: #007abe;
+  cursor: pointer;
 }
 
 td {
