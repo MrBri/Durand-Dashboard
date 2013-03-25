@@ -113,10 +113,6 @@ function homeCtrl ($scope, $http, $location) {
       return(itemName);
     }
   };
-
-  $scope.loadTotal = function() {
-    console.log('loading charts');
-  };
 }
 homeCtrl.$inject = ['$scope', '$http', '$location'];
 
