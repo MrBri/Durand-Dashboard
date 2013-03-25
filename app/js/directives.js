@@ -36,13 +36,9 @@ angular.module('myApp.directives', []).
       link: function (scope, element, attrs) {
         var chartsDefaults = {
           chart: {
-            renderTo: element[0],
-            type: attrs.type || null,
-            height: attrs.height || null,
-            width: attrs.width || null,
+            renderTo: element[0]
           }
         };
-
        //Update when charts data changes
        scope.$watch(function() { return attrs.value; }, function(value) {
          if(!attrs.value) return;
@@ -52,7 +48,6 @@ angular.module('myApp.directives', []).
            var deepCopy = true;
            var newSettings = {};
            $.extend(deepCopy, newSettings, chartsDefaults, JSON.parse(attrs.value));
-           debugger;
            var chart = new Highcharts.Chart(newSettings);
        });
      }

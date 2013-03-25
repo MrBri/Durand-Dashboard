@@ -54,55 +54,52 @@
           <th></th>
         </tr>
        <tbody>
-          <tr>
           <tr ng-repeat="category in categories">
             <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
             <td>{{category.numEvents}}</td>
-            <td class="column">
-              <div id="bar-sales"><chart value='{{cat_inc_sales}}'></chart></div>
-            </td>
-            <td>
-              <div id="bar-vol">
+            <td class="column"></td>
+            <td></td>
+            <td class="column"></td>
+            <td></td>
+            <td class="column"></td>
+            <td></td>
+          </tr>
+          <div class="bar-charts span9" style="position:relative; left:27%; top:120px">
+              <div class="span2" id="bar-sales">
+                <chart value='{{cat_inc_sales}}'></chart>
+              </div>
+              <div class="span2" id="bar-vol">
                 <chart value='{{cat_inc_vol}}'></chart>
               </div>
-            </td>
-            <td class="column">
-              <div id="bar-margin">
+              <div class="span2" id="bar-margin">
                 <chart value='{{cat_inc_margin}}'></chart>
               </div>
-            </td>
-            <td>
-              <div id="bar-profit">
+              <div class="span2" id="bar-profit">
                 <chart value='{{cat_inc_profit}}'></chart>
               </div>
-            </td>
-            <td class="column">
-              <div id="bar-trans">
+              <div class="span2" id="bar-trans">
                 <chart value='{{cat_inc_trans}}'></chart>
               </div>
-            </td>
-            <td>
-              <div id="bar-impact">
+              <div class="span2" id="bar-impact">
                 <chart value='{{cat_inc_impact}}'></chart>
               </div>
-            </td>
-          </tr>
+          </div>
 
           <tr>
             <td class="row-title">Average</td>
             <td></td>
-            <td class="average column">80</td>
-            <td class="average">80</td>
-            <td class="average column">80</td>
-            <td class="average">80</td>
-            <td class="average column">80</td>
-            <td class="average">80</td>
+            <td class="average column" ng-click="showSales()">80</td>
+            <td class="average" ng-click="showVolume()">80</td>
+            <td class="average column" ng-click="showMargin()">80</td>
+            <td class="average" ng-click="showProfit()">80</td>
+            <td class="average column" ng-click="showTrans()">80</td>
+            <td class="average" ng-click="showImpact()">80</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <div class="row-fluid span11 time-series">
-      <div id="time-series"></div>
+    <div id="time-series" class="row-fluid span11 time-series">
+      <chart value='{{timeseries}}'></chart>
     </div>
   </div>
 

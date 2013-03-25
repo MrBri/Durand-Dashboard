@@ -292,6 +292,11 @@ tr {
   margin-top: -28px;
 }
 
+#time-series {
+  height: 130px;
+  overflow: visible;
+}
+
 .column {
   background: rgba(213,213,213,.3);
 }
@@ -325,6 +330,7 @@ tr {
   font-size: 25px;
   font-weight: bold;
   color: #007abe;
+  cursor: pointer;
 }
 
 td {
