@@ -42,6 +42,19 @@ function homeCtrl ($scope, $http, $location) {
     });
   };
 
+  $scope.loadWeek = function() {
+    $http.get('/app/data/category_data_inc.json').success(function(data) {
+      var stringified = JSON.stringify(data);
+      var colData = JSON.parse(stringified);
+      $scope.cat_inc_sales = colData[0];
+      $scope.cat_inc_vol = colData[1];
+      $scope.cat_inc_margin = colData[2];
+      $scope.cat_inc_profit = colData[3];
+      $scope.cat_inc_trans = colData[4];
+      $scope.cat_inc_impact = colData[5];
+    });
+  };
+
   $http.get('/app/data/salesTimeSeries.json').success(function(data) {
     $scope.timeseries = data;
   });
