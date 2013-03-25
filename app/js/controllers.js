@@ -2,7 +2,6 @@
 
 /* Controllers */
 
-
 function loginCtrl($scope, $location) {
   $scope.login = function() {
     $location.path("/home");
@@ -11,11 +10,18 @@ function loginCtrl($scope, $location) {
 loginCtrl.$inject = ['$scope', '$location'];
 
 function homeCtrl ($scope, $http, $location) {
-  $scope.catDataInc = glb.categoryDataIncremental;
+  // $scope.categories = glb.categoryDataIncremental;
 
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
     $scope.categories = data;
-    console.log($scope.categories);
+  });
+
+  $http.get('/app/data/mod_brand_data.js').success(function(data){
+    $scope.brands = data;
+  });
+
+  $http.get('/app/data/mod_item_data.js').success(function(data){
+    $scope.items = data;
   });
 
   $scope.viewTactic = function() {
@@ -36,7 +42,9 @@ function twoBytwoCtrl($scope, $http) {
 twoBytwoCtrl.$inject = ['$scope', '$http'];
 
 function brandCtrl($scope, $http) {
-
+  $http.get('/app/data/mod_brand_data.js').success(function(data){
+    $scope.brands = data;
+  });
 }
 
 function actionItemCtrl($scope) {

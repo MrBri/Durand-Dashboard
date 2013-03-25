@@ -106,7 +106,7 @@
       <p>Action Required</p>
     </div>
 
-    <div ng-repeat="actionItem in catDataInc | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
+    <div ng-repeat="actionItem in categories | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
       <p ng-class="{'': !open, 'action-open': open}">
         <span>Action: </span>Promote <span>{{actionItem.item}}</span><br>{{actionItem.action}}
           <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>

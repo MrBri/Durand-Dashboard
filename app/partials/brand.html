@@ -12,7 +12,7 @@
       <input class="span3 calendar" type="date">
     </div>
     <div class="row-fluid main-content-header">
-      <div class="span6 duation">
+      <div class="span6">
         <span>Duration: </span>
         <div class="btn-group">
           <button class="btn pill pill-left">Week</button>
@@ -56,9 +56,9 @@
         </tr>
        <tbody>
           <tr>
-          <tr ng-repeat="category in categories">
-            <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
-            <td class="span1">{{category.numEvents}}</td>
+          <tr ng-repeat="brand in brands">
+            <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{brand.item}}</a></td>
+            <td class="span1">{{brand.numEvents}}</td>
             <td class="span1 column">
               <div class="data"></div>
             </td>
@@ -91,13 +91,13 @@
       <p>Action Required</p>
     </div>
 
-    <div ng-repeat="category in catDataInc | action" ng-class="category.actionColor" class="action-item">
+    <div ng-repeat="category in categories | action" ng-class="category.actionColor" class="action-item">
       <p><span>Action: </span>Promote <span>{{category.item}}</span>
         {{category.action}}
       <i class="icon-chevron-down"></i></p>
     </div>
 
-    <div ng-repeat="category in catDataInc | followUp" ng-class="category.actionColor" class="action-item follow-up">
+    <div ng-repeat="category in categories | followUp" ng-class="category.actionColor" class="action-item follow-up">
       <p><span>Follow Up: </span>Promote <span>{{category.item}}</span>
         {{category.followUp}}
       <i class="icon-chevron-up"></i></p>
