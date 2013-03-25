@@ -1,13 +1,1305 @@
-[
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-sales"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":454.0046871987661,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":637.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":402.63157894736844,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":459.375,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":630,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":366.6666666666667,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":621.4285714285713,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":444.23076923076917,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":360.7142857142857,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":325,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":292.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}}]}]},
 
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-vol"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":74.05803571428571,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":120,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":18.214285714285715,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":131.25,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":82.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":43.75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":21.428571428571427,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":98.4375,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":0,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":150,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}}]}]},
-
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-margin"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":334.8822838345865,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":400,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":316.07142857142856,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":193.42105263157896,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":332.1428571428571,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":287.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":990,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":300,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":201.5625,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":225,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":103.125,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}}]}]},
-
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-profit"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":82.57224025974025,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":112.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":168.75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":20.454545454545453,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":74.99999999999999,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":82.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":43.75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":32.14285714285714,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":103.125,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":37.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":150,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}}]}]},
-
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-trans"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":357.7809065934066,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":412.5000000000001,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":98.07692307692308,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":112.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":537.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":195,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":487.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":421.875,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":145,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":1050,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":117.85714285714286,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}}]}]},
-
-{"credits":{"enabled":false},"chart":{"type":"bar","backgroundColor":"transparent","width":100,"height":376,"renderTo":"bar-impact"},"title":{"text":""},"plotOptions":{"series":{"borderWidth":0,"shadow":false,"pointPadding":-1,"groupPadding":-1,"pointWidth":20,"dataLabels":{"enabled":true}}},"xAxis":{"labels":{"enabled":false},"tickLength":0,"lineWidth":0},"yAxis":{"gridLineWidth":0,"tickLength":0,"labels":{"enabled":false},"title":{"text":""},"lineWidth":0,"plotLines":[{"color":"grey","width":1,"value":12043.180465367963,"dashStyle":"dash"},{"color":"black","width":1.5,"value":0,"dashStyle":"line"}]},"legend":{"enabled":false},"tooltip":{"enabled":false},"series":[{"data":[{"y":29025,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":945.8333333333333,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":7940.625,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":24558.333333333336,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":5343.75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":18439.28571428571,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":15797.727272727272,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#006095"],[1,"#007ABE"]]}},{"y":5837.5,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":9618.75,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}},{"y":2925,"pointWidth":15,"color":{"linearGradient":{"x1":0,"y1":0,"x2":1,"y2":0},"stops":[[0,"#E89C01"],[1,"#FDBA30"]]}}]}]}
+[{
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-sales"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 454.0046871987661,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 637,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 402,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 459,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 630,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 367,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 621,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 444,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 361,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 325,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 293,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }, {
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-vol"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 74.05803571428571,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 120,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 18,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 75,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 131,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 82,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 43,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 21,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 98,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 0,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 150,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }, {
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-margin"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 334.8822838345865,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 400,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 316,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 193,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 332,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 287,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 990,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 300,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 201,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 225,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 103,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }, {
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-profit"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 82.57224025974025,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 112,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 168,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 20,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 75,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 83,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 44,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 32,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 103,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 38,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 150,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }, {
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-trans"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 357.7809065934066,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 412,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 98,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 112,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 537,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 195,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 487,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 421,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 145,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 1050,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 117,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }, {
+        "credits": {
+            "enabled": false
+        },
+        "chart": {
+            "type": "bar",
+            "backgroundColor": "transparent",
+            "width": 100,
+            "height": 376,
+            "renderTo": "bar-impact"
+        },
+        "title": {
+            "text": ""
+        },
+        "plotOptions": {
+            "series": {
+                "borderWidth": 0,
+                "shadow": false,
+                "pointPadding": -1,
+                "groupPadding": -1,
+                "pointWidth": 20,
+                "dataLabels": {
+                    "enabled": true
+                }
+            }
+        },
+        "xAxis": {
+            "labels": {
+                "enabled": false
+            },
+            "tickLength": 0,
+            "lineWidth": 0
+        },
+        "yAxis": {
+            "gridLineWidth": 0,
+            "tickLength": 0,
+            "labels": {
+                "enabled": false
+            },
+            "title": {
+                "text": ""
+            },
+            "lineWidth": 0,
+            "plotLines": [{
+                    "color": "grey",
+                    "width": 1,
+                    "value": 12043.180465367963,
+                    "dashStyle": "dash"
+                }, {
+                    "color": "black",
+                    "width": 1.5,
+                    "value": 0,
+                    "dashStyle": "line"
+                }
+            ]
+        },
+        "legend": {
+            "enabled": false
+        },
+        "tooltip": {
+            "enabled": false
+        },
+        "series": [{
+                "data": [{
+                        "y": 29025,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 945,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 7940,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 24558,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 5343,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 18439,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 15797,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#006095"],
+                                [1, "#007ABE"]
+                            ]
+                        }
+                    }, {
+                        "y": 5837,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 9618,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }, {
+                        "y": 2925,
+                        "pointWidth": 15,
+                        "color": {
+                            "linearGradient": {
+                                "x1": 0,
+                                "y1": 0,
+                                "x2": 1,
+                                "y2": 0
+                            },
+                            "stops": [
+                                [0, "#E89C01"],
+                                [1, "#FDBA30"]
+                            ]
+                        }
+                    }
+                ]
+            }
+        ]
+    }
 ]

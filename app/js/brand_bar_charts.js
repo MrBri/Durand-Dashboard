@@ -10,7 +10,6 @@ charts.setupBrandBarDataObj = function(data, name) {
     dataObj["y"] = data[name][i];
     dataObj["pointWidth"] = charts.settings.BAR_WIDTH;
 
-    debugger;
     if (data["color"][i] === "NEGATIVE_COLOR_LIGHT") {
       dataObj["color"] = {linearGradient: { x1: 0, y1: 0, x2: 1, y2: 0 },
                          stops: [[0, charts.settings.NEGATIVE_COLOR_LIGHT],
@@ -97,7 +96,6 @@ charts.getBrandBarColor = function(data) {
      colors[i] = "NEGATIVE_COLOR_LIGHT";
    }
  }
-
  return colors;
 };
 //setup for brand bar graphs
