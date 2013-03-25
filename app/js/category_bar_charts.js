@@ -89,7 +89,6 @@ charts.setupBarGraph = function(brands) {
     if (brands[item]['id'] === null) {
       continue;
     }
-
     salesData.push(brands[item]['sales']);
     marginData.push(brands[item]['volume']);
     volumeData.push(brands[item]['margin']);
@@ -98,15 +97,17 @@ charts.setupBarGraph = function(brands) {
     impactData.push(brands[item]['impact']);
   }
 
-  var $container = $('div.data');
-  charts.drawColumn(salesData, $container, 0);
-  charts.drawColumn(volumeData, $container, 1);
-  charts.drawColumn(marginData, $container, 2);
-  charts.drawColumn(profitData, $container, 3);
-  charts.drawColumn(transactionsData, $container, 4);
-  charts.drawColumn(impactData, $container, 5);
+  setTimeout(function(){
+    var $container = $('div.data');
+    charts.drawColumn(salesData, $container, 0);
+    charts.drawColumn(volumeData, $container, 1);
+    charts.drawColumn(marginData, $container, 2);
+    charts.drawColumn(profitData, $container, 3);
+    charts.drawColumn(transactionsData, $container, 4);
+    charts.drawColumn(impactData, $container, 5);
+  }, 2000)
 };
 
 
 //Load data files and begin creating the bar graphs
-charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);
+// charts.loadDataFile('/app/data/mod_category_data_inc.js', charts.setupBarGraph);

@@ -80,14 +80,16 @@ charts.setupLineGraph = function(data) {
     transactions.push(data[item]['transactions']);
     impact.push(data[item]['impact']);
   }
+  setTimeout(function(){
+    //load graphs - only one shown for now
+    charts.setupGraph(sales, 'sales');
+    charts.setupGraph(volume, 'volume');
+    charts.setupGraph(margin, 'margin');
+    charts.setupGraph(profit, 'profit');
+    charts.setupGraph(transactions, 'transactions');
+    charts.setupGraph(impact, 'transactions');
+  }, 10)
 
-  //load graphs - only one shown for now
-  // setupGraph(sales, 'sales');
-  // setupGraph(volume, 'volume');
-  charts.setupGraph(margin, 'margin');
-  // setupGraph(profit);
-  // setupGraph(transactions);
-  // setupGraph(impact);
 
 };
 
@@ -95,4 +97,4 @@ charts.setupLineGraph = function(data) {
 charts.target = {};
 
 //Load the data then create the chart
-charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);
+// charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);

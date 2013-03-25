@@ -1,0 +1,127 @@
+{
+    "credits": {
+        "enabled": false
+    },
+    "chart": {
+        "type": "spline",
+        "backgroundColor": "transparent",
+        "renderTo": "time-series",
+        "height": 130
+    },
+    "title": {
+        "text": ""
+    },
+    "plotOptions": {
+        "series": {
+            "borderWidth": 0,
+            "shadow": false
+        }
+    },
+    "xAxis": {
+        "labels": {
+            "enabled": true
+        },
+        "tickLength": 0,
+        "categories": ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+    },
+    "yAxis": {
+        "gridLineWidth": 1,
+        "tickLength": 0,
+        "title": {
+            "text": ""
+        },
+        "plotLines": [{
+                "color": "#8DC63F",
+                "value": 70,
+                "width": 2,
+                "dashStyle": "dash",
+                "label": {
+                    "text": "Target",
+                    "style": {
+                        "color": "#8DC63F"
+                    }
+                }
+            }
+        ]
+    },
+    "legend": {
+        "enabled": false
+    },
+    "series": [{
+            "data": [{
+                    "y": 65,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#FDBA30"
+                    }
+                }, {
+                    "y": 80,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 75,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 70,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 60,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#FDBA30"
+                    }
+                }, {
+                    "y": 58,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#FDBA30"
+                    }
+                }, {
+                    "y": 65,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#FDBA30"
+                    }
+                }, {
+                    "y": 65,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#FDBA30"
+                    }
+                }, {
+                    "y": 75,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 80,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 73,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }, {
+                    "y": 75,
+                    "marker": {
+                        "radius": 8,
+                        "fillColor": "#007ABE"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -152,16 +152,16 @@ charts.getAverage = function(data) {
     }, 0) / data.length;
 };
 
-//Load data file and convert it to an object
-charts.loadDataFile = function(filepath, callback) {
-  $.ajax({
-    url: filepath,
-    success: function(result) {
-      var data = JSON.parse(result);
-      callback(data);
-    },
-    error: function() {
-      console.log("ERROR loading data!");
-    }
-  });
-};
+// //Load data file and convert it to an object
+// charts.loadDataFile = function(filepath, callback) {
+//   $.ajax({
+//     url: filepath,
+//     success: function(result) {
+//       var data = JSON.parse(result);
+//       callback(data);
+//     },
+//     error: function() {
+//       console.log("ERROR loading data!");
+//     }
+//   });
+// };

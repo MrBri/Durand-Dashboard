@@ -125,7 +125,6 @@
           <th></th>
         </tr>
        <tbody>
-          <tr>
           <tr ng-repeat="category in categories">
             <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
             <td>{{category.numEvents}}</td>
@@ -161,6 +160,11 @@
           </tr>
         </tbody>
       </table>
+    </div>
+    <div>
+      <chart value='{{basicAreaChart}}' type="spline" height="376">
+      </chart>
+        <button ng-click="updateData()">Update</button>
     </div>
     <div class="row-fluid span11 time-series">
       <div id="time-series"></div>
