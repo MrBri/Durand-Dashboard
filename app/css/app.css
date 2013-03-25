@@ -315,7 +315,8 @@ tr {
   border-bottom: 1px solid gray;
 }
 
-#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact {
+#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact,
+#brand-bar-sales, #brand-bar-vol, #brand-bar-margin {
   height: 10px;
   overflow: visible;
   /*margin-right:1px;*/
