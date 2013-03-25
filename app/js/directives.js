@@ -52,7 +52,7 @@ angular.module('myApp.directives', []).
            var deepCopy = true;
            var newSettings = {};
            $.extend(deepCopy, newSettings, chartsDefaults, JSON.parse(attrs.value));
-           debugger;
+           console.log("About to create chart");
            var chart = new Highcharts.Chart(newSettings);
        });
      }

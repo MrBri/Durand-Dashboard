@@ -54,7 +54,6 @@
           <th></th>
         </tr>
        <tbody>
-          <tr>
           <tr ng-repeat="category in categories">
             <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
             <td>{{category.numEvents}}</td>
@@ -102,7 +101,9 @@
       </table>
     </div>
     <div class="row-fluid span11 time-series">
-      <div id="time-series"></div>
+      <div id="time-series">
+        <chart value='{{cat_line_inc_mar}}'></chart>
+      </div>
     </div>
   </div>
 
