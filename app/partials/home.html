@@ -1,7 +1,3 @@
-<script src="js/charts.js"></script>
-<script src="js/category_time_series.js"></script>
-<script src="js/category_bar_charts.js"></script>
-
 <sub-header></sub-header>
 
 <div class="container-fluid row-fluid main-content">
@@ -63,22 +59,32 @@
             <td class="span3 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
             <td>{{category.numEvents}}</td>
             <td class="column">
-              <div class="data"></div>
+              <div id="bar-sales"><chart value='{{cat_inc_sales}}'></chart></div>
             </td>
             <td>
-              <div class="data"></div>
+              <div id="bar-vol">
+                <chart value='{{cat_inc_vol}}'></chart>
+              </div>
             </td>
             <td class="column">
-              <div class="data"></div>
+              <div id="bar-margin">
+                <chart value='{{cat_inc_margin}}'></chart>
+              </div>
             </td>
             <td>
-              <div class="data"></div>
+              <div id="bar-profit">
+                <chart value='{{cat_inc_profit}}'></chart>
+              </div>
             </td>
             <td class="column">
-              <div class="data"></div>
+              <div id="bar-trans">
+                <chart value='{{cat_inc_trans}}'></chart>
+              </div>
             </td>
             <td>
-              <div class="data"></div>
+              <div id="bar-impact">
+                <chart value='{{cat_inc_impact}}'></chart>
+              </div>
             </td>
           </tr>
 
