@@ -440,6 +440,7 @@ tr {
 }
 
 .average-bottom {
+  position: relative;
   background: #ddd;
   height: 12px;
   width: 100%;
@@ -447,6 +448,7 @@ tr {
 }
 
 .average-bottom-odd {
+  position: relative;
   background: #f2f2f2;
   height: 12px;
   width: 100%;
@@ -522,13 +524,14 @@ background-image: -webkit-gradient(
 
 .action-open {
   border-bottom: 1px solid #e5d6d6;
-  padding-bottom: 8pt;
+  /*padding-bottom: 8pt;*/
   margin-bottom: 0 !important;
 }
 
 .hiddenAction {
   border-top: 1px solid #fff8f8;
   padding-top: 8pt;
+  margin-bottom: 0;
 }
 
 .action-item span {
@@ -626,6 +629,7 @@ background-image: -webkit-gradient(
   -webkit-box-shadow: 0px 1px 0px rgba(56, 56, 56, 0.8);
   -moz-box-shadow:    0px 1px 0px rgba(56, 56, 56, 0.8);
   box-shadow:         0px 1px 0px rgba(56, 56, 56, 0.8);
+  /*top:40px;*/
 }
 
 /************/

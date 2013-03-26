@@ -12,7 +12,7 @@
       <div class="span6">
         <span>Duration: </span>
         <div class="btn-group">
-          <button class="btn pill pill-left">Week</button>
+          <button class="btn pill pill-left" ng-click="loadWeek()">Week</button>
           <button class="btn pill pill-right active" ng-click="loadTotal()">Total</button>
         </div>
       </div>
@@ -94,17 +94,17 @@
             <td class="average column grey" ng-click="showSales();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
               <div class="average-number">371</div>
               <div class="average-bottom">
-                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></p>
+                <span ng-show="open">
                   {{actionItem.hiddenAction}}
-                </p>
+                </span>
               </div>
             </td>
             <td class="average grey" ng-click="showVolume();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p ng-show="open">
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -113,7 +113,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p ng-show="open">
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -122,7 +122,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p ng-show="open">
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -131,7 +131,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p ng-show="open">
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -140,7 +140,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p class="hiddenAction" ng-show="open"}}>
+                <p ng-show="open">
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
