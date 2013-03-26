@@ -11,6 +11,7 @@ angular.module('myApp.filters', [])
   .filter('action', function(){
     return function(input, prop) {
       var arrayToReturn = [];
+      if (input === undefined) { return false; }
       for (var i = 0; i < input.length; i++) {
         if ( input[i].action !== "" ) {
           arrayToReturn.push(input[i]);
@@ -22,6 +23,7 @@ angular.module('myApp.filters', [])
   .filter('followUp', function() {
     return function(input) {
       var arrayToReturn = [];
+      if (input === undefined) { return false }
       for (var i = 0; i < input.length; i++) {
         if (input[i].followUp !== "") {
           arrayToReturn.push(input[i]);

@@ -139,6 +139,7 @@ function brandCtrl($scope, $http) {
 
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
+    //$scope.averages = averagesvc.calc;
   });
 }
 

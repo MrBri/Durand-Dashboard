@@ -383,6 +383,7 @@ tr {
   position: relative;
   left: 200px;
   top: 61px;
+  z-index: 1;
 }
 
 .brand-bar-charts {
