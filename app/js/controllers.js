@@ -128,7 +128,7 @@ function twoBytwoCtrl($scope, $http) {
 }
 twoBytwoCtrl.$inject = ['$scope', '$http'];
 
-function brandCtrl($scope, $http) {
+function brandCtrl($scope, $http, AverageSvc) {
   $http.get('/app/data/brand_bar.json').success(function(data){
     var stringified = JSON.stringify(data);
     var colData = JSON.parse(stringified);
@@ -139,7 +139,7 @@ function brandCtrl($scope, $http) {
 
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
-    //$scope.averages = averagesvc.calc;
+    $scope.averages = AverageSvc.calc(data);
   });
 }
 

@@ -398,12 +398,12 @@ tr {
 
 .brand-bar-charts {
   position: relative;
-  left: 100px;
+  left: 150px;
   top: -20px;
 }
 
 .brand-bar-charts:last-of-type {
-  left: 150px;
+  left: 200px;
 }
 
 #time-series {
