@@ -95,4 +95,4 @@ charts.setupLineGraph = function(data) {
 charts.target = {};
 
 //Load the data then create the chart
-charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);
+// charts.loadDataFile('/app/data/mod_category_linechart.js', charts.setupLineGraph);

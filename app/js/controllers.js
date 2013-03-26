@@ -14,9 +14,12 @@ function homeCtrl ($scope, $http, $location) {
   $scope.catDataInc = glb.categoryDataIncremental;
 
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
-    $scope.modCatDataInc = data;
-    console.log('modeCatDataInc', $scope.modCatDataInc);
+    $scope.categories = data;
   });
+
+  // $http.get("/app/data/salesTimeSeries.json").success(function(data) {
+  //   $scope.basicAreaChart = data;
+  // });
 
   $scope.viewTactic = function() {
     $location.path("/twoBytwo");
