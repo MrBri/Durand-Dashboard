@@ -7,7 +7,8 @@
       <input class="span3 calendar" type="date">
       <input class="span3 calendar" type="date">
     </div>
-    <div class="row-fluid main-content-header">
+    <div class="main-content-container">
+      <div class="row-fluid main-content-header">
       <div class="span6">
         <span>Duration: </span>
         <div class="btn-group">
@@ -57,7 +58,7 @@
         </thead>
        <tbody>
           <tr ng-repeat="category in categories">
-            <td class="span1 row-title"><a href="#" style="text-decoration:none; color: #666">{{category.item}}</a></td>
+            <td class="span1 row-title"><a href="#">{{category.item}}</a></td>
             <td class="span1">{{category.numEvents}}</td>
             <td class="span2 column"></td>
             <td class="span2"></td>
@@ -66,7 +67,7 @@
             <td class="span2 column"></td>
             <td class="span2"></td>
           </tr>
-          <div class="bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
+            <div class="bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
               <div class="span2 bar-chart" id="bar-sales">
                 <chart value='{{cat_inc_sales}}'></chart>
               </div>
@@ -86,22 +87,22 @@
                 <chart value='{{cat_inc_impact}}'></chart>
               </div>
           </div>
-
           <tr>
             <td class="row-title">Average</td>
             <td></td>
-            <td class="average column" ng-click="showSales()">80</td>
-            <td class="average" ng-click="showVolume()">80</td>
+            <td class="average column" ng-click="showSales()">371</td>
+            <td class="average avg" ng-click="showVolume()">74</td>
             <td class="average column" ng-click="showMargin()">80</td>
-            <td class="average" ng-click="showProfit()">80</td>
-            <td class="average column" ng-click="showTrans()">80</td>
-            <td class="average" ng-click="showImpact()">80</td>
+            <td class="average pos" ng-click="showProfit()">406</td>
+            <td class="average column" ng-click="showTrans()">258</td>
+            <td class="average" ng-click="showImpact()">14</td>
           </tr>
         </tbody>
       </table>
     </div>
     <div id="time-series" class="row-fluid span11 time-series">
       <chart value='{{timeseries}}'></chart>
+    </div>
     </div>
   </div>
 

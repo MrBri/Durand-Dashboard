@@ -183,6 +183,10 @@ table {
 
 /* MAIN CONTENT */
 
+.main-content-container {
+  margin-left:20px;
+}
+
 .main-content {
   margin: 20px 0;
   padding: 0px;
@@ -309,6 +313,7 @@ table {
 }
 
 .table-header {
+  margin-bottom:-10px;
 }
 
 tr {
@@ -329,7 +334,7 @@ tr {
 
 #time-series {
   height: 130px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .column {
@@ -340,15 +345,13 @@ tr {
   min-width: 150px;
 }
 
-.row-title p{
+.row-title a{
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   width: 8%;
   color: #666;
-/*  text-overflow : ellipsis;
-  white-space: nowrap;*/
-
+  text-decoration: none;
 }
 
 .best-row {
@@ -358,7 +361,7 @@ tr {
 
 .upper-header {
   border-bottom: 1px solid #ccc;
-  margin: 20px 0px 0px 4px !important;
+  margin: 20px 0px 0px 10px !important;
 }
 
 .table-header th {
@@ -373,6 +376,15 @@ tr {
   font-weight: bold;
   color: #007abe;
   cursor: pointer;
+  border: none !important;
+}
+
+.average.pos {
+  color: #F77B00;
+}
+
+.average.avg {
+  color: #FDBA30;
 }
 
 td {
