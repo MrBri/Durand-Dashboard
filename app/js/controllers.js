@@ -4,6 +4,10 @@
 
 function loginCtrl($scope, $location) {
   $scope.login = function() {
+    $location.path("/choose");
+  };
+
+  $scope.goHome = function() {
     $location.path("/home");
   };
 }
