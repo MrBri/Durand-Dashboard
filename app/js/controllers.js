@@ -16,6 +16,7 @@ loginCtrl.$inject = ['$scope', '$location'];
 function homeCtrl ($scope, $http, $location) {
   // $scope.categories = glb.categoryDataIncremental;
 
+  //Category names
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
     $scope.categories = data;
   });
