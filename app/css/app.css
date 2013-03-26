@@ -383,7 +383,16 @@ tr {
   position: relative;
   left: 200px;
   top: 61px;
-  z-index: 1;
+}
+
+.brand-bar-charts {
+  position: relative;
+  left: 100px;
+  top: -20px;
+}
+
+.brand-bar-charts:last-of-type {
+  left: 150px;
 }
 
 #time-series {
@@ -416,6 +425,11 @@ tr {
 .upper-header {
   border-bottom: 1px solid #ccc;
   margin: 20px 0px 0px 10px !important;
+}
+
+.top-border {
+  border-top: 1px solid #ccc;
+  margin: 0px 0px 20px 10px;
 }
 
 .table-header th {
