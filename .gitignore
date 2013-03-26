@@ -2,3 +2,4 @@
 assets
 .gitignore
 app/.DS_Store
+.idea/
