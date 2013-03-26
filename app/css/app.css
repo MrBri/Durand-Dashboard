@@ -106,6 +106,10 @@ body {
   font-weight: bold;
 }
 
+.dropdown-menu {
+  z-index: 10000;
+}
+
 .dropdown-toggle {
   width: 20%;
 }
@@ -257,7 +261,7 @@ input.calendar {
 
 .excel {
   margin-top:0px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-left:2px solid #ccc;
   border-right:2px solid #ccc;
 }
