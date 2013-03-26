@@ -6,8 +6,8 @@ body {
   margin: 0 2%;
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-  display: none;
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
 }
 
 .outerContainer {
@@ -266,9 +266,19 @@ body {
   padding-left: 20px;
 }
 
-input.calendar {
-  margin-top: .7%;
-  /*height: 40px;*/
+.datePicker {
+  margin-top: .6%;
+}
+.dateField {
+  width: 30%;
+}
+
+.dateBtn {
+  margin-right: 5%;
+}
+
+.ui-datepicker {
+  z-index: 9999 !important;
 }
 
 .left-container {
