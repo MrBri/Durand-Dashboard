@@ -13,7 +13,7 @@
         <span>Duration: </span>
         <div class="btn-group">
           <button class="btn pill pill-left">Week</button>
-          <button class="btn pill pill-right" ng-click="loadTotal()">Total</button>
+          <button class="btn pill pill-right active" ng-click="loadTotal()">Total</button>
         </div>
       </div>
       <div class="span1 excel">
@@ -68,7 +68,7 @@
             <td class="span2 column"></td>
             <td class="span2"></td>
           </tr>
-            <div class="bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
+            <div class="bar-charts span9">
               <div class="span2 bar-chart" id="bar-sales">
                 <chart value='{{cat_inc_sales}}'></chart>
               </div>
@@ -88,16 +88,63 @@
                 <chart value='{{cat_inc_impact}}'></chart>
               </div>
           </div>
-          <tr>
-            <td class="row-title">Average</td>
+          <tr style="border-bottom:none">
+            <td class="span1 row-title">Average</td>
             <td></td>
-            <td class="average column" ng-click="showSales()">371</td>
-            <td class="average avg" ng-click="showVolume()">74</td>
-            <td class="average column" ng-click="showMargin()">80</td>
-            <td class="average pos" ng-click="showProfit()">406</td>
-            <td class="average column" ng-click="showTrans()">258</td>
-            <td class="average" ng-click="showImpact()">14</td>
-          </tr>
+            <td class="average column grey" ng-click="showSales();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>
+            <td class="average grey" ng-click="showVolume();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom-odd">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>
+            <td class="average column grey" ng-click="showMargin();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>
+            <td class="average grey" ng-click="showProfit();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom-odd">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>
+            <td class="average column grey" ng-click="showTrans();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>
+            <td class="average grey" ng-click="showImpact();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
+              <div class="average-number">371</div>
+              <div class="average-bottom-odd">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
+                  {{actionItem.hiddenAction}}
+                </p>
+              </div>
+            </td>          </tr>
         </tbody>
       </table>
     </div>
