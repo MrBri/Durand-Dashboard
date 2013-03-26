@@ -4,6 +4,10 @@
 
 function loginCtrl($scope, $location) {
   $scope.login = function() {
+    $location.path("/choose");
+  };
+
+  $scope.goHome = function() {
     $location.path("/home");
   };
 }
@@ -130,6 +134,10 @@ function brandCtrl($scope, $http) {
     $scope.brand_sales = colData[0];
     $scope.brand_vol = colData[1];
     $scope.brand_margin = colData[2]; 
+  });
+
+  $http.get('/app/data/mod_brand_data.js').success(function(data) {
+    $scope.brands = data;
   });
 }
 

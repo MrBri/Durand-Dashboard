@@ -1,8 +1,8 @@
 <sub-header></sub-header>
 
 <div class="container-fluid row-fluid main-content">
-  <div class="span9 content-containers">
-    <div class="row-fluid content-container-header">
+  <div class="span9 main-container">
+    <div class="row-fluid main-container-header">
       <p class="span6">Brand</p>
       <input class="span3 calendar" type="date">
       <input class="span3 calendar" type="date">
@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="span1 excel">
-        <i class="icon-th-large"></i>
+        <img src="img/xl-icon32.png" alt="excel export" />
       </div>
       <ul class="span4 legend">
         <li>
@@ -46,9 +46,9 @@
           <tr>
             <th class="span1"><p>Parity</p></th>
             <th class="span1"><p># of Events</p></th>
-            <th class="column span2"><p>Incremental Sales<br/> $Thousands</p></th>
-            <th class="span2"><p>Incremental Volume<br/> $Thousands</p></th>
-            <th class="column span2"><p>Incremental Margin<br/> $Thousands</p></th>
+            <th class="column span3"><p>Incremental Sales<br/> $Thousands</p></th>
+            <th class="span3"><p>Incremental Volume<br/> $Thousands</p></th>
+            <th class="column span3"><p>Incremental Margin<br/> $Thousands</p></th>
             <th></th>
           </tr>
         </thead>
@@ -67,13 +67,13 @@
             </td>
           </tr>
           <div class="bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
-              <div class="span2 bar-chart" id="brand-bar-sales">
+              <div class="span3 bar-chart" id="brand-bar-sales">
                 <chart value='{{brand_sales}}'></chart>
               </div>
-              <div class="span2 bar-chart" id="brand-bar-vol">
+              <div class="span3 bar-chart" id="brand-bar-vol">
                 <chart value='{{brand_vol}}'></chart>
               </div>
-              <div class="span2 bar-chart" id="brand-bar-margin">
+              <div class="span3 bar-chart" id="brand-bar-margin">
                 <chart value='{{brand_margin}}'></chart>
               </div>
           </div>
@@ -93,8 +93,8 @@
   </div>
 
 
-  <div class="span3 content-containers">
-    <div class="row-fluid content-container-header">
+  <div class="span3 main-container">
+    <div class="row-fluid main-container-header">
       <p>Action Required</p>
     </div>
 
@@ -110,27 +110,7 @@
       <i class="icon-chevron-up"></i></p>
     </div>
 
-<!--     <div class="action-item green">
-      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
-      <i class="icon-chevron-down"></i>
-    </div>
-    <div class="action-item red">
-      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
-      <i class="icon-chevron-down"></i>
-    </div>
-    <div class="action-item red follow-up">
-      <p><span>Follow Up: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
-      <i class="icon-chevron-up"></i>
-    </div>
-    <div class="action-item green">
-      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
-      <i class="icon-chevron-down"></i>
-    </div>
-    <div class="action-item yellow">
-      <p><span>Action: </span>Promote <span>Category 3 </span>more often given high performance and low numbers of promotional events</p>
-      <i class="icon-chevron-down"></i>
-    </div>
- -->
+
   </div>
 </div>
 
