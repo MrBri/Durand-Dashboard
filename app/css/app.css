@@ -55,7 +55,7 @@ body {
   box-shadow: inset 1px 1px 1px 0px #999;
 }
 
-.sign-in, .choose {
+.sign-in {
   margin-top: 25%;
 }
 
@@ -91,6 +91,7 @@ body {
 /* CHOOSE BUTTONS */
 
 .choose {
+  margin-top: 15%;
   font-size: 20px;
   color: #fff;
   text-shadow:
