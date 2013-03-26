@@ -124,8 +124,12 @@ function twoBytwoCtrl($scope, $http) {
 twoBytwoCtrl.$inject = ['$scope', '$http'];
 
 function brandCtrl($scope, $http) {
-  $http.get('/app/data/mod_brand_data.js').success(function(data){
-    $scope.brands = data;
+  $http.get('/app/data/brand_bar.json').success(function(data){
+    var stringified = JSON.stringify(data);
+    var colData = JSON.parse(stringified);
+    $scope.brand_sales = colData[0];
+    $scope.brand_vol = colData[1];
+    $scope.brand_margin = colData[2]; 
   });
 }
 

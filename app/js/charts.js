@@ -41,9 +41,6 @@ charts.barOptions = function() {
         pointPadding: -1,
         groupPadding: -1,
         pointWidth: 20,
-        dataLabels: {
-          enabled: true
-        }
       }
     },
     xAxis: {
