@@ -131,6 +131,10 @@ function brandCtrl($scope, $http) {
     $scope.brand_vol = colData[1];
     $scope.brand_margin = colData[2]; 
   });
+
+  $http.get('/app/data/mod_brand_data.js').success(function(data) {
+    $scope.brands = data;
+  });
 }
 
 function actionItemCtrl($scope) {
