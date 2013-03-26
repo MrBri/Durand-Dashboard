@@ -33,7 +33,7 @@
         },
         "plotLines": [{
                 "color": "#8DC63F",
-                "value": 30,
+                "value": 1100,
                 "width": 2,
                 "dashStyle": "dash",
                 "label": {
@@ -53,19 +53,19 @@
                     "y": 602,
                     "marker": {
                         "radius": 8,
-                        "fillColor": "#007ABE"
+                        "fillColor": "#FDBA30"
                     }
                 }, {
                     "y": 550,
                     "marker": {
                         "radius": 8,
-                        "fillColor": "#007ABE"
+                        "fillColor": "#FDBA30"
                     }
                 }, {
                     "y": 755,
                     "marker": {
                         "radius": 8,
-                        "fillColor": "#007ABE"
+                        "fillColor": "#FDBA30"
                     }
                 }, {
                     "y": 1220,
@@ -89,7 +89,7 @@
                     "y": 985,
                     "marker": {
                         "radius": 8,
-                        "fillColor": "#007ABE"
+                        "fillColor": "#FDBA30"
                     }
                 }, {
                     "y": 1307,

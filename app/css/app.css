@@ -6,9 +6,14 @@ body {
   margin: 0 2%;
 }
 
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
+}
+
 .outerContainer {
   min-width: 984px;
 }
+
 /* HEADER */
 
 .header {
@@ -149,6 +154,10 @@ body {
   font-weight: bold;
 }
 
+.dropdown-menu {
+  z-index: 10000;
+}
+
 .dropdown-toggle {
   width: 20%;
 }
@@ -210,7 +219,7 @@ body {
 
 .tactic-detail:hover {
   border-top-color: #4987df;
-  background: #4987df;
+  /*background: #4987df;*/
   color: #ccc;
 }
 
@@ -226,12 +235,16 @@ body {
 
 /* MAIN CONTENT */
 
+.main-content-container {
+  margin-left:20px;
+}
+
 .main-content {
-  margin: 20px 0;
+  margin: 1% 0;
   padding: 0px;
 }
 
-.action-lists {
+.main-container {
   background: white;
   height: 800px;
   border-radius: 10px;
@@ -241,23 +254,23 @@ body {
   border:1px solid rgba(116, 179, 233, 0.8);
 }
 
-.action-list-header {
+.main-container-header {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   background: #e1e1e1;
-  height: 60px;
+  height: 40px;
   color: #464646;
 }
 
-.action-list-header p {
-  font-size: 25px;
+.main-container-header p {
+  font-size: 18px;
   text-shadow: rgba(0,0,0,.4) -1px 0px 0;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 20px;
 }
 
 input.calendar {
-  margin-top: 10px;
+  margin-top: .7%;
   /*height: 40px;*/
 }
 
@@ -267,7 +280,7 @@ input.calendar {
 /* Main-content Header */
 
 .main-content-header {
-  margin: 20px 20px 0 20px;
+  margin: 20px 20px -30px 20px;
   height: 50px;
 }
 
@@ -296,7 +309,7 @@ input.calendar {
 
 .excel {
   margin-top:0px;
-  padding: 0 20px;
+  padding: 0 10px;
   border-left:2px solid #ccc;
   border-right:2px solid #ccc;
 }
@@ -349,39 +362,51 @@ input.calendar {
 table {
   border-top: none;
   color: #666;
+  position: relative;
+  top: -31px;
 }
 
 .table-header {
+  margin-bottom:-10px;
 }
 
 tr {
   border-bottom: 1px solid gray;
 }
 
-#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact {
+#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact,
+#brand-bar-sales, #brand-bar-vol, #brand-bar-margin {
   height: 10px;
   overflow: visible;
-  margin-top: -28px;
+  /*margin-right:1px;*/
+  /*margin-top: -28px;*/
+}
+
+.bar-chart {
+  /*width:100px;*/
+  padding-right:5px !important;
 }
 
 #time-series {
   height: 130px;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .column {
   background: rgba(213,213,213,.3);
 }
 
-.row-title p{
+.row-title {
+  min-width: 150px;
+}
+
+.row-title a{
   position: relative;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   width: 8%;
   color: #666;
-/*  text-overflow : ellipsis;
-  white-space: nowrap;*/
-
+  text-decoration: none;
 }
 
 .best-row {
@@ -390,8 +415,8 @@ tr {
 }
 
 .upper-header {
-  /*border-bottom: 1px solid #ccc;*/
-  margin-bottom: -8px;
+  border-bottom: 1px solid #ccc;
+  margin: 20px 0px 0px 10px !important;
 }
 
 .table-header th {
@@ -406,6 +431,15 @@ tr {
   font-weight: bold;
   color: #007abe;
   cursor: pointer;
+  border: none !important;
+}
+
+.average.pos {
+  color: #F77B00;
+}
+
+.average.avg {
+  color: #FDBA30;
 }
 
 td {
@@ -428,6 +462,34 @@ td {
 }
 
 /* RIGHT BAR */
+
+.numActions {
+  float: right;
+  padding: 0 9px;
+  margin-right: 10%;
+  margin-top: -2%;
+  background: #e80a15; /* Old browsers */
+  background: linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -o-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -moz-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -webkit-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -ms-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+
+background-image: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0, rgb(246,155,160)),
+  color-stop(0.65, rgb(232,10,21)),
+  color-stop(1, rgb(208,4,7))
+);
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 2px 0 #777;
+  -moz-box-shadow: 0 2px 2px 0 #777;
+  box-shadow: 0 2px 2px 0 #777;
+}
 
 .action-item {
   margin: 12px 10px;
@@ -667,6 +729,7 @@ p.qSub {
   background: -ms-linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* IE10+ */
   background: linear-gradient(45deg, #c15a00 0%,#f77b00 100%); /* W3C */
 }
+
 
 
 /* DEBUGGING */
