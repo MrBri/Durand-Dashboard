@@ -1,14 +1,18 @@
+<script src="js/charts.js"></script>
+<script src="js/category_time_series.js"></script>
+<script src="js/category_bar_charts.js"></script>
+
 <sub-header></sub-header>
 
 <div class="container-fluid row-fluid main-content">
   <div class="span9 main-container">
-    <div ng-controller="dateCtrl" class="row-fluid main-container-header">
+    <div  class="row-fluid main-container-header">
       <p class="span6">Category</p>
       <div class="control-group input-append span6 datePicker">
-        <input type="text" class="dateField" ng-model="datepicker.date" data-date-format="dd/mm/yyyy" bs-datepicker>
+        <input type="text" class="dateField" ng-model="datepicker.fromDate" data-date-format="dd/mm/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
         
-        <input type="text" class="dateField" ng-model="datepicker.date" data-date-format="dd/mm/yyyy" bs-datepicker>
+        <input type="text" class="dateField" ng-model="datepicker.toDate" data-date-format="dd/mm/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
         <!-- </div> -->
       </div>
@@ -18,8 +22,8 @@
       <div class="row-fluid main-content-header">
       <div class="span6">
         <span>Duration: </span>
-        <div class="btn-group" data-toggle="buttons-radio">
-          <button class="btn pill pill-left" ng-click="loadWeek()">Week</button>
+        <div class="btn-group">
+          <button class="btn pill pill-left">Week</button>
           <button class="btn pill pill-right active" ng-click="loadTotal()">Total</button>
         </div>
       </div>
@@ -47,19 +51,19 @@
     </div>
     <div class="row-fluid table-header span11">
       <div class="span3"></div>
-      <div class="span6 upper-header">Average Sales &amp; Profit</div>
-      <div class="span3 upper-header">Average Traffic &amp; Basket</div>
+      <div class="span6 upper-header">Avarage Sales &amp; Profit</div>
+      <div class="span3 upper-header">Avarage Traffic &amp; Basket</div>
       <table class="categories">
         <thead>
           <tr>
             <th class="span1"><p>Parity</p></th>
             <th class="span1"><p># of Events</p></th>
-            <th class="column span2 top-border"><p>Incremental <br/>Sales<br/> $Thousands</p></th>
-            <th class="span2 top-border"><p>Incremental <br/>Volume<br/> $Thousands</p></th>
-            <th class="column span2 top-border"><p>Incremental <br/>Margin<br/> $Thousands</p></th>
-            <th class="span2 top-border"><p>Incremental <br/>Profit<br/> $Thousands</p></th>
-            <th class="span2 column top-border"><p>Incremental <br/>Transactions<br/> $Thousands</p></th>
-            <th class="span2 top-border"><p>Incremental <br/>Impact<br/> $Thousands</p></th>
+            <th class="column span2"><p>Incremental <br/>Sales<br/> $Thousands</p></th>
+            <th class="span2"><p>Incremental <br/>Volume<br/> $Thousands</p></th>
+            <th class="column span2"><p>Incremental <br/>Margin<br/> $Thousands</p></th>
+            <th class="span2"><p>Incremental <br/>Profit<br/> $Thousands</p></th>
+            <th class="span2 column"><p>Incremental <br/>Transactions<br/> $Thousands</p></th>
+            <th class="span2"><p>Incremental <br/>Impact<br/> $Thousands</p></th>
             <th></th>
           </tr>
         </thead>
@@ -101,17 +105,17 @@
             <td class="average column grey" ng-click="showSales();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
               <div class="average-number">371</div>
               <div class="average-bottom">
-                <p class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></p>
-                <span ng-show="open">
+                <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
-                </span>
+                </p>
               </div>
             </td>
             <td class="average grey" ng-click="showVolume();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p ng-show="open">
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -120,7 +124,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p ng-show="open">
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -129,7 +133,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p ng-show="open">
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -138,7 +142,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p ng-show="open">
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -147,7 +151,7 @@
               <div class="average-number">371</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-                <p ng-show="open">
+                <p class="hiddenAction" ng-show="open"}}>
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
@@ -155,9 +159,9 @@
         </tbody>
       </table>
     </div>
-      <div id="time-series" class="row-fluid span11 time-series">
-          <chart value='{{timeseries}}'></chart>
-      </div>
+    <div class="row-fluid span11 time-series">
+      <div id="time-series"></div>
+    </div>
     </div>
   </div>
 

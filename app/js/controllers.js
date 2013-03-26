@@ -118,6 +118,14 @@ function homeCtrl ($scope, $http, $location) {
       return(itemName);
     }
   };
+
+  var fromDate = new Date();
+  fromDate.setMonth(fromDate.getMonth() - 1);
+
+  $scope.datepicker = {
+    "fromDate": fromDate,
+    "toDate": Date()
+  };
 }
 homeCtrl.$inject = ['$scope', '$http', '$location'];
 

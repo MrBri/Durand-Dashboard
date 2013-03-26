@@ -53,7 +53,7 @@ angular.module('myApp.directives', []).
      }
    }
   })
-  .directive('bsDatepicker', ['$timeout', '$strap.config', function($timeout, config) {
+  .directive('bsDatepicker', ['$timeout', function($timeout, config) {
   'use strict';
 
   var isTouch = 'ontouchstart' in window && !window.navigator.userAgent.match(/PhantomJS/i);
