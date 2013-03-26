@@ -28,10 +28,6 @@ table {
   /*height:40px;*/
 }
 
-.logout {
-
-}
-
 .username {
   text-align: right;
   padding-top: 1.5%;
@@ -317,7 +313,7 @@ table {
 }
 
 tr {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid #ccc;
 }
 
 #bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact,
@@ -328,9 +324,11 @@ tr {
   /*margin-top: -28px;*/
 }
 
-.bar-chart {
-  /*width:100px;*/
-  padding-right:5px !important;
+.bar-charts {
+  position: relative;
+  left: 200px;
+  top: 61px;
+  z-index: 1;
 }
 
 #time-series {
@@ -372,12 +370,32 @@ tr {
 }
 
 .average {
+  position: relative;
   text-align: center !important;
   font-size: 25px;
   font-weight: bold;
   color: #007abe;
   cursor: pointer;
   border: none !important;
+  padding: 0;
+}
+
+.average-number {
+  padding: 8px;
+}
+
+.average-bottom {
+  background: #ddd;
+  height: 12px;
+  width: 100%;
+  border-top: 1px solid #ccc;
+}
+
+.average-bottom-odd {
+  background: #f2f2f2;
+  height: 12px;
+  width: 100%;
+  border-top: 1px solid #ccc;
 }
 
 .average.pos {
@@ -389,13 +407,13 @@ tr {
 }
 
 td {
-  padding: 7px !important;
+  padding: 7px;
 }
 
 /* TIME SERIES*/
 
 .time-series {
-  margin-top: -5px;
+  margin-top: -21px;
   height: 130px;
   background: #ebebeb;
   -moz-border-radius: 8px;
@@ -413,7 +431,6 @@ td {
   margin: 12px 10px;
   padding: 10px 34px 10px 10px;
   border-radius: 10px;
-  /*position: relative;*/
 }
 
 .action-item p {
@@ -458,6 +475,18 @@ td {
   position: absolute;
   right: -10%;
   top: 50%;
+  cursor:pointer;
+}
+
+.grey-arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  position: absolute;
+  left: 45%;
+  cursor:pointer;
+  margin-top:4px;
 }
 
 .red .arrow-down {
@@ -500,6 +529,20 @@ td {
   -webkit-box-shadow: 0px 1px 0px rgba(56, 100, 44, 0.5);
   -moz-box-shadow:    0px 1px 0px rgba(56, 100, 44, 0.5);
   box-shadow:         0px 1px 0px rgba(56, 100, 44, 0.5);
+}
+
+.grey .arrow-down {
+  border-top: 6px solid #bbb;
+  -webkit-box-shadow: 0px -1px 0px rgba(56, 56, 56, 0.8);
+  -moz-box-shadow:    0px -1px 0px rgba(56, 56, 56, 0.8);
+  box-shadow:         0px -1px 0px rgba(56, 56, 56, 0.8);
+}
+
+.grey .arrow-up {
+  border-bottom: 6px solid #bbb;
+  -webkit-box-shadow: 0px 1px 0px rgba(56, 56, 56, 0.8);
+  -moz-box-shadow:    0px 1px 0px rgba(56, 56, 56, 0.8);
+  box-shadow:         0px 1px 0px rgba(56, 56, 56, 0.8);
 }
 
 /************/
