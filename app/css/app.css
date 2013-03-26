@@ -6,14 +6,14 @@ body {
   margin: 0 2%;
 }
 
-table {
-  position: relative;
-  top: -31px;
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none;
 }
 
 .outerContainer {
   min-width: 984px;
 }
+
 /* HEADER */
 
 .header {
@@ -167,7 +167,7 @@ table {
 
 .tactic-detail:hover {
   border-top-color: #4987df;
-  background: #4987df;
+  /*background: #4987df;*/
   color: #ccc;
 }
 
@@ -188,11 +188,11 @@ table {
 }
 
 .main-content {
-  margin: 20px 0;
+  margin: 1% 0;
   padding: 0px;
 }
 
-.action-lists {
+.main-container {
   background: white;
   height: 800px;
   border-radius: 10px;
@@ -202,23 +202,23 @@ table {
   border:1px solid rgba(116, 179, 233, 0.8);
 }
 
-.action-list-header {
+.main-container-header {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   background: #e1e1e1;
-  height: 60px;
+  height: 40px;
   color: #464646;
 }
 
-.action-list-header p {
-  font-size: 25px;
+.main-container-header p {
+  font-size: 18px;
   text-shadow: rgba(0,0,0,.4) -1px 0px 0;
-  margin-top: 20px;
+  margin-top: 10px;
   padding-left: 20px;
 }
 
 input.calendar {
-  margin-top: 10px;
+  margin-top: .7%;
   /*height: 40px;*/
 }
 
@@ -310,6 +310,8 @@ input.calendar {
 table {
   border-top: none;
   color: #666;
+  position: relative;
+  top: -31px;
 }
 
 .table-header {
@@ -408,6 +410,34 @@ td {
 }
 
 /* RIGHT BAR */
+
+.numActions {
+  float: right;
+  padding: 0 9px;
+  margin-right: 10%;
+  margin-top: -2%;
+  background: #e80a15; /* Old browsers */
+  background: linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -o-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -moz-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -webkit-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+  background: -ms-linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
+
+background-image: -webkit-gradient(
+  linear,
+  left top,
+  left bottom,
+  color-stop(0, rgb(246,155,160)),
+  color-stop(0.65, rgb(232,10,21)),
+  color-stop(1, rgb(208,4,7))
+);
+  color: white;
+  border: 2px solid white;
+  border-radius: 20px;
+  -webkit-box-shadow: 0 2px 2px 0 #777;
+  -moz-box-shadow: 0 2px 2px 0 #777;
+  box-shadow: 0 2px 2px 0 #777;
+}
 
 .action-item {
   margin: 12px 10px;

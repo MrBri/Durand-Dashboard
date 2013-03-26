@@ -1,8 +1,12 @@
+<script src="js/charts.js"></script>
+<script src="js/category_time_series.js"></script>
+<script src="js/category_bar_charts.js"></script>
+
 <sub-header></sub-header>
 
 <div class="container-fluid row-fluid main-content">
-  <div class="span9 action-lists">
-    <div class="row-fluid action-list-header">
+  <div class="span9 main-container">
+    <div class="row-fluid main-container-header">
       <p class="span6">Category</p>
       <input class="span3 calendar" type="date">
       <input class="span3 calendar" type="date">
@@ -12,7 +16,7 @@
       <div class="span6">
         <span>Duration: </span>
         <div class="btn-group">
-          <button class="btn pill pill-left" ng-click="loadWeek()">Week</button>
+          <button class="btn pill pill-left">Week</button>
           <button class="btn pill pill-right" ng-click="loadTotal()">Total</button>
         </div>
       </div>
@@ -57,8 +61,9 @@
           </tr>
         </thead>
        <tbody>
+          <tr>
           <tr ng-repeat="category in categories">
-            <td class="span1 row-title"><a href="#">{{category.item}}</a></td>
+            <td class="span1 row-title"><a href="#">{{concat(category.item)}}</a></td>
             <td class="span1">{{category.numEvents}}</td>
             <td class="span2 column"></td>
             <td class="span2"></td>
@@ -100,16 +105,16 @@
         </tbody>
       </table>
     </div>
-    <div id="time-series" class="row-fluid span11 time-series">
-      <chart value='{{timeseries}}'></chart>
+    <div class="row-fluid span11 time-series">
+      <div id="time-series"></div>
     </div>
     </div>
   </div>
 
 
-  <div class="span3 action-lists">
-    <div class="row-fluid action-list-header">
-      <p>Action Required</p>
+  <div class="span3 main-container">
+    <div class="row-fluid main-container-header">
+      <p ng-cloak>Action Required<span ng-cloak class="numActions">{{(categories|followUp).length + (categories|action).length}}</span></p>
     </div>
 
     <div ng-repeat="actionItem in categories | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
@@ -122,7 +127,7 @@
       </p>
     </div>
 
-    <div ng-repeat="followUpItem in catDataInc | followUp" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
+    <div ng-repeat="followUpItem in categories | followUp" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
       <p>
         <span>Follow Up: </span>Promote <span>{{followUpItem.item}}</span><br>{{followUpItem.followUp}}
         <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
