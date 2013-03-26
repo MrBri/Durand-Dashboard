@@ -13,7 +13,7 @@ function loginCtrl($scope, $location) {
 }
 loginCtrl.$inject = ['$scope', '$location'];
 
-function homeCtrl ($scope, $http, $location) {
+function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
   // $scope.categories = glb.categoryDataIncremental;
 
   //Category names
@@ -27,6 +27,11 @@ function homeCtrl ($scope, $http, $location) {
 
   $http.get('/app/data/mod_item_data.js').success(function(data){
     $scope.items = data;
+  });
+
+  $http.get('/app/data/mod_category_data_total.js').success(function(data) {
+    console.log("Calling CatAvgSvc");
+    $scope.total_avg = CategoryAvgSvc.calc(data);
   });
 
   $http.get('/app/data/category_data_inc.json').success(function(data) {
@@ -127,7 +132,9 @@ function homeCtrl ($scope, $http, $location) {
     "toDate": Date()
   };
 }
-homeCtrl.$inject = ['$scope', '$http', '$location'];
+
+//FIX - commenting this out for now since it breaks the CategoryAvgSvc
+//homeCtrl.$inject = ['$scope', '$http', 'CategoryAvgSvc', '$location'];
 
 function twoBytwoCtrl($scope, $http) {
   $http.get('data/twoBytwoData.js').success(function(data){
