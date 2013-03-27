@@ -99,7 +99,7 @@
             <td class="span1 row-title">Average</td>
             <td></td>
             <td class="average column grey" ng-click="showSales();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_sales}}</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>
@@ -108,7 +108,7 @@
               </div>
             </td>
             <td class="average grey" ng-click="showVolume();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_vol}}</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>
@@ -117,7 +117,7 @@
               </div>
             </td>
             <td class="average column grey" ng-click="showMargin();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_margin}}</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>
@@ -126,7 +126,7 @@
               </div>
             </td>
             <td class="average grey" ng-click="showProfit();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_profit}}</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>
@@ -135,7 +135,7 @@
               </div>
             </td>
             <td class="average column grey" ng-click="showTrans();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_trans}}</div>
               <div class="average-bottom">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>
@@ -144,7 +144,7 @@
               </div>
             </td>
             <td class="average grey" ng-click="showImpact();toggleOpen()" ng-controller="actionItemCtrl" ng-class="{'': !open, 'action-open': open}">
-              <div class="average-number">371</div>
+              <div class="average-number">{{avg_tot_impact}}</div>
               <div class="average-bottom-odd">
                 <span class="grey-arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
                 <p class="hiddenAction" ng-show="open"}}>

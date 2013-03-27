@@ -178,42 +178,6 @@
       "actionColor" : null,
       "disabled" : true,
       "ActionOrder" : null
-    },
-    {
-      "id" : null,
-      "item" : null,
-      "numEvents" : null,
-      "sales" : null,
-      "volume" : null,
-      "margin" : null,
-      "profit" : null,
-      "transactions" : null,
-      "impact" : null,
-      "isBest" : null,
-      "followUp" : null,
-      "action" : null,
-      "hiddenAction" : null,
-      "actionColor" : null,
-      "disabled" : null,
-      "ActionOrder" : null
-    },
-    {
-      "id" : null,
-      "item" : null,
-      "numEvents" : null,
-      "sales" : null,
-      "volume" : null,
-      "margin" : null,
-      "profit" : null,
-      "transactions" : null,
-      "impact" : null,
-      "isBest" : null,
-      "followUp" : null,
-      "action" : null,
-      "hiddenAction" : null,
-      "actionColor" : null,
-      "disabled" : null,
-      "ActionOrder" : null
     }
   ]
 
