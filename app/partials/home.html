@@ -1,69 +1,75 @@
+<!-- ROW OF SELECTORS -->
 <sub-header></sub-header>
 
-<div class="container-fluid row-fluid main-content">
+<div class="container main-content row">
+  <!-- BEGIN MAIN CONTENT AREA -->
   <div class="span9 main-container">
+
     <div  class="row-fluid main-container-header">
       <p class="span6">Category</p>
       <div class="control-group input-append span6 datePicker">
-        <input type="text" class="dateField" ng-model="datepicker.fromDate" data-date-format="dd/mm/yyyy" bs-datepicker>
+        
+        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
 
-        <input type="text" class="dateField" ng-model="datepicker.toDate" data-date-format="dd/mm/yyyy" bs-datepicker>
+        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-        <!-- </div> -->
+
       </div>
-
     </div>
-    <div class="main-content-container">
-      <div class="row-fluid main-content-header">
-      <div class="span6">
-        <span>Duration: </span>
-        <div class="btn-group" data-toggle="buttons-radio">
-          <button class="btn pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
-          <button class="btn pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
+
+    <div class="row-fluid">
+
+      <div class="span8">
+        <span class="durationLabel">Duration: </span>
+        <div class="btn-group durationBtns" data-toggle="buttons-radio">
+          <button class="btn btn-mini pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
+          <button class="btn btn-mini pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
         </div>
       </div>
-      <div class="span1 excel">
-        <img src="img/xl-icon32.png" alt="excel export" />
+
+      <div class="span4">
+        <img class="excel" src="img/excel-icon-small.jpg" alt="export to excel" />
+        <ul class="legend">
+          <li>
+            <span>+/= avg.</span>
+            <div class="legend-bar plus-avg"></div>
+          </li>
+          <li>
+            <span>- avg.</span>
+            <div class="legend-bar minus-avg"></div>
+          </li>
+          <li>
+            <span>Negative</span>
+            <div class="legend-bar negative"></div>
+          </li>
+          <li>
+            <span>Best</span>
+            <div class="legend-bar best"></div>
+          </li>
+        </ul>
       </div>
-      <ul class="span4 legend">
-        <li>
-          <span>+/= avg.</span>
-          <div class="legend-bar plus-avg"></div>
-        </li>
-        <li>
-          <span>- avg.</span>
-          <div class="legend-bar minus-avg"></div>
-        </li>
-        <li>
-          <span>Negative</span>
-          <div class="legend-bar negative"></div>
-        </li>
-        <li>
-          <span>Best</span>
-          <div class="legend-bar best"></div>
-        </li>
-      </ul>
     </div>
+
     <div class="row-fluid table-header span11">
       <div class="span3"></div>
-      <div class="span6 upper-header">Avarage Sales &amp; Profit</div>
-      <div class="span3 upper-header">Avarage Traffic &amp; Basket</div>
-      <table class="categories">
+      <div class="span6 upper-header">Average Sales &amp; Profit</div>
+      <div class="span3 upper-header">Average Traffic &amp; Basket</div>
+      <table class="main-table">
         <thead>
           <tr>
             <th class="span1"><p>Parity</p></th>
             <th class="span1"><p># of Events</p></th>
-            <th class="column span2"><p>Incremental <br/>Sales<br/> $Thousands</p></th>
-            <th class="span2"><p>Incremental <br/>Volume<br/> $Thousands</p></th>
-            <th class="column span2"><p>Incremental <br/>Margin<br/> $Thousands</p></th>
-            <th class="span2"><p>Incremental <br/>Profit<br/> $Thousands</p></th>
-            <th class="span2 column"><p>Incremental <br/>Transactions<br/> $Thousands</p></th>
-            <th class="span2"><p>Incremental <br/>Impact<br/> $Thousands</p></th>
+            <th class="column span2"><p>Incremental<br>Sales<br> $Thousands</p></th>
+            <th class="span2"><p>Incremental<br>Volume<br> $Thousands</p></th>
+            <th class="column span2"><p>Incremental<br>Margin<br> $Thousands</p></th>
+            <th class="span2"><p>Incremental<br>Profit<br> $Thousands</p></th>
+            <th class="span2 column"><p>Incremental<br>Transactions<br> $Thousands</p></th>
+            <th class="span2"><p>Incremental<br>Impact<br> $Thousands</p></th>
             <th></th>
           </tr>
         </thead>
-       <tbody>
+        <tbody>
           <tr>
           <tr ng-repeat="category in categories">
             <td class="span1 row-title"><a href="#">{{concat(category.item)}}</a></td>
@@ -162,17 +168,18 @@
                   {{actionItem.hiddenAction}}
                 </p>
               </div>
-            </td>          </tr>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
-     <div id="time-series" class="row-fluid span11 time-series">
-          <chart value='{{timeseries}}'></chart>
-      </div>
+
+    <div id="time-series" class="row-fluid span11 time-series">
+      <chart value='{{timeseries}}'></chart>
     </div>
-  </div>
+  </div> <!-- END MAIN CONTENT AREA -->
 
-
+  <!-- SIDEBAR - ACTION ITEMS -->
   <div class="span3 main-container">
     <div class="row-fluid main-container-header">
       <p ng-cloak>Action Required<span ng-cloak class="ng-cloak numActions">{{(categories|followUp).length + (categories|action).length}}</span></p>
@@ -197,6 +204,6 @@
         {{followUpItem.hiddenAction}}
       </p>
     </div>
+  </div> <!-- END SIDEBAR -->
 
-  </div>
 </div>

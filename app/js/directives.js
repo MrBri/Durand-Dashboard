@@ -9,15 +9,16 @@ angular.module('myApp.directives', []).
       elm.text(version);
     };
   }]).
-  directive('logout', function () {
+  directive('accountLinks', function () {
     return {
-      template:
-          '<ul class="span3 username">' +
-            '<li>John Smith</li>' +
-            '<li> | </li>' +
-            '<li>Logout </li>' +
-            '<i class="icon-play icon-white"></i>' +
-          '</ul>'
+      // template:
+          // '<ul class="username row">' +
+          //   '<li>John Smith</li>' +
+          //   '<li> | </li>' +
+          //   '<li>Logout </li>' +
+          //   '<i class="icon-play icon-white"></i>' +
+          // '</ul>'
+      templateUrl: 'partials/accountLinks.html'
     };
   }).
   directive('subHeader', function() {
@@ -52,8 +53,8 @@ angular.module('myApp.directives', []).
        });
      }
    }
-  })
-  .directive('bsDatepicker', ['$timeout', function($timeout, config) {
+  }).
+  directive('bsDatepicker', ['$timeout', function($timeout, config) {
   'use strict';
 
   var isTouch = 'ontouchstart' in window && !window.navigator.userAgent.match(/PhantomJS/i);
@@ -96,7 +97,7 @@ angular.module('myApp.directives', []).
     require: '?ngModel',
     link: function postLink(scope, element, attrs, controller) {
 
-      var options = config.datepicker || {},
+      var options = {},
           language = attrs.language || options.language || 'en',
           format = attrs.dateFormat || options.format || ($.fn.datepicker.dates[language] && $.fn.datepicker.dates[language].format) || 'mm/dd/yyyy';
 

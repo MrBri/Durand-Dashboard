@@ -1,42 +1,42 @@
 /* app css stylesheet */
-/*@media (min-width: 1024px) { */
-body {
-  background: #d4f0ff;
-  font-family: Helvetica Neue, Helvetica;
-  margin: 0 2%;
-}
+/* @media (min-width: 1024px) { */
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
   display: none !important;
 }
 
-.outerContainer {
-  min-width: 984px;
+body {
+  background: #d4f0ff;
+  font-family: Helvetica Neue, Helvetica;
+  /*margin: 0 2%;*/
+}
+
+.container {
+  width: 984px;
 }
 
 /* HEADER */
 
 .header {
-  /*padding: 1.5% 0 1.5% 0;*/
-  padding-bottom: 7px;
-  border-bottom: 1.5px solid #bed8e5;
-  /*margin-left:0;*/
+  border-bottom: 2px solid #bed8e5;
+  height: 52px;
 }
 
-.brand img{
-  padding-top: 11px;
-  /*height:40px;*/
+.brand img {
+  padding-top: 13px;
 }
 
-.username {
+.accountLinks {
+  margin-right: -40px;
+  padding-top: 16px;
   text-align: right;
-  padding-top: 1.5%;
-  list-style: none;
+  font-size:12px;
+  color: white;
 }
 
-.username li{
-  font-size:12px;
-  display: inline;
+.accountLinks a {
+  padding: 0 4px;
+  text-decoration: none;
   color: white;
 }
 
@@ -142,7 +142,7 @@ body {
 .subheader {
   font-family: Helvetica Neue, Helvetica;
   margin-left:0;
-  padding-top: .75%;
+  padding-top: 10px;
   color:white;
 }
 
@@ -159,22 +159,20 @@ body {
   width: 20%;
 }
 
-.selector:first-child {
-  margin-left:0;
-}
-
 .dropdownLabel {
   text-transform: uppercase;
   font-size:11px;
+  margin-bottom: 8px;
 }
 
 .icon-chevron-right {
   background-color: #5a656b;
   /*color: #0078bb;*/
   border-radius: 10px;
-  margin-top: .5%;
+  /*margin-top: .5%;
   margin-left: 5%;
-  margin-bottom: 7%;
+  margin-bottom: 5%;*/
+  margin: .5% 5% 5% 5%;
   padding: 0 1px 1px 0;
 }
 
@@ -193,9 +191,7 @@ body {
   background: url('../img/item-tactic-chevron-small.png') no-repeat 95% 50%, -o-linear-gradient(top, #75a4e6, #4987df);
   background: url('../img/item-tactic-chevron-small.png') no-repeat 95% 50%, linear-gradient(top, #75a4e6, #4987df); /* W3C */
   margin-top: 6%;
-  /*padding-top: 10%;*/
   margin-right: 15%;
-  /*padding: 10px 30px;*/
   height: 50px;
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -237,7 +233,7 @@ body {
 }
 
 .main-content {
-  margin: 1% 0;
+  margin: 0.5% 0;
   padding: 0px;
 }
 
@@ -255,20 +251,21 @@ body {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   background: #e1e1e1;
-  height: 40px;
+  height: 36px;
   color: #464646;
 }
 
 .main-container-header p {
   font-size: 18px;
   text-shadow: rgba(0,0,0,.4) -1px 0px 0;
-  margin-top: 10px;
-  padding-left: 20px;
+  margin-top: 8px;
+  padding-left: 2.5%;
 }
 
 .datePicker {
-  margin-top: .6%;
+  margin-top: .4%;
 }
+
 .dateField {
   width: 30%;
 }
@@ -277,26 +274,21 @@ body {
   margin-right: 5%;
 }
 
-.ui-datepicker {
-  z-index: 9999 !important;
-}
-
 .left-container {
   margin-left: 20px;
 }
-/* Main-content Header */
 
-.main-content-header {
-  margin: 20px 20px -30px 20px;
-  height: 50px;
+/* Main-content */
+
+.durationLabel {
+  padding-left: 6%;
+  font-size: 10px;
+  color: #4f5459;
 }
 
 .pill {
-  padding: 4px 35px;
-  font-size:20px;
   font-weight: bold;
-  color:#4f5459;
-  text-shadow: rgba(255,255,255,1) 1px 1px 0;
+  width: 90%;
 }
 
 .pill:hover {
@@ -306,7 +298,6 @@ body {
 .pill-left {
   border-top-left-radius: 20px !important;
   border-bottom-left-radius: 20px !important;
-
 }
 
 .pill-right {
@@ -315,28 +306,31 @@ body {
 }
 
 .excel {
+  float: left;
   margin-top:0px;
-  padding: 0 10px;
-  border-left:2px solid #ccc;
-  border-right:2px solid #ccc;
+  padding: 3px 10px;
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
 }
 
 .legend {
   display:inline;
   margin-left: 0;
+  margin-top: -5px;
 }
 
 .legend li{
   float:left;
   display:inline;
-  font-size:12px;
-  width:50px;
+  font-size:9px;
+  color: #4f5459;
+  width:35px;
   padding-left:10px;
 }
 
 .legend-bar {
   height: 5px;
-  width: 50px;
+  width: 35px;
 }
 
 .plus-avg {
@@ -364,11 +358,11 @@ body {
   background: #bade90;
 }
 
-/* TABLE */
+/* Main Content Table */
 
-table {
+.main-table {
   border-top: none;
-  color: #666;
+  color: #4f5459;
   position: relative;
   top: -31px;
 }

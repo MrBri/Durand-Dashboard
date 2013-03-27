@@ -146,17 +146,25 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
     }
   };
 
-  var fromDate = new Date();
-  fromDate.setMonth(fromDate.getMonth() - 1);
-
-  $scope.datepicker = {
-    "fromDate": fromDate,
-    "toDate": Date()
-  };
 }
 
 //FIX - commenting this out for now since it breaks the CategoryAvgSvc
 //homeCtrl.$inject = ['$scope', '$http', 'CategoryAvgSvc', '$location'];
+
+function datePickerCtrl($scope) {
+  var fromDate = new Date();
+  fromDate.setMonth(fromDate.getMonth() - 1);
+  var fromDateStr = ""+(fromDate.getMonth()+1)+"\/"+fromDate.getDate()+"\/"+fromDate.getFullYear();
+  var toDate = new Date();
+  var toDateStr = ""+(toDate.getMonth()+1)+"\/"+toDate.getDate()+"\/"+toDate.getFullYear();
+
+  $scope.datepicker = {
+    'fromDate': fromDateStr,
+    'toDate': toDateStr,
+    'language': 'en',
+    'format': 'mm/dd/yyyy'
+  };
+}
 
 function twoBytwoCtrl($scope, $http) {
   $http.get('data/twoBytwoData.js').success(function(data){

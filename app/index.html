@@ -5,20 +5,22 @@
   <title>My AngularJS App</title>
   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/app.css"/>
+  <link rel="stylesheet" href="css/datepicker.css"/>
 
 </head>
 <body>
-  <div class="outerContainer container row-fluid" ng-controller="indexCtrl">
-    <div class="span12 header">
-      <div class="row-fluid">
-        <a class="span9 brand" href="#"><img src="img/durand-small.png"></a>
-        <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
-        <div logout></div>
-        <!-- END PARTIAL -->
+  <div class="container header" ng-controller="indexCtrl">
+    <div class="row">
+      <div class="span9">
+        <a class="brand" href="#"><img src="img/durand-small.png"></a>
       </div>
+      <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
+      <div account-links class="span3"></div>
+      <!-- END PARTIAL -->
     </div>
   </div>
-  <div class="outerContainer container row-fluid">
+
+  <div class="container row">
     <div ng-view></div>
   </div>
   <!-- In production use:
@@ -26,6 +28,7 @@
   -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
   <script src="data/categoryData.js"></script>
   <script src="lib/angular/angular.js"></script>
