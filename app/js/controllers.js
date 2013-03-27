@@ -43,6 +43,16 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
     $scope.avg_tot_impact = total_avg[5];
   });
 
+  $http.get('/app/data/mod_category_data_inc.js').success(function(data) {
+    var total_avg = CategoryAvgSvc.calc(data);
+    $scope.avg_inc_sales = total_avg[0];
+    $scope.avg_inc_vol = total_avg[1];
+    $scope.avg_inc_margin = total_avg[2];
+    $scope.avg_inc_profit = total_avg[3];
+    $scope.avg_inc_trans = total_avg[4];
+    $scope.avg_inc_impact = total_avg[5];
+  });
+
   $http.get('/app/data/category_data_inc.json').success(function(data) {
     var stringified = JSON.stringify(data);
     var colData = JSON.parse(stringified);

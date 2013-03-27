@@ -54,12 +54,10 @@ angular.module('myApp.services', [])
       }
 
       //Calculate the average
-      debugger;
       for (var j=0; j < averages.length; j++) {
         averages[j] /= count;
         averages[j] = Math.round(averages[j]);
       }
-      debugger;
       return averages;
     }
 
