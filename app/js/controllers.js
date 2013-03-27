@@ -2,13 +2,16 @@
 
 /* Controllers */
 
+function indexCtrl ($scope, $location) {
+  $scope.goHome = function() {
+    $location.path("/home");
+  };
+}
+indexCtrl.$inject = ['$scope', '$location'];
+
 function loginCtrl($scope, $location) {
   $scope.login = function() {
     $location.path("/twoBytwo");
-  };
-
-  $scope.goHome = function() {
-    $location.path("/home");
   };
 }
 loginCtrl.$inject = ['$scope', '$location'];
