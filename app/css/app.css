@@ -12,7 +12,7 @@ body {
 }
 
 .container {
-  width: 984px;
+  width: 1024px;
 }
 
 /* HEADER */
@@ -24,6 +24,7 @@ body {
 
 .brand img {
   padding-top: 13px;
+  padding-left: 2px;
 }
 
 .accountLinks {
@@ -141,7 +142,6 @@ body {
 
 .subheader {
   font-family: Helvetica Neue, Helvetica;
-  margin-left:0;
   padding-top: 7px;
   color:white;
 }
@@ -154,7 +154,6 @@ body {
 .select-one {
   width: 80%;
   font-weight: bold;
-  /*margin-top: 10px;*/
 }
 
 .dropdown-menu {
@@ -227,15 +226,14 @@ body {
   float: right;
 }
 
-
 /* MAIN CONTENT */
 
 .main-content-container {
-  margin-left:20px;
+  /*margin-left:20px;*/
 }
 
 .main-content {
-  margin: 0.5% 0;
+  /*margin: 0.5% 0;*/
   padding: 0px;
 }
 

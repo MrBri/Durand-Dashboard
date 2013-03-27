@@ -1,24 +1,28 @@
 <!-- ROW OF SELECTORS -->
-<sub-header></sub-header>
+<sub-header class="subheader"></sub-header>
 
-<div class="container main-content row">
+<!-- <div class="main-content"> -->
+
   <!-- BEGIN MAIN CONTENT AREA -->
   <div class="span9 main-container">
 
-    <div  class="row-fluid main-container-header">
-      <p class="span6">Category</p>
-      <div class="control-group input-append span6 datePicker">
-        
-        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+    <!-- MAIN CONTENT HEADER -->
+    <div class="row">
+      <div  class="span9 main-container-header">
+        <p class="span5">Category</p>
+        <div class="control-group input-append span3 datePicker">
+          
+          <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+          <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
 
-        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-
+          <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+          <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+        </div>
       </div>
-    </div>
+    </div> <!-- END MAIN CONTENT HEADER -->
 
-    <div class="row-fluid">
+    <!-- MAIN CONTENT SUBHEADER -->
+    <div class="row">
 
       <div class="span8">
         <span class="durationLabel">Duration: </span>
@@ -49,8 +53,9 @@
           </li>
         </ul>
       </div>
-    </div>
+    </div> <!-- END MAIN CONTENT SUBHEADER -->
 
+    <!-- MAIN CONTENT BODY -->
     <div class="row-fluid table-header span11">
       <div class="span3"></div>
       <div class="span6 upper-header">Average Sales &amp; Profit</div>
@@ -206,4 +211,4 @@
     </div>
   </div> <!-- END SIDEBAR -->
 
-</div>
+<!-- </div> -->
