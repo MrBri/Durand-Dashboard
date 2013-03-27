@@ -142,13 +142,19 @@ body {
 .subheader {
   font-family: Helvetica Neue, Helvetica;
   margin-left:0;
-  padding-top: 10px;
+  padding-top: 7px;
   color:white;
+}
+
+.subheader div.btn-group {
+  margin-top: 2px;
+  padding: 2px 0;
 }
 
 .select-one {
   width: 80%;
   font-weight: bold;
+  /*margin-top: 10px;*/
 }
 
 .dropdown-menu {
@@ -162,16 +168,12 @@ body {
 .dropdownLabel {
   text-transform: uppercase;
   font-size:11px;
-  margin-bottom: 8px;
 }
 
 .icon-chevron-right {
   background-color: #5a656b;
   /*color: #0078bb;*/
   border-radius: 10px;
-  /*margin-top: .5%;
-  margin-left: 5%;
-  margin-bottom: 5%;*/
   margin: .5% 5% 5% 5%;
   padding: 0 1px 1px 0;
 }
