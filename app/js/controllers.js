@@ -4,7 +4,7 @@
 
 function loginCtrl($scope, $location) {
   $scope.login = function() {
-    $location.path("/choose");
+    $location.path("/twoBytwo");
   };
 
   $scope.goHome = function() {
@@ -168,7 +168,7 @@ function brandCtrl($scope, $http, AverageSvc) {
     var colData = JSON.parse(stringified);
     $scope.brand_sales = colData[0];
     $scope.brand_vol = colData[1];
-    $scope.brand_margin = colData[2]; 
+    $scope.brand_margin = colData[2];
   });
 
   $http.get('/app/data/mod_brand_data.js').success(function(data) {

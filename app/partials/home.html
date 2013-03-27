@@ -7,7 +7,7 @@
       <div class="control-group input-append span6 datePicker">
         <input type="text" class="dateField" ng-model="datepicker.fromDate" data-date-format="dd/mm/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-        
+
         <input type="text" class="dateField" ng-model="datepicker.toDate" data-date-format="dd/mm/yyyy" bs-datepicker>
         <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
         <!-- </div> -->
@@ -18,9 +18,9 @@
       <div class="row-fluid main-content-header">
       <div class="span6">
         <span>Duration: </span>
-        <div class="btn-group">
-          <button class="btn pill pill-left">Week</button>
-          <button class="btn pill pill-right active" ng-click="loadTotal();curDurationBtn=true">Total</button>
+        <div class="btn-group" data-toggle="buttons-radio">
+          <button class="btn pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
+          <button class="btn pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
         </div>
       </div>
       <div class="span1 excel">
