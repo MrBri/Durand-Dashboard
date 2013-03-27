@@ -16,6 +16,10 @@ loginCtrl.$inject = ['$scope', '$location'];
 function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
   // $scope.categories = glb.categoryDataIncremental;
 
+  //Set bool to determine whether incremental or total button is selected.
+  //False = Incremental View, True = Total View
+  $scope.curDurationBtn = false;
+
   //Category names
   $http.get('/app/data/mod_category_data_inc.js').success(function(data){
     $scope.categories = data;
