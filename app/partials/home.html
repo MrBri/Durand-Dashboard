@@ -1,5 +1,5 @@
 <!-- ROW OF SELECTORS -->
-<sub-header class="subheader"></sub-header>
+<sub-header></sub-header>
 
 <!-- <div class="main-content"> -->
 
@@ -23,8 +23,7 @@
 
     <!-- MAIN CONTENT SUBHEADER -->
     <div class="row">
-
-      <div class="span8">
+      <div class="span5 mainContentSub">
         <span class="durationLabel">Duration: </span>
         <div class="btn-group durationBtns" data-toggle="buttons-radio">
           <button class="btn btn-mini pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
@@ -32,8 +31,8 @@
         </div>
       </div>
 
-      <div class="span4">
-        <img class="excel" src="img/excel-icon-small.jpg" alt="export to excel" />
+      <div class="span4 mainContentSub">
+        
         <ul class="legend">
           <li>
             <span>+/= avg.</span>
@@ -52,6 +51,7 @@
             <div class="legend-bar best"></div>
           </li>
         </ul>
+        <img class="excel" src="img/excel-icon-small.jpg" alt="export to excel" />
       </div>
     </div> <!-- END MAIN CONTENT SUBHEADER -->
 
@@ -184,12 +184,15 @@
     </div>
   </div> <!-- END MAIN CONTENT AREA -->
 
-  <!-- SIDEBAR - ACTION ITEMS -->
+  <!-- BEGIN SIDEBAR - ACTION ITEMS -->
   <div class="span3 main-container">
-    <div class="row-fluid main-container-header">
-      <p ng-cloak>Action Required<span ng-cloak class="ng-cloak numActions">{{(categories|followUp).length + (categories|action).length}}</span></p>
-    </div>
 
+    <!-- SIDEBAR HEADER -->
+    <div class="row">
+      <div class=" span3 main-container-header">
+        <p class="span3" ng-cloak>Action Required<span class="ng-cloak numActions">{{(categories|followUp).length + (categories|action).length}}</span></p>
+      </div>
+    </div>
     <div ng-repeat="actionItem in categories | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
       <p ng-class="{'': !open, 'action-open': open}">
         <span>Action: </span>Promote <span>{{actionItem.item}}</span><br>{{actionItem.action}}

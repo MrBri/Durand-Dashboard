@@ -3,19 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>My AngularJS App</title>
-  <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet">
+<!--   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="stylesheet" href="css/app.css"/>
   <link rel="stylesheet" href="css/datepicker.css"/>
 
 </head>
 <body>
-  <div class="container header row" ng-controller="indexCtrl">
-    <div class="span9">
+<!--   <div class="container">
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+    <div class="span1 visible"></div>
+  </div> -->
+
+  <div class="container" ng-controller="indexCtrl">
+    <div class="span9 header">
       <a class="brand" href="#"><img src="img/durand-small.png"></a>
     </div>
     <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
-    <div account-links class="span3"></div>
+    <div account-links class="span3 header"></div>
     <!-- END PARTIAL -->
+    <div class="divider span12"></div>
   </div>
 
   <div class="container row">
@@ -25,7 +42,8 @@
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.4/angular.min.js"></script>
   -->
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+<!--   // <script src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script> -->
   <script src="js/bootstrap-datepicker.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
   <script src="data/categoryData.js"></script>

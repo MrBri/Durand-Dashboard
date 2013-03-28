@@ -9,6 +9,7 @@ body {
   background: #d4f0ff;
   font-family: Helvetica Neue, Helvetica;
   /*margin: 0 2%;*/
+  margin: 0 auto;
 }
 
 .container {
@@ -18,8 +19,11 @@ body {
 /* HEADER */
 
 .header {
+  height: 51px;
+}
+
+.divider {
   border-bottom: 2px solid #bed8e5;
-  height: 52px;
 }
 
 .brand img {
@@ -28,7 +32,6 @@ body {
 }
 
 .accountLinks {
-  margin-right: -40px;
   padding-top: 16px;
   text-align: right;
   font-size:12px;
@@ -140,33 +143,31 @@ body {
 
 /* SUBHEADER */
 
-.subheader {
+.selector {
+  margin-top: 8px;
+  margin-bottom: 12px;
   font-family: Helvetica Neue, Helvetica;
-  padding-top: 7px;
   color:white;
-}
-
-.subheader div.btn-group {
-  margin-top: 2px;
-  padding: 2px 0;
-}
-
-.select-one {
-  width: 80%;
-  font-weight: bold;
-}
-
-.dropdown-menu {
-  z-index: 10000;
-}
-
-.dropdown-toggle {
-  width: 20%;
 }
 
 .dropdownLabel {
   text-transform: uppercase;
   font-size:11px;
+}
+
+.selector-left {
+  margin-top: 2px;
+  width: 80%;
+  font-weight: bold;
+}
+
+.selector-right {
+  margin-top: 2px;
+  width: 20%;
+}
+
+.dropdown-menu {
+  z-index: 10000;
 }
 
 .icon-chevron-right {
@@ -226,14 +227,9 @@ body {
   float: right;
 }
 
-/* MAIN CONTENT */
-
-.main-content-container {
-  /*margin-left:20px;*/
-}
+/* MAIN CONTENT - HEADER */
 
 .main-content {
-  /*margin: 0.5% 0;*/
   padding: 0px;
 }
 
@@ -251,19 +247,18 @@ body {
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
   background: #e1e1e1;
-  height: 36px;
+  height: 38px;
   color: #464646;
 }
 
 .main-container-header p {
   font-size: 18px;
   text-shadow: rgba(0,0,0,.4) -1px 0px 0;
-  margin-top: 8px;
-  padding-left: 2.5%;
+  margin-top: 10px;
 }
 
 .datePicker {
-  margin-top: .4%;
+  margin-top: 4px;
 }
 
 .dateField {
@@ -274,14 +269,14 @@ body {
   margin-right: 5%;
 }
 
-.left-container {
-  margin-left: 20px;
+/*MAIN CONTENT - MAIN */
+
+.mainContentSub {
+  margin-top: 7px;
 }
 
-/* Main-content */
-
 .durationLabel {
-  padding-left: 6%;
+  padding-left: 14px;
   font-size: 10px;
   color: #4f5459;
 }
@@ -306,16 +301,18 @@ body {
 }
 
 .excel {
-  float: left;
+  float: right;
   margin-top:0px;
-  padding: 3px 10px;
+  margin-right: -20px;
+  padding: 3px 12px;
   border-left:1px solid #ccc;
   border-right:1px solid #ccc;
 }
 
 .legend {
+  float: right;
+  margin-right: 16px;
   display:inline;
-  margin-left: 0;
   margin-top: -5px;
 }
 
@@ -325,7 +322,7 @@ body {
   font-size:9px;
   color: #4f5459;
   width:35px;
-  padding-left:10px;
+  padding-left:6px;
 }
 
 .legend-bar {
@@ -506,7 +503,7 @@ td {
 .numActions {
   float: right;
   padding: 0 9px;
-  margin-right: 10%;
+  margin-right: 28px;
   margin-top: -2%;
   background: #e80a15; /* Old browsers */
   background: linear-gradient(top, rgb(246,155,160) 0%, rgb(232,10,21) 65%, rgb(208,4,7) 100%);
@@ -801,6 +798,8 @@ p.qSub {
 
 /* DEBUGGING */
 .visible {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   border: 1px solid red; 
 }
 
