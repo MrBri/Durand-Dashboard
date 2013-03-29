@@ -83,6 +83,27 @@ angular.module('myApp.services', ['ngResource'])
           .then(function(response) {
             return response.data;
         });
+      },
+      showProfit: function() {
+        return $http.get('/app/data/profitTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showTrans: function() {
+        return $http.get('/app/data/transactionsTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showImpact: function() {
+        return $http.get('/app/data/impactTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+        });
       }
+
     }
   });

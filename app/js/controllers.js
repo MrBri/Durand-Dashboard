@@ -16,7 +16,7 @@ function loginCtrl($scope, $location) {
 }
 loginCtrl.$inject = ['$scope', '$location'];
 
-function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
+function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
   // $scope.categories = glb.categoryDataIncremental;
 
   //Set bool to determine whether incremental or total button is selected.
@@ -94,45 +94,32 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
     });
   };
 
-  //Time Series
-  $http.get('/app/data/salesTimeSeries.json').success(function(data) {
-    $scope.timeseries = data;
-  });
+  //Load up intiial time series data
+  $scope.timeseries = timeChartSvc.showSales();
 
+  //Functions to display the correct line graph
   $scope.showSales = function() {
-    $http.get('/app/data/salesTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showSales();
   };
 
   $scope.showVolume = function() {
-    $http.get('/app/data/volumeTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showVolume();
   };
 
   $scope.showMargin = function() {
-    $http.get('/app/data/marginTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showMargin();
   };
 
   $scope.showProfit = function() {
-    $http.get('/app/data/profitTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showProfit();
   };
 
   $scope.showTrans = function() {
-    $http.get('/app/data/transactionsTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showTrans();
   };
 
   $scope.showImpact = function() {
-    $http.get('/app/data/impactTimeSeries.json').success(function(data) {
-      $scope.timeseries = data;
-    });
+    $scope.timeseries = timeChartSvc.showImpact();
   };
 
   $scope.viewTactic = function() {
