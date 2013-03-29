@@ -172,11 +172,27 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
 
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
-    $scope.averages = AverageSvc.calc(data);
+    var averages = AverageSvc.calc(data);
+    $scope.avg_sale = averages[0];
+    $scope.avg_vol = averages[1];
+    $scope.avg_margin = averages[2];
   });
 
   //$scope.salesTimeChart = salesTimeChartSvc.query();
   $scope.timeseries = timeChartSvc.showSales();
+
+  $scope.showSales = function() {
+    $scope.timeseries = timeChartSvc.showSales();
+  };
+
+  $scope.showVolume = function() {
+    $scope.timeseries = timeChartSvc.showVolume();
+  };
+
+  $scope.showMargin = function() {
+    $scope.timeseries = timeChartSvc.showMargin();
+  };
+
 }
 
 function actionItemCtrl($scope) {
