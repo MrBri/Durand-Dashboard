@@ -46,26 +46,33 @@ body {
 
 /* LOGIN SCREEN */
 
+.form-horizontal .control-group {
+  margin-bottom: 5px;
+}
+
+.sign-in {
+  margin-top: 250px;
+}
+
 .controls input {
   height: 40px;
-  font-size: 14pt;
-  padding: 6px 0 0 10px;
+  margin-left: 43px;
+  font-size: 16px;
+  font-weight: lighter;
+  padding-left: 12px;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   border-radius: 8px;
   border: none;
   -webkit-box-shadow: inset 1px 1px 1px 0px #999;
   -moz-box-shadow: inset 1px 1px 1px 0px #999;
-  box-shadow: inset 1px 1px 1px 0px #999;
-}
-
-.sign-in {
-  margin-top: 25%;
+  box-shadow: inset 1px 1px 1px 0px #666;
 }
 
 .sign-in button {
-  font-size: 20px;
-  font-weight: bold;
+  margin-left: 43px;
+  font-size: 22px;
+  font-weight: normal;
   color: #363636;
   padding: 10px 20px;
   background: -moz-linear-gradient(
