@@ -94,6 +94,7 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
     });
   };
 
+  //Time Series
   $http.get('/app/data/salesTimeSeries.json').success(function(data) {
     $scope.timeseries = data;
   });
@@ -173,7 +174,7 @@ function twoBytwoCtrl($scope, $http) {
 }
 twoBytwoCtrl.$inject = ['$scope', '$http'];
 
-function brandCtrl($scope, $http, AverageSvc) {
+function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
   $http.get('/app/data/brand_bar.json').success(function(data){
     var stringified = JSON.stringify(data);
     var colData = JSON.parse(stringified);
@@ -186,6 +187,9 @@ function brandCtrl($scope, $http, AverageSvc) {
     $scope.brands = data;
     $scope.averages = AverageSvc.calc(data);
   });
+
+  //$scope.salesTimeChart = salesTimeChartSvc.query();
+  $scope.timeseries = timeChartSvc.showSales();
 }
 
 function actionItemCtrl($scope) {
