@@ -167,7 +167,7 @@ function datePickerCtrl($scope) {
 }
 
 function twoBytwoCtrl($scope, $http) {
-  $http.get('data/twoBytwoData.js').success(function(data){
+  $http.get('data/twoByTwoData.js').success(function(data){
     $scope.twoBytwo = data;
   });
 }
