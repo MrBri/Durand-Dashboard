@@ -1,0 +1,33 @@
+{
+  "name": "Durand-Dashboard",
+  "version": "0.1.0-3",
+  "dependences": {},
+  "engines": {
+    "node": "0.8.x"
+  },
+  "description": "Retail Promotions Effectiveness",
+  "main": "scripts/web-server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node ./scripts/web-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MrBri/Durand-Dashboard.git"
+  },
+  "keywords": [
+    "Durand",
+    "McKinsey",
+    "Retail",
+    "Promotion",
+    "HighCharts",
+    "AngularJS"
+  ],
+  "author": "Mike Adams, Tony Thomson, Raya Desawade, Tyler Briles",
+  "license": "BSD",
+  "gitHead": "3d1bbd72e598d182d2a92b16656215c75655caf0",
+  "readmeFilename": "README.md",
+  "subdomain": "durand"
+}

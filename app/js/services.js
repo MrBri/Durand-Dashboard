@@ -5,11 +5,10 @@
 
 // Demonstrate how to register services
 // In this case it is a simple value service.
-angular.module('myApp.services', [])
+angular.module('myApp.services', ['ngResource'])
   .value('version', '0.1')
   .service('AverageSvc', function() {
     this.calc = function(data) {
-      console.log("In calc");
       var averages = [];
       averages[0] = 0;
       averages[1] = 0;
@@ -61,4 +60,50 @@ angular.module('myApp.services', [])
       return averages;
     }
 
+  })
+  //Return the sales time series line graph
+  .factory('timeChartSvc', function($http) {
+    return {
+      showSales: function() {
+        return $http.get('/app/data/salesTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showVolume: function() {
+        return $http.get('/app/data/volumeTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showMargin: function() {
+        return $http.get('/app/data/marginTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+        });
+      },
+      showProfit: function() {
+        return $http.get('/app/data/profitTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showTrans: function() {
+        return $http.get('/app/data/transactionsTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+
+        });
+      },
+      showImpact: function() {
+        return $http.get('/app/data/impactTimeSeries.json')
+          .then(function(response) {
+            return response.data;
+        });
+      }
+
+    }
   });
