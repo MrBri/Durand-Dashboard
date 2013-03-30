@@ -2,7 +2,7 @@
 <html lang="en" ng-app="myApp">
 <head>
   <meta charset="utf-8">
-  <title>My AngularJS App</title>
+  <title>Durand Dashboard</title>
 <!--   <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"> -->
   <link rel="stylesheet" href="css/bootstrap.css"/>
   <link rel="stylesheet" href="css/app.css"/>
@@ -30,7 +30,8 @@
       <a class="brand" href="#"><img src="img/durand-small.png"></a>
     </div>
     <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
-    <div account-links class="span3 header"></div>
+    <div ng-show='isLoggedIn();' class="span3 header" account-links ng-controller="loginCtrl"></div>
+
     <!-- END PARTIAL -->
     <div class="divider span12"></div>
   </div>

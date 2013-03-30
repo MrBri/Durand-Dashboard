@@ -6,8 +6,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-sales"
         },
         "title": {
@@ -19,7 +19,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }
@@ -223,8 +223,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-vol"
         },
         "title": {
@@ -236,7 +236,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }
@@ -440,8 +440,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-margin"
         },
         "title": {
@@ -453,7 +453,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }
@@ -657,8 +657,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-profit"
         },
         "title": {
@@ -670,7 +670,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }
@@ -874,8 +874,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-trans"
         },
         "title": {
@@ -887,7 +887,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }
@@ -1091,8 +1091,8 @@
         "chart": {
             "type": "bar",
             "backgroundColor": "transparent",
-            "width": 100,
-            "height": 376,
+            "width": 85,
+            "height": 311,
             "renderTo": "bar-impact"
         },
         "title": {
@@ -1104,7 +1104,7 @@
                 "shadow": false,
                 "pointPadding": -1,
                 "groupPadding": -1,
-                "pointWidth": 20,
+                "pointWidth": 16,
                 "dataLabels": {
                     "enabled": true
                 }

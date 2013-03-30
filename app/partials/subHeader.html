@@ -6,11 +6,11 @@
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="#/home">Department 1</a></li>
-      <li><a href="#/home">Department 2</a></li>
-      <li><a href="#/home">Department 3</a></li>
-      <li><a href="#/home">Department 4</a></li>
-      <li><a href="#/home">Department 5</a></li>
+      <li><a href="#/home">Dry Grocery</a></li>
+      <li><a href="#/home">Dairy</a></li>
+      <li><a href="#/home">Frozen Food</a></li>
+      <li><a href="#/home">Pharmacy</a></li>
+      <li><a href="#/home">Deli &amp; Bakery</a></li>
     </ul>
   </div>
 </div>
@@ -51,18 +51,14 @@
   </div>
 </div>
 <div class="span2 selector">
-  <span class="dropdownLabel">Item Tactic</span><i class="icon-chevron-right icon-white chev-disabled "></i>
+  <span class="dropdownLabel">Item Tactic</span><i class="icon-chevron-right icon-white chev-disabled"></i>
   <div class="btn-group btn-block">
     <button class="btn selector-left" disabled>Select one</button>
     <button class="btn selector-right" data-toggle="dropdown" disabled>
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu">
-      <li><a href="#">Item Tactic 1</a></li>
-      <li><a href="#">Item Tactic 2</a></li>
-      <li><a href="#">Item Tactic 3</a></li>
-      <li><a href="#">Item Tactic 4</a></li>
-      <li><a href="#">Item Tactic 5</a></li>
+      <li ng-repeat="item in items"><a href="#">{{item.item}}</a></li>
     </ul>
   </div>
 </div>

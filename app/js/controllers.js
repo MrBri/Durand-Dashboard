@@ -2,19 +2,26 @@
 
 /* Controllers */
 
-function indexCtrl ($scope, $location) {
+function indexCtrl ($scope, $location, LogInSvc ) {
   $scope.goHome = function() {
     $location.path("/home");
   };
-}
-indexCtrl.$inject = ['$scope', '$location'];
 
-function loginCtrl($scope, $location) {
-  $scope.login = function() {
-    $location.path("/twoBytwo");
-  };
 }
-loginCtrl.$inject = ['$scope', '$location'];
+
+function loginCtrl($scope, $location, LogInSvc) {
+
+  $scope.login = function() {
+    LogInSvc.setLogin(true);
+   $location.path("/twoBytwo");
+ 
+  };
+
+  $scope.isLoggedIn = function() {
+    return LogInSvc.getLoginStatus();
+  };
+
+}
 
 function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
   // $scope.categories = glb.categoryDataIncremental;
@@ -28,32 +35,22 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
     $scope.categories = data;
   });
 
-  $http.get('/app/data/mod_brand_data.js').success(function(data){
-    $scope.brands = data;
-  });
+  // $http.get('/app/data/mod_brand_data.js').success(function(data){
+  //   $scope.brands = data;
+  // });
 
   $http.get('/app/data/mod_item_data.js').success(function(data){
     $scope.items = data;
   });
 
+  // Retrieves totals for category total averages
   $http.get('/app/data/mod_category_data_total.js').success(function(data) {
-    var total_avg = CategoryAvgSvc.calc(data);
-    $scope.avg_tot_sales = total_avg[0];
-    $scope.avg_tot_vol = total_avg[1];
-    $scope.avg_tot_margin = total_avg[2];
-    $scope.avg_tot_profit = total_avg[3];
-    $scope.avg_tot_trans = total_avg[4];
-    $scope.avg_tot_impact = total_avg[5];
+    $scope.avg_total = CategoryAvgSvc.calc(data);
   });
 
+  // Retrieves totals for category week averages
   $http.get('/app/data/mod_category_data_inc.js').success(function(data) {
-    var total_avg = CategoryAvgSvc.calc(data);
-    $scope.avg_inc_sales = total_avg[0];
-    $scope.avg_inc_vol = total_avg[1];
-    $scope.avg_inc_margin = total_avg[2];
-    $scope.avg_inc_profit = total_avg[3];
-    $scope.avg_inc_trans = total_avg[4];
-    $scope.avg_inc_impact = total_avg[5];
+    $scope.avg_inc = CategoryAvgSvc.calc(data);
   });
 
   $http.get('/app/data/category_data_inc.json').success(function(data) {
@@ -127,8 +124,8 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
   };
 
   $scope.concat = function(itemName) {
-    if(itemName.length > 7) {
-      return(itemName.slice(0,7) + "...");
+    if(itemName.length > 18) {
+      return(itemName.slice(0,18) + "...");
     } else {
       return(itemName);
     }
@@ -170,12 +167,10 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.brand_margin = colData[2];
   });
 
+  // Retrieves total averages for Brands page table
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
-    var averages = AverageSvc.calc(data);
-    $scope.avg_sale = averages[0];
-    $scope.avg_vol = averages[1];
-    $scope.avg_margin = averages[2];
+    $scope.averages = AverageSvc.calc(data);
   });
 
   //$scope.salesTimeChart = salesTimeChartSvc.query();
@@ -197,12 +192,31 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.categories = data;
   });
 
+  $scope.actionIsNotNull = function(brand) {
+    return brand.action !== null;
+  };
+
+  $scope.followUpIsNotNull = function(brand) {
+    return brand.followUp !== null;
+  };
 }
 
 function actionItemCtrl($scope) {
-    $scope.open = false;
+  $scope.open = false;
 
   $scope.toggleOpen = function () {
     $scope.open = ($scope.open) ? false : true;
   };
+}
+
+function timeSeriesCtrl($scope) {
+  $scope.toggleSelected = function (colNum) {
+    for (var i = 0; i < 6; i++) {
+      $scope.selected[i] = false;
+    };
+    $scope.selected[colNum] = true;
+  };
+  
+  $scope.selected = [];
+  $scope.selected[0] = true;
 }

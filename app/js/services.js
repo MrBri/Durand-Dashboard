@@ -31,6 +31,17 @@ angular.module('myApp.services', ['ngResource'])
       return averages;
     }
   })
+  .service('LogInSvc', function() {
+    var isLoggedIn = false;
+    return {
+      getLoginStatus: function() {
+        return isLoggedIn;
+      },
+      setLogin: function(value) {
+        isLoggedIn = value; 
+      }
+    };
+  })
   .service('CategoryAvgSvc', function() {
     this.calc = function(data) {
       var count = 0;
