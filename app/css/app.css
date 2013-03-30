@@ -246,6 +246,7 @@ div.dropdown-menu {
   -webkit-box-shadow: 0 0 8px rgba(116, 179, 233, 1);
   -moz-box-shadow: 0 0 8px rgba(116, 179, 233, 1);
   border:1px solid rgba(116, 179, 233, 0.8);
+  position: relative;
 }
 
 .main-container-header {
@@ -558,16 +559,16 @@ div.selected-avg-bottom {
 
 .brand-bar-charts {
   position: absolute;
-  top: 268px;
+  top: 135px;
   z-index: 1;
 }
 
 #brand-bar-sales {
-  left: 205px;
+  left: 195px;
 }
 
 #brand-bar-vol {
-  left: 375px;
+  left: 370px;
 }
 
 #brand-bar-margin {
