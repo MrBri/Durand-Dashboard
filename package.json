@@ -1,17 +1,17 @@
 {
   "name": "Durand-Dashboard",
-  "version": "0.1.0-3",
+  "version": "0.1.0-4",
   "dependences": {},
   "engines": {
-    "node": "0.8.x"
+    "node": "0.6.x"
   },
   "description": "Retail Promotions Effectiveness",
-  "main": "scripts/web-server.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "start": "node ./scripts/web-server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node scripts/web-server.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "HighCharts",
     "AngularJS"
   ],
+  "subdomain": "durand-dashboard",
   "author": "Mike Adams, Tony Thomson, Raya Desawade, Tyler Briles",
   "license": "BSD",
   "gitHead": "3d1bbd72e598d182d2a92b16656215c75655caf0",
