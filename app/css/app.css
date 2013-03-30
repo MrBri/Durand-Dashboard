@@ -610,6 +610,10 @@ div.selected-avg-bottom {
 
 /* RIGHT BAR */
 
+.action-items {
+  overflow: scroll;
+}
+
 .numActions {
   float: right;
   padding: 0 9px;
@@ -646,6 +650,20 @@ background-image: -webkit-gradient(
 
 .action-item p {
   position: relative;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.red .actionLabel {
+  color: #ff0000;
+}
+
+.green .actionLabel {
+  color: #8dc63f;
+}
+
+.yellow .actionLabel {
+  color: #d9cb00;
 }
 
 .action-open {
@@ -682,51 +700,51 @@ background-image: -webkit-gradient(
 .arrow {
   width: 0; 
   height: 0; 
-  border-left: 8px solid transparent;
-  border-right: 8px solid transparent;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
   position: absolute;
-  right: -10%;
+  right: -25px;
   top: 50%;
   cursor:pointer;
 }
 
 .red .arrow-down {
-  border-top: 10px solid #f00;
+  border-top: 8px solid #f00;
   -webkit-box-shadow: 0px -1px 0px rgba(146, 0, 50, 0.75);
   -moz-box-shadow:    0px -1px 0px rgba(146, 0, 50, 0.75);
   box-shadow:         0px -1px 0px rgba(146, 0, 50, 0.75);
 }
 
 .red .arrow-up {
-  border-bottom: 10px solid #f00;
+  border-bottom: 8px solid #f00;
   -webkit-box-shadow: 0px 1px 0px rgba(146, 0, 50, 0.75);
   -moz-box-shadow:    0px 1px 0px rgba(146, 0, 50, 0.75);
   box-shadow:         0px 1px 0px rgba(146, 0, 50, 0.75);
 }
 
 .green .arrow-down {
-  border-top: 10px solid #8dc63f;
+  border-top: 8px solid #8dc63f;
   -webkit-box-shadow: 0px -1px 0px rgba(81, 113, 36, 0.75);
   -moz-box-shadow:    0px -1px 0px rgba(81, 113, 36, 0.75);
   box-shadow:         0px -1px 0px rgba(81, 113, 36, 0.75);
 }
 
 .green .arrow-up {
-  border-bottom: 10px solid #8dc63f;
+  border-bottom: 8px solid #8dc63f;
   -webkit-box-shadow: 0px 1px 0px rgba(81, 113, 36, 0.75);
   -moz-box-shadow:    0px 1px 0px rgba(81, 113, 36, 0.75);
   box-shadow:         0px 1px 0px rgba(81, 113, 36, 0.75);
 }
 
 .yellow .arrow-down {
-  border-top: 10px solid #c3b700;
+  border-top: 8px solid #c3b700;
   -webkit-box-shadow: 0px -1px 0px rgba(56, 100, 44, 0.5);
   -moz-box-shadow:    0px -1px 0px rgba(56, 100, 44, 0.5);
   box-shadow:         0px -1px 0px rgba(56, 100, 44, 0.5);
 }
 
 .yellow .arrow-up {
-  border-bottom: 10px solid #c3b700;
+  border-bottom: 8px solid #c3b700;
   -webkit-box-shadow: 0px 1px 0px rgba(56, 100, 44, 0.5);
   -moz-box-shadow:    0px 1px 0px rgba(56, 100, 44, 0.5);
   box-shadow:         0px 1px 0px rgba(56, 100, 44, 0.5);

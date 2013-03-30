@@ -241,7 +241,7 @@
   </div> <!-- END MAIN CONTENT AREA -->
 
   <!-- BEGIN SIDEBAR - ACTION ITEMS -->
-  <div class="span3 main-container">
+  <div class="span3 main-container action-items">
 
     <!-- SIDEBAR HEADER -->
     <div class="row">
@@ -251,7 +251,7 @@
     </div>
     <div ng-repeat="actionItem in categories | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
       <p ng-class="{'': !open, 'action-open': open}">
-        <span>Action: </span>Promote <span>{{actionItem.item}}</span><br>{{actionItem.action}}
+        <span class="actionLabel">Action: </span>Promote <span>{{actionItem.item}}</span><br>{{actionItem.action}}
           <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
       </p>
       <p class="hiddenAction" ng-show="open"}}>
