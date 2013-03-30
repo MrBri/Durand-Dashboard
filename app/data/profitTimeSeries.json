@@ -20,10 +20,13 @@
     },
     "xAxis": {
         "labels": {
-            "enabled": true
+            "enabled": true,
+            "style": {
+              "font-size": "9px"
+            }
         },
         "tickLength": 0,
-        "categories": ["Sep", "Oct", "Nov", "Dec", "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug"]
+        "categories": ["SEP", "OCT", "NOV", "DEC", "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG"]
     },
     "yAxis": {
         "gridLineWidth": 1,
