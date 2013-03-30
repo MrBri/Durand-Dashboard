@@ -131,6 +131,11 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
     }
   };
 
+  $scope.isOdd = function(idx) {
+    if(idx%2 === 1) return false;
+    else return true;
+  }
+
 }
 
 //FIX - commenting this out for now since it breaks the CategoryAvgSvc
@@ -199,6 +204,11 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
   $scope.followUpIsNotNull = function(brand) {
     return brand.followUp !== null;
   };
+
+  $scope.isOdd = function(idx) {
+    if(idx%2 === 1) return false;
+    else return true;
+  }
 }
 
 function actionItemCtrl($scope) {
