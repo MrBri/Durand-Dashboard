@@ -559,14 +559,26 @@ div.selected-avg-bottom {
 }
 
 .brand-bar-charts {
-  position: relative;
-  left: 150px;
-  top: -20px;
+  position: absolute;
+  top: 268px;
+  z-index: 1;
 }
 
-.brand-bar-charts:last-of-type {
-  left: 200px;
+#brand-bar-sales {
+  left: 205px;
 }
+
+#brand-bar-vol {
+  left: 375px;
+}
+
+#brand-bar-margin {
+  left: 545px;
+}
+
+/*.brand-bar-charts:last-of-type {
+  left: 200px;
+}*/
 
 .best-row {
   background-color: rgb(185,222,144);
@@ -591,7 +603,6 @@ div.selected-avg-bottom {
 }*/
 
 /* TIME SERIES*/
-
 
 #time-series {
   /*height: 130px;*/
