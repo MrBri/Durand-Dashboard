@@ -8,7 +8,6 @@
 body {
   background: #d4f0ff;
   font-family: Helvetica Neue, Helvetica;
-  /*margin: 0 2%;*/
   margin: 0 auto;
 }
 
@@ -173,13 +172,12 @@ body {
   width: 20%;
 }
 
-.dropdown-menu {
-  z-index: 10000;
+div.dropdown-menu {
+  z-index: 1000;
 }
 
 .icon-chevron-right {
   background-color: #5a656b;
-  /*color: #0078bb;*/
   border-radius: 10px;
   margin: .5% 5% 5% 5%;
   padding: 0 1px 1px 0;
@@ -507,7 +505,7 @@ div.selected-avg-bottom {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
-  left: 38px;
+  left: 47%;
   cursor: pointer;
   margin-top: 3px;
 }
@@ -576,38 +574,12 @@ div.selected-avg-bottom {
   left: 545px;
 }
 
-/*.brand-bar-charts:last-of-type {
-  left: 200px;
-}*/
-
 .best-row {
   background-color: rgb(185,222,144);
   background-size: 20px;
 }
 
-/*.top-border {
-  border-top: 1px solid #ccc;
-  margin: 0px 0px 20px 10px;
-}*/
-
-/*.average.pos {
-  color: #F77B00;
-}
-
-.average.avg {
-  color: #FDBA30;
-}*/
-
-/*td {
-  padding: 7px;
-}*/
-
 /* TIME SERIES*/
-
-#time-series {
-  /*height: 130px;*/
-  /*overflow: hidden;*/
-}
 
 .time-series {
   /*margin-top: -21px;*/

@@ -22,11 +22,11 @@
   <!-- MAIN CONTENT SUBHEADER -->
   <div class="row">
     <div class="span5 mainContentSub">
-      <span class="durationLabel">Duration: </span>
+      <!-- <span class="durationLabel">Duration: </span>
       <div class="btn-group durationBtns" data-toggle="buttons-radio">
         <button class="btn btn-mini pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
         <button class="btn btn-mini pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
-      </div>
+      </div> -->
     </div>
 
     <div class="span4 mainContentSub">
@@ -82,22 +82,17 @@
         <td colspan=2 class="row-title">Average</td>
 
         <td ng-repeat="idx in [0,1,2]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{averages[idx]}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{averages[idx]}}</div>
-
+          <div class="average-number">{{averages[idx]}}</div>
           <div class="avg-bottom">
             <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
           </div>
 
           <!-- FLOATING DIV FOR SELECTED AVG -->
           <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{averages[idx]}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{averages[idx]}}</div>
-
+            <div class="selected-average-number">{{averages[idx]}}</div>
             <div class="selected-avg-bottom">
               <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
             </div>
-
           </div> <!-- END FLOATING DIV -->
 
         </td>
