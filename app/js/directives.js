@@ -11,13 +11,6 @@ angular.module('myApp.directives', []).
   }]).
   directive('accountLinks', function () {
     return {
-      // template:
-          // '<ul class="username row">' +
-          //   '<li>John Smith</li>' +
-          //   '<li> | </li>' +
-          //   '<li>Logout </li>' +
-          //   '<i class="icon-play icon-white"></i>' +
-          // '</ul>'
       templateUrl: 'partials/accountLinks.html'
     };
   }).
@@ -31,6 +24,11 @@ angular.module('myApp.directives', []).
     return {
       restrict: 'E',
       templateUrl: 'partials/sidebar.html'
+    };
+  }).
+  directive('modal', function () {
+    return {
+      templateUrl: 'partials/modal.html'
     };
   }).
   directive('chart', function () {
