@@ -1,24 +1,37 @@
+<!-- ROW OF SELECTORS -->
 <sub-header></sub-header>
 
-<div class="container-fluid row-fluid main-content">
-  <div class="span9 main-container">
-    <div class="row-fluid main-container-header">
-      <p class="span6">Brand</p>
-      <input class="span3 calendar" type="date">
-      <input class="span3 calendar" type="date">
+<!-- BEGIN MAIN CONTENT AREA -->
+<div class="span9 main-container">
+
+  <!-- MAIN CONTENT HEADER -->
+  <div class="row">
+    <div class="span9 main-container-header">
+      <p class="span5">Brand</p>
+      <div class="control-group input-append span3 datePicker">
+
+        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+
+        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+      </div>
     </div>
-    <div class="row-fluid main-content-header">
-      <div class="span6">
-        <span>Duration: </span>
-        <div class="btn-group">
-          <button class="btn pill pill-left">Week</button>
-          <button class="btn pill pill-right" ng-click="loadTotal()">Total</button>
-        </div>
+  </div> <!-- END MAIN CONTENT HEADER -->
+
+  <!-- MAIN CONTENT SUBHEADER -->
+  <div class="row">
+    <div class="span5 mainContentSub">
+      <span class="durationLabel">Duration: </span>
+      <div class="btn-group durationBtns" data-toggle="buttons-radio">
+        <button class="btn btn-mini pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
+        <button class="btn btn-mini pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
       </div>
-      <div class="span1 excel">
-        <img src="img/xl-icon32.png" alt="excel export" />
-      </div>
-      <ul class="span4 legend">
+    </div>
+
+    <div class="span4 mainContentSub">
+      
+      <ul class="legend">
         <li>
           <span>+/= avg.</span>
           <div class="legend-bar plus-avg"></div>
@@ -36,78 +49,89 @@
           <div class="legend-bar best"></div>
         </li>
       </ul>
+      <img class="excel" src="img/excel-icon-small.jpg" alt="export to excel" />
     </div>
-    <div class="row-fluid table-header span11">
-      <div class="span4"></div>
-      <div class="span8"><h5>Average Sales &amp; Profit</h5></div>
-      <table class="main-table">
-        <thead>
-          <tr>
-            <th class="span2"><p>Parity</p></th>
-            <th class="span2"><p># of Events</p></th>
-            <th class="oddColumn span3 top-border"><p>Incremental Sales<br/> $Thousands</p></th>
-            <th class="span3 top-border"><p>Incremental Volume<br/> $Thousands</p></th>
-            <th class="oddColumn span3 top-border"><p>Incremental Margin<br/> $Thousands</p></th>
-            <th></th>
-          </tr>
-        </thead>
-       <tbody>
-          <tr ng-repeat="brand in brands">
-            <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{brand.item}}</a></td>
-            <td class="span1">{{brand.numberEvents}}</td>
-            <td class="span1 oddColumn">
-              <div class="data"></div>
-            </td>
-            <td class="span1">
-              <div class="data"></div>
-            </td>
-            <td class="span1 oddColumn">
-              <div class="data"></div>
-            </td>
-          </tr>
-          <div class="brand-bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
-              <div class="span3 brand-bar-charts" id="brand-bar-sales">
-                <chart value='{{brand_sales}}'></chart>
-              </div>
-              <div class="span3 brand-bar-charts" id="brand-bar-vol">
-                <chart value='{{brand_vol}}'></chart>
-              </div>
-              <div class="span3 brand-bar-charts" id="brand-bar-margin">
-                <chart value='{{brand_margin}}'></chart>
-              </div>
-          </div>
-          <tr>
-            <td class="row-title">Average</td>
-            <td class="span3"></td>
-            <td ng-repeat="average in averages" class="average span3">{{average}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div id="time-series" class="row-fluid span11 time-series">
-      <chart value='{{timeseries}}'></chart>
+  </div> <!-- END MAIN CONTENT SUBHEADER -->
+
+  <!-- MAIN CONTENT BODY -->
+  <div class="row-fluid table-header span11">
+    <div class="span4"></div>
+    <div class="span8"><h5>Average Sales &amp; Profit</h5></div>
+    <table class="main-table">
+      <thead>
+        <tr>
+          <th class="span2"><p>Parity</p></th>
+          <th class="span2"><p># of Events</p></th>
+          <th class="oddColumn span3 top-border"><p>Incremental Sales<br/> $Thousands</p></th>
+          <th class="span3 top-border"><p>Incremental Volume<br/> $Thousands</p></th>
+          <th class="oddColumn span3 top-border"><p>Incremental Margin<br/> $Thousands</p></th>
+          <th></th>
+        </tr>
+      </thead>
+     <tbody>
+        <tr ng-repeat="brand in brands">
+          <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{brand.item}}</a></td>
+          <td class="span1">{{brand.numberEvents}}</td>
+          <td class="span1 oddColumn">
+            <div class="data"></div>
+          </td>
+          <td class="span1">
+            <div class="data"></div>
+          </td>
+          <td class="span1 oddColumn">
+            <div class="data"></div>
+          </td>
+        </tr>
+        <div class="brand-bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
+            <div class="span3 brand-bar-charts" id="brand-bar-sales">
+              <chart value='{{brand_sales}}'></chart>
+            </div>
+            <div class="span3 brand-bar-charts" id="brand-bar-vol">
+              <chart value='{{brand_vol}}'></chart>
+            </div>
+            <div class="span3 brand-bar-charts" id="brand-bar-margin">
+              <chart value='{{brand_margin}}'></chart>
+            </div>
+        </div>
+        <tr>
+          <td class="row-title">Average</td>
+          <td class="span3"></td>
+          <td ng-repeat="average in averages" class="average span3">{{average}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div id="time-series" class="row-fluid span11 time-series">
+    <chart value='{{timeseries}}'></chart>
+  </div>
+</div> <!-- END MAIN CONTENT AREA -->
+
+<!-- BEGIN SIDEBAR - ACTION ITEMS -->
+<div class="span3 main-container action-items">
+
+  <!-- SIDEBAR HEADER -->
+  <div class="row">
+    <div class=" span3 main-container-header">
+      <p class="span3" ng-cloak>Action Required<span class="ng-cloak numActions">{{(brands|filter:followUpIsNotNull).length + (brands|filter:actionIsNotNull).length}}</span></p>
     </div>
   </div>
-
-
-  <div class="span3 main-container">
-    <div class="row-fluid main-container-header">
-      <p>Action Required</p>
-    </div>
-
-    <div ng-repeat="category in categories | action" ng-class="category.actionColor" class="action-item">
-      <p><span>Action: </span>Promote <span>{{category.item}}</span>
-        {{category.action}}
-      <i class="icon-chevron-down"></i></p>
-    </div>
-
-    <div ng-repeat="category in categories | followUp" ng-class="category.actionColor" class="action-item follow-up">
-      <p><span>Follow Up: </span>Promote <span>{{category.item}}</span>
-        {{category.followUp}}
-      <i class="icon-chevron-up"></i></p>
-    </div>
-
-
+  <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
+    <p ng-class="{'': !open, 'action-open': open}">
+      <span class="actionLabel">Action: </span>{{actionItem.action}}
+        <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+    </p>
+    <p class="hiddenAction" ng-show="open"}}>
+      {{actionItem.hiddenAction}}
+    </p>
   </div>
-</div>
 
+  <div ng-repeat="followUpItem in brands | filter:followUpIsNotNull" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
+    <p>
+      <span class="actionLabel">Follow Up: </span>{{followUpItem.followUp}}
+      <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+    </p>
+    <p class="hiddenAction" ng-show="open"}}>
+      {{followUpItem.hiddenAction}}
+    </p>
+  </div>
+</div> <!-- END SIDEBAR -->
