@@ -799,19 +799,18 @@ background-image: -webkit-gradient(
 }
 
 .yAxisTop {
-  top: 225px;
-  left: 72px;
+  top: 86px;
+  left: 51px;
 }
 
 .yAxisBottom {
-  top: 684px;
-  left: 72px;
+  top: 549px;
+  left: 51px;
 }
 
 .xAxisRight {
-  top: 684px;
-  /*left: 92px;*/
-  left: 930px;
+  top: 549px;
+  left: 890px;
 }
 
 .quadrant {
