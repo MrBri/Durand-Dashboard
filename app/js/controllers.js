@@ -43,24 +43,14 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
     $scope.items = data;
   });
 
+  // Retrieves totals for category total averages
   $http.get('/app/data/mod_category_data_total.js').success(function(data) {
-    var total_avg = CategoryAvgSvc.calc(data);
-    $scope.avg_tot_sales = total_avg[0];
-    $scope.avg_tot_vol = total_avg[1];
-    $scope.avg_tot_margin = total_avg[2];
-    $scope.avg_tot_profit = total_avg[3];
-    $scope.avg_tot_trans = total_avg[4];
-    $scope.avg_tot_impact = total_avg[5];
+    $scope.avg_total = CategoryAvgSvc.calc(data);
   });
 
+  // Retrieves totals for category week averages
   $http.get('/app/data/mod_category_data_inc.js').success(function(data) {
-    var total_avg = CategoryAvgSvc.calc(data);
-    $scope.avg_inc_sales = total_avg[0];
-    $scope.avg_inc_vol = total_avg[1];
-    $scope.avg_inc_margin = total_avg[2];
-    $scope.avg_inc_profit = total_avg[3];
-    $scope.avg_inc_trans = total_avg[4];
-    $scope.avg_inc_impact = total_avg[5];
+    $scope.avg_inc = CategoryAvgSvc.calc(data);
   });
 
   $http.get('/app/data/category_data_inc.json').success(function(data) {
@@ -177,12 +167,10 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.brand_margin = colData[2];
   });
 
+  // Retrieves total averages for Brands page table
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
-    var averages = AverageSvc.calc(data);
-    $scope.avg_sale = averages[0];
-    $scope.avg_vol = averages[1];
-    $scope.avg_margin = averages[2];
+    $scope.averages = AverageSvc.calc(data);
   });
 
   //$scope.salesTimeChart = salesTimeChartSvc.query();

@@ -88,124 +88,21 @@
       <tr class="sum-row" ng-controller="timeSeriesCtrl">
         <td colspan=2 class="row-title">Average</td>
 
-        <td class="average odd-column grey" ng-click="showSales();toggleSelected(0)"  ng-class="{'': !selected[0], 'selected-col': selected[0]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_sales}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_sales}}</div>
+        <td ng-repeat="idx in [0,1,2,3,4,5]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
+          <div class="average-number" ng-show='curDurationBtn'>{{avg_total[idx]}}</div>
+          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc[idx]}}</div>
 
           <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[0], 'arrow-down': !selected[0]}"></span>
+            <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
           </div>
 
           <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(0)"  ng-class="{'': !selected[0], 'selected-col': selected[0]}" ng-show='selected[0]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_sales}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_sales}}</div>
+          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
+            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_total[idx]}}</div>
+            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc[idx]}}</div>
 
             <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[0], 'arrow-down': !selected[0]}"></span>
-            </div>
-
-          </div> <!-- END FLOATING DIV -->
-
-        </td>
-
-        <td class="average grey" ng-click="showVolume();toggleSelected(1)" ng-class="{'': !selected[1], 'selected-col': selected[1]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_vol}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_vol}}</div>
-
-          <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[1], 'arrow-down': !selected[1]}"></span>
-          </div>
-
-          <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(1)"  ng-class="{'': !selected[1], 'selected-col': selected[1]}" ng-show='selected[1]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_vol}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_vol}}</div>
-
-            <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[1], 'arrow-down': !selected[1]}"></span>
-            </div>
-
-          </div> <!-- END FLOATING DIV -->
-
-        </td>
-
-        <td class="average odd-column grey" ng-click="showMargin();toggleSelected(2)" ng-class="{'': !selected[2], 'selected-col': selected[2]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_margin}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_margin}}</div>
-          <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[2], 'arrow-down': !selected[2]}"></span>
-          </div>
-
-          <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(2)"  ng-class="{'': !selected[2], 'selected-col': selected[2]}" ng-show='selected[2]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_margin}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_margin}}</div>
-
-            <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[2], 'arrow-down': !selected[2]}"></span>
-            </div>
-
-          </div> <!-- END FLOATING DIV -->
-
-        </td>
-
-        <td class="average grey" ng-click="showProfit();toggleSelected(3)" ng-class="{'': !selected[3], 'selected-col': selected[3]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_profit}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_profit}}</div>
-
-          <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[3], 'arrow-down': !selected[3]}"></span>
-          </div>
-
-          <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(3)"  ng-class="{'': !selected[3], 'selected-col': selected[3]}" ng-show='selected[3]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_profit}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_profit}}</div>
-
-            <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[3], 'arrow-down': !selected[3]}"></span>
-            </div>
-
-          </div> <!-- END FLOATING DIV -->
-
-        </td>
-
-        <td class="average odd-column grey" ng-click="showTrans();toggleSelected(4)" ng-class="{'': !selected[4], 'selected-col': selected[4]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_trans}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_trans}}</div>
-          <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[4], 'arrow-down': !selected[4]}"></span>
-          </div>
-
-          <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(4)"  ng-class="{'': !selected[4], 'selected-col': selected[4]}" ng-show='selected[4]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_trans}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_trans}}</div>
-
-            <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[4], 'arrow-down': !selected[4]}"></span>
-            </div>
-
-          </div> <!-- END FLOATING DIV -->
-
-        </td>
-
-        <td class="average grey" ng-click="showImpact();toggleSelected(5)" ng-class="{'': !selected[5], 'selected-col': selected[5]}">
-          <div class="average-number" ng-show='curDurationBtn'>{{avg_tot_impact}}</div>
-          <div class="average-number" ng-hide='curDurationBtn'>{{avg_inc_impact}}</div>
-
-          <div class="avg-bottom">
-            <span class="grey-arrow" ng-class="{'arrow-up': selected[5], 'arrow-down': !selected[5]}"></span>
-          </div>
-
-          <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(5)"  ng-class="{'': !selected[5], 'selected-col': selected[5]}" ng-show='selected[5]'>
-            <div class="selected-average-number" ng-show='curDurationBtn'>{{avg_tot_impact}}</div>
-            <div class="selected-average-number" ng-hide='curDurationBtn'>{{avg_inc_impact}}</div>
-
-            <div class="selected-avg-bottom">
-              <span class="grey-arrow" ng-class="{'arrow-up': selected[5], 'arrow-down': !selected[5]}"></span>
+              <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
             </div>
 
           </div> <!-- END FLOATING DIV -->

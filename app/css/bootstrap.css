@@ -152,7 +152,7 @@ textarea {
   overflow: auto;
   vertical-align: top;
 }
-@media print {
+/*@media print {
   * {
     text-shadow: none !important;
     color: #000 !important;
@@ -202,7 +202,7 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
-}
+}*/
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -5272,7 +5272,7 @@ button.close {
 .visible-desktop {
   display: inherit !important;
 }
-@media (min-width: 768px) and (max-width: 979px) {
+/*@media (min-width: 768px) and (max-width: 979px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -5285,8 +5285,8 @@ button.close {
   .hidden-tablet {
     display: none !important;
   }
-}
-@media (max-width: 767px) {
+}*/
+/*@media (max-width: 767px) {
   .hidden-desktop {
     display: inherit !important;
   }
@@ -5302,16 +5302,16 @@ button.close {
 }
 .visible-print {
   display: none !important;
-}
-@media print {
+}*/
+/*@media print {
   .visible-print {
     display: inherit !important;
   }
   .hidden-print {
     display: none !important;
   }
-}
-@media (max-width: 767px) {
+}*/
+/*@media (max-width: 767px) {
   body {
     padding-left: 20px;
     padding-right: 20px;
@@ -5407,8 +5407,8 @@ button.close {
   .modal.fade.in {
     top: 20px;
   }
-}
-@media (max-width: 480px) {
+}*/
+/*@media (max-width: 480px) {
   .nav-collapse {
     -webkit-transform: translate3d(0, 0, 0);
   }
@@ -5458,8 +5458,8 @@ button.close {
   .carousel-caption {
     position: static;
   }
-}
-@media (min-width: 768px) and (max-width: 979px) {
+}*/
+/*@media (min-width: 768px) and (max-width: 979px) {
   .row {
     margin-left: -20px;
     *zoom: 1;
@@ -5798,8 +5798,8 @@ button.close {
   .uneditable-input.span1 {
     width: 28px;
   }
-}
-@media (min-width: 1200px) {
+}*/
+/*@media (min-width: 1200px) {
   .row {
     margin-left: -30px;
     *zoom: 1;
@@ -6147,8 +6147,8 @@ button.close {
   .row-fluid .thumbnails {
     margin-left: 0;
   }
-}
-@media (max-width: 979px) {
+}*/
+/*@media (max-width: 979px) {
   body {
     padding-top: 0;
   }
@@ -6298,10 +6298,10 @@ button.close {
     padding-left: 10px;
     padding-right: 10px;
   }
-}
-@media (min-width: 980px) {
+}*/
+/*@media (min-width: 980px) {
   .nav-collapse.collapse {
     height: auto !important;
     overflow: visible !important;
   }
-}
+}*/

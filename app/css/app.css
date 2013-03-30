@@ -2,13 +2,12 @@
 /* @media (min-width: 1024px) { */
 
 [ng\:cloak], [ng-cloak], .ng-cloak {
-  display: none !important;
+  display: none;
 }
 
 body {
   background: #d4f0ff;
   font-family: Helvetica Neue, Helvetica;
-  /*margin: 0 2%;*/
   margin: 0 auto;
 }
 
@@ -173,13 +172,12 @@ body {
   width: 20%;
 }
 
-.dropdown-menu {
-  z-index: 10000;
+div.dropdown-menu {
+  z-index: 1000;
 }
 
 .icon-chevron-right {
   background-color: #5a656b;
-  /*color: #0078bb;*/
   border-radius: 10px;
   margin: .5% 5% 5% 5%;
   padding: 0 1px 1px 0;
@@ -248,6 +246,7 @@ body {
   -webkit-box-shadow: 0 0 8px rgba(116, 179, 233, 1);
   -moz-box-shadow: 0 0 8px rgba(116, 179, 233, 1);
   border:1px solid rgba(116, 179, 233, 0.8);
+  position: relative;
 }
 
 .main-container-header {
@@ -507,7 +506,7 @@ div.selected-avg-bottom {
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   position: absolute;
-  left: 38px;
+  left: 47%;
   cursor: pointer;
   margin-top: 3px;
 }
@@ -531,83 +530,57 @@ div.selected-avg-bottom {
 .bar-charts {
   position: absolute;
   z-index: 1;
-  top: 268px;
+  top: 135px;
 }
 
 #bar-sales {
-  left: 205px;
+  left: 189px;
 }
 
 #bar-vol {
-  left: 292px;
+  left: 275px;
 }
 
 #bar-margin {
-  left: 379px;
+  left: 361px;
 }
 
 #bar-profit {
-  left: 466px;
+  left: 448px;
 }
 
 #bar-trans {
-  left: 553px;
+  left: 535px;
 }
 
 #bar-impact {
-  left: 640px;
+  left: 621px;
 }
 
 .brand-bar-charts {
   position: absolute;
-  top: 268px;
+  top: 135px;
   z-index: 1;
 }
 
 #brand-bar-sales {
-  left: 205px;
+  left: 195px;
 }
 
 #brand-bar-vol {
-  left: 375px;
+  left: 370px;
 }
 
 #brand-bar-margin {
   left: 545px;
 }
 
-/*.brand-bar-charts:last-of-type {
-  left: 200px;
-}*/
-
 .best-row {
   background-color: rgb(185,222,144);
   background-size: 20px;
 }
 
-/*.top-border {
-  border-top: 1px solid #ccc;
-  margin: 0px 0px 20px 10px;
-}*/
-
-/*.average.pos {
-  color: #F77B00;
-}
-
-.average.avg {
-  color: #FDBA30;
-}*/
-
-/*td {
-  padding: 7px;
-}*/
-
 /* TIME SERIES*/
-
-#time-series {
-  /*height: 130px;*/
-  /*overflow: hidden;*/
-}
 
 .time-series {
   /*margin-top: -21px;*/
@@ -660,7 +633,7 @@ background-image: -webkit-gradient(
 
 .action-item {
   margin: 12px 10px;
-  padding: 10px 34px 10px 10px;
+  padding: 10px 34px 0px 10px;
   border-radius: 10px;
 }
 
@@ -684,14 +657,15 @@ background-image: -webkit-gradient(
 
 .action-open {
   border-bottom: 1px solid #e5d6d6;
-  /*padding-bottom: 8pt;*/
-  margin-bottom: 0 !important;
+  padding-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .hiddenAction {
   border-top: 1px solid #fff8f8;
   padding-top: 8pt;
   margin-bottom: 0;
+  padding-bottom: 10px;
 }
 
 .action-item span {
@@ -775,7 +749,6 @@ background-image: -webkit-gradient(
 }
 
 .matrixTitle {
-  /*font-weight: lighter !important;*/
   text-align: center;
   color: #0078bb;
 }
@@ -865,9 +838,9 @@ background-image: -webkit-gradient(
 
 .qNum {
   height: 150px;
-  width: 33.3% !important;
+  width: 33.3%;
   font-size: 40pt;
-  margin: 0 !important;
+  margin: 0;
 }
 
 div .qNum:nth-child(1),div .qNum:nth-child(2) {
