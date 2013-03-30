@@ -193,6 +193,10 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.timeseries = timeChartSvc.showMargin();
   };
 
+  $http.get('/app/data/mod_category_data_inc.js').success(function(data){
+    $scope.categories = data;
+  });
+
 }
 
 function actionItemCtrl($scope) {

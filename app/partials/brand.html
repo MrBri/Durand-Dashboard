@@ -109,26 +109,4 @@
       <chart value='{{timeseries}}'></chart>
     </div>
   </div>
-
-
-  <div class="span3 main-container">
-    <div class="row-fluid main-container-header">
-      <p>Action Required</p>
-    </div>
-
-    <div ng-repeat="category in categories | action" ng-class="category.actionColor" class="action-item">
-      <p><span>Action: </span>Promote <span>{{category.item}}</span>
-        {{category.action}}
-      <i class="icon-chevron-down"></i></p>
-    </div>
-
-    <div ng-repeat="category in categories | followUp" ng-class="category.actionColor" class="action-item follow-up">
-      <p><span>Follow Up: </span>Promote <span>{{category.item}}</span>
-        {{category.followUp}}
-      <i class="icon-chevron-up"></i></p>
-    </div>
-
-
-  </div>
-</div>
-
+<sidebar></sidebar>

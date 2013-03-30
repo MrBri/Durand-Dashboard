@@ -183,35 +183,4 @@
       <chart value='{{timeseries}}'></chart>
     </div>
   </div> <!-- END MAIN CONTENT AREA -->
-
-  <!-- BEGIN SIDEBAR - ACTION ITEMS -->
-  <div class="span3 main-container">
-
-    <!-- SIDEBAR HEADER -->
-    <div class="row">
-      <div class=" span3 main-container-header">
-        <p class="span3" ng-cloak>Action Required<span class="ng-cloak numActions">{{(categories|followUp).length + (categories|action).length}}</span></p>
-      </div>
-    </div>
-    <div ng-repeat="actionItem in categories | action" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
-      <p ng-class="{'': !open, 'action-open': open}">
-        <span>Action: </span>Promote <span>{{actionItem.item}}</span><br>{{actionItem.action}}
-          <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-      </p>
-      <p class="hiddenAction" ng-show="open"}}>
-        {{actionItem.hiddenAction}}
-      </p>
-    </div>
-
-    <div ng-repeat="followUpItem in categories | followUp" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
-      <p>
-        <span>Follow Up: </span>Promote <span>{{followUpItem.item}}</span><br>{{followUpItem.followUp}}
-        <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
-      </p>
-      <p class="hiddenAction" ng-show="open"}}>
-        {{followUpItem.hiddenAction}}
-      </p>
-    </div>
-  </div> <!-- END SIDEBAR -->
-
-<!-- </div> -->
+<sidebar></sidebar>

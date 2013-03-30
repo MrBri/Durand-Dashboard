@@ -27,6 +27,12 @@ angular.module('myApp.directives', []).
       templateUrl: 'partials/subHeader.html'
     };
   }).
+  directive('sidebar', function() {
+    return {
+      restrict: 'E',
+      templateUrl: 'partials/sidebar.html'
+    };
+  }).
   directive('chart', function () {
     return {
       restrict: 'E',
