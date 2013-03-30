@@ -81,14 +81,14 @@
       <tr class="sum-row" ng-controller="timeSeriesCtrl">
         <td colspan=2 class="row-title">Average</td>
 
-        <td ng-repeat="idx in [0,1,2]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
+        <td ng-repeat="idx in [0,1,2]" class="average grey {{idx%2}}" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx], 'odd-column': isOdd(idx)}">
           <div class="avg-number">{{averages[idx]}}</div>
           <div class="avg-bottom">
             <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
           </div>
 
           <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
+          <div class="average grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx], 'odd-column': isOdd(idx)}" ng-show='selected[idx]'>
             <div class="selected-avg-number">{{averages[idx]}}</div>
             <div class="selected-avg-bottom">
               <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
