@@ -400,6 +400,8 @@ body {
   font-weight: normal;
   vertical-align: bottom;
   padding-left: 5px;
+  /*border: 1px solid red;*/
+  z-index: 1000;
 }
 
 .subhead-light {
@@ -407,7 +409,7 @@ body {
 }
 
 .odd-column {
-  background: rgba(213,213,213,.3);
+  background: #f2f2f2;
 }
 
 .table-row {
@@ -451,7 +453,8 @@ body {
 }*/
 
 div.selected-avg {
-  background: #f2f2f2;
+  border-top: 1px solid #dcdcdc;
+  background: #fff;
   z-index: 9999;
   position: absolute;
   width: 100%;
@@ -461,13 +464,16 @@ div.selected-avg {
   font-size: 28px;
 }
 
+.odd-column div.selected-avg {
+  background: #f2f2f2;
+}
+
 .average-number {
   padding: 8px 0 4px 0;
 }
 
 .selected-average-number {
   padding: 12px 0 4px 0;
-  /*background: #f2f2f2;*/
 }
 
 .avg-bottom {
@@ -534,7 +540,7 @@ div.selected-avg-bottom {
 .bar-charts {
   position: relative;
   left: 195px;
-  top: 72px;
+  top: 69px;
   z-index: 1;
 }
 

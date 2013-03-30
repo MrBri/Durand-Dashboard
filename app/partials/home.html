@@ -78,19 +78,19 @@
         <tr ng-repeat="category in categories" class="table-row">
           <td class="row-title"><a href="#">{{concat(category.item)}}</a></td>
           <td class="row-title">{{category.numEvents}}</td>
-          <td class=" odd-column"></td>
-          <td class=""></td>
-          <td class=" odd-column"></td>
-          <td class=""></td>
-          <td class=" odd-column"></td>
-          <td class=""></td>
+          <td class="odd-column"></td>
+          <td></td>
+          <td class="odd-column"></td>
+          <td></td>
+          <td class="odd-column"></td>
+          <td></td>
         </tr>
-<!--         <tr>
+        <tr>
           <div class="bar-charts">
             <div class="" id="bar-sales">
               <chart value='{{cat_inc_sales}}'></chart>
             </div>
-            <div class="" id="bar-vol">
+<!--             <div class="" id="bar-vol">
               <chart value='{{cat_inc_vol}}'></chart>
             </div>
             <div class="" id="bar-margin">
@@ -104,9 +104,9 @@
             </div>
             <div class="" id="bar-impact">
               <chart value='{{cat_inc_impact}}'></chart>
-            </div>
+            </div> -->
           </div>
-        </tr> -->
+        </tr>
         <tr class="sum-row" ng-controller="timeSeriesCtrl">
           <td colspan=2 class="row-title">Average</td>
 
