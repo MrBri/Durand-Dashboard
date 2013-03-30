@@ -8,28 +8,28 @@
   <div class="row">
     <div class="span9 main-container-header">
       <p class="span5">Brand</p>
-      <div class="control-group input-append span3 datePicker">
+      <div class="control-group input-append span3 date-picker">
 
-        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
 
-        <input type="text" class="dateField" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-        <button type="button" class="btn dateBtn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
     </div>
   </div> <!-- END MAIN CONTENT HEADER -->
 
   <!-- MAIN CONTENT SUBHEADER -->
   <div class="row">
-    <div class="span5 mainContentSub">
-      <!-- <span class="durationLabel">Duration: </span>
+    <div class="span5 main-content-sub">
+      <!-- <span class="duration-label">Duration: </span>
       <div class="btn-group durationBtns" data-toggle="buttons-radio">
         <button class="btn btn-mini pill pill-left active" ng-click="loadWeek();curDurationBtn=false">Week</button>
         <button class="btn btn-mini pill pill-right" ng-click="loadTotal();curDurationBtn=true">Total</button>
       </div> -->
     </div>
 
-    <div class="span4 mainContentSub">
+    <div class="span4 main-content-sub">
       
       <ul class="legend">
         <li>
@@ -62,11 +62,11 @@
         <th colspan=3 class="upper-header">Average Sales &amp; Profit</th>
       </tr>
       <tr class="table-sub-header table-row">
-        <th class="parityCol">Parity</th>
-        <th class="eventsCol"># of Events</th>
-        <th class="dataColBrands oddColumn">Incremental<br>Sales<br><span class="subhead-light">$Thousands</span></th>
-        <th class="dataColBrands">Incremental<br>Volume<br><span class="subhead-light">$Thousands</span></th>
-        <th class="dataColBrands oddColumn">Incremental<br>Margin<br><span class="subhead-light">$Thousands</span></th>
+        <th class="parity-col">Parity</th>
+        <th class="events-col"># of Events</th>
+        <th class="data-col-brands oddColumn">Incremental<br>Sales<br><span class="subhead-light">$Thousands</span></th>
+        <th class="data-col-brands">Incremental<br>Volume<br><span class="subhead-light">$Thousands</span></th>
+        <th class="data-col-brands oddColumn">Incremental<br>Margin<br><span class="subhead-light">$Thousands</span></th>
       </tr>
     </thead>
     <tbody>
@@ -82,14 +82,14 @@
         <td colspan=2 class="row-title">Average</td>
 
         <td ng-repeat="idx in [0,1,2]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
-          <div class="average-number">{{averages[idx]}}</div>
+          <div class="avg-number">{{averages[idx]}}</div>
           <div class="avg-bottom">
             <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
           </div>
 
           <!-- FLOATING DIV FOR SELECTED AVG -->
           <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
-            <div class="selected-average-number">{{averages[idx]}}</div>
+            <div class="selected-avg-number">{{averages[idx]}}</div>
             <div class="selected-avg-bottom">
               <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
             </div>
@@ -124,7 +124,7 @@
   <!-- SIDEBAR HEADER -->
   <div class="row">
     <div class=" span3 main-container-header">
-      <p class="span3" ng-cloak>Action Required<span class="ng-cloak numActions">{{(brands|filter:followUpIsNotNull).length + (brands|filter:actionIsNotNull).length}}</span></p>
+      <p class="span3" ng-cloak>Action Required<span class="ng-cloak num-actions">{{(brands|filter:followUpIsNotNull).length + (brands|filter:actionIsNotNull).length}}</span></p>
     </div>
   </div>
   <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
@@ -132,7 +132,7 @@
       <span class="actionLabel">Action: </span>{{actionItem.action}}
         <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
-    <p class="hiddenAction" ng-show="open"}}>
+    <p class="hidden-action" ng-show="open"}}>
       {{actionItem.hiddenAction}}
     </p>
   </div>
@@ -142,7 +142,7 @@
       <span class="actionLabel">Follow Up: </span>{{followUpItem.followUp}}
       <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
-    <p class="hiddenAction" ng-show="open"}}>
+    <p class="hidden-action" ng-show="open"}}>
       {{followUpItem.hiddenAction}}
     </p>
   </div>
