@@ -35,9 +35,9 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
     $scope.categories = data;
   });
 
-  $http.get('/app/data/mod_brand_data.js').success(function(data){
-    $scope.brands = data;
-  });
+  // $http.get('/app/data/mod_brand_data.js').success(function(data){
+  //   $scope.brands = data;
+  // });
 
   $http.get('/app/data/mod_item_data.js').success(function(data){
     $scope.items = data;
