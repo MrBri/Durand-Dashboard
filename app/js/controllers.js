@@ -167,12 +167,10 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.brand_margin = colData[2];
   });
 
+  // Retrieves total averages for Brands page table
   $http.get('/app/data/mod_brand_data.js').success(function(data) {
     $scope.brands = data;
-    var averages = AverageSvc.calc(data);
-    $scope.avg_sale = averages[0];
-    $scope.avg_vol = averages[1];
-    $scope.avg_margin = averages[2];
+    $scope.averages = AverageSvc.calc(data);
   });
 
   //$scope.salesTimeChart = salesTimeChartSvc.query();

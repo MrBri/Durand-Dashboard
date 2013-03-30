@@ -78,11 +78,31 @@
         <td class="oddColumn"></td>
       </tr>
 
-<!--       <tr>
-        <td class="row-title">Average</td>
-        <td class=""></td>
-        <td ng-repeat="average in averages" class="average">{{average}}</td>
-      </tr> -->
+      <tr class="sum-row" ng-controller="timeSeriesCtrl">
+        <td colspan=2 class="row-title">Average</td>
+
+        <td ng-repeat="idx in [0,1,2]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
+          <div class="average-number" ng-show='curDurationBtn'>{{averages[idx]}}</div>
+          <div class="average-number" ng-hide='curDurationBtn'>{{averages[idx]}}</div>
+
+          <div class="avg-bottom">
+            <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
+          </div>
+
+          <!-- FLOATING DIV FOR SELECTED AVG -->
+          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
+            <div class="selected-average-number" ng-show='curDurationBtn'>{{averages[idx]}}</div>
+            <div class="selected-average-number" ng-hide='curDurationBtn'>{{averages[idx]}}</div>
+
+            <div class="selected-avg-bottom">
+              <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
+            </div>
+
+          </div> <!-- END FLOATING DIV -->
+
+        </td>
+      </tr>
+
     </tbody>
   </table>
 
