@@ -6,6 +6,9 @@ function indexCtrl ($scope, $location) {
   $scope.goHome = function() {
     $location.path("/home");
   };
+
+  //User is not logged in by default
+  $scope.isLoggedIn = false;
 }
 indexCtrl.$inject = ['$scope', '$location'];
 
