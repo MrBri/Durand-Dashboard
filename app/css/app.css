@@ -592,7 +592,8 @@ div.selected-avg-bottom {
 /* RIGHT BAR */
 
 .action-items {
-  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .num-actions {
