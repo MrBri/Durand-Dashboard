@@ -54,35 +54,35 @@
   </div> <!-- END MAIN CONTENT SUBHEADER -->
 
   <!-- MAIN CONTENT BODY -->
-  <div class="row-fluid table-header span11">
-    <div class="span4"></div>
-    <div class="span8"><h5>Average Sales &amp; Profit</h5></div>
-    <table class="main-table">
-      <thead>
-        <tr>
-          <th class="span2"><p>Parity</p></th>
-          <th class="span2"><p># of Events</p></th>
-          <th class="oddColumn span3 top-border"><p>Incremental Sales<br/> $Thousands</p></th>
-          <th class="span3 top-border"><p>Incremental Volume<br/> $Thousands</p></th>
-          <th class="oddColumn span3 top-border"><p>Incremental Margin<br/> $Thousands</p></th>
-          <th></th>
+  <table class="main-table">
+    <thead>
+      <tr class="table-header">
+        <th colspan=2></th>
+        <th colspan=3 class="upper-header">Average Sales &amp; Profit</th>
+      </tr>
+      <tr class="table-sub-header table-row">
+        <th class="parityCol">Parity</th>
+        <th class="eventsCol"># of Events</th>
+        <th class="dataColBrands oddColumn">Incremental<br>Sales<br><span class="subhead-light">$Thousands</span></th>
+        <th class="dataColBrands">Incremental<br>Volume<br><span class="subhead-light">$Thousands</span></th>
+        <th class="dataColBrands oddColumn">Incremental<br>Margin<br><span class="subhead-light">$Thousands</span></th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="brand in brands" class="table-row">
+          <td class="row-title"><a href="#">{{brand.item}}</a></td>
+          <td class="">{{brand.numberEvents}}</td>
+          <td class="oddColumn">
+            <!-- <div class="data"></div> -->
+          </td>
+          <td>
+            <!-- <div class="data"></div> -->
+          </td>
+          <td class="oddColumn">
+            <!-- <div class="data"></div> -->
+          </td>
         </tr>
-      </thead>
-     <tbody>
-        <tr ng-repeat="brand in brands">
-          <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{brand.item}}</a></td>
-          <td class="span1">{{brand.numberEvents}}</td>
-          <td class="span1 oddColumn">
-            <div class="data"></div>
-          </td>
-          <td class="span1">
-            <div class="data"></div>
-          </td>
-          <td class="span1 oddColumn">
-            <div class="data"></div>
-          </td>
-        </tr>
-        <div class="brand-bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
+        <!-- <div class="brand-bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
             <div class="span3 brand-bar-charts" id="brand-bar-sales">
               <chart value='{{brand_sales}}'></chart>
             </div>
@@ -97,11 +97,12 @@
           <td class="row-title">Average</td>
           <td class="span3"></td>
           <td ng-repeat="average in averages" class="average span3">{{average}}</td>
-        </tr>
+        </tr> -->
       </tbody>
-    </table>
-  </div>
-  <div id="time-series" class="row-fluid span11 time-series">
+  </table>
+
+  <!-- TIME SERIES GRAPH -->
+  <div id="time-series" class="time-series">
     <chart value='{{timeseries}}'></chart>
   </div>
 </div> <!-- END MAIN CONTENT AREA -->

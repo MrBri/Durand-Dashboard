@@ -384,8 +384,13 @@ body {
   width: 40px;
 }
 
-.dataColumn {
+.dataColCategories {
   width: 81px;
+  background: #fff;
+}
+
+.dataColBrands {
+  width: 170px;
   background: #fff;
 }
 
