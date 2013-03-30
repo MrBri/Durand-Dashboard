@@ -386,6 +386,7 @@ body {
 
 .dataColumn {
   width: 81px;
+  background: #fff;
 }
 
 .upper-header {
@@ -400,8 +401,8 @@ body {
   font-weight: normal;
   vertical-align: bottom;
   padding-left: 5px;
-  /*border: 1px solid red;*/
-  z-index: 1000;
+  position: relative;
+  z-index: 100;
 }
 
 .subhead-light {
@@ -431,10 +432,6 @@ body {
   font-weight: bold;
 }
 
-.sum-row td {
-  /*padding: 3px 0 0 0;*/
-}
-
 .average {
   position: relative;
   text-align: center;
@@ -444,13 +441,14 @@ body {
   cursor: pointer;
   border: none;
   padding: 0;
+  border-top: 1px solid #ccc;
+  background: #fff;
+  z-index: 100;
 }
 
-/*.selected-col {
-  
-  height: 70px;
-  background: #000 !important;
-}*/
+.average.odd-column {
+  background: #f2f2f2;
+}
 
 div.selected-avg {
   border-top: 1px solid #dcdcdc;
@@ -476,13 +474,14 @@ div.selected-avg {
   padding: 12px 0 4px 0;
 }
 
-.avg-bottom {
+div.avg-bottom {
   position: relative;
   background: #ddd;
   height: 10px;
   bottom: 0;
   border-top: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
+  z-index: 100;
 }
 
 div.selected-avg-bottom {
@@ -493,13 +492,8 @@ div.selected-avg-bottom {
   border-bottom: 1px solid #3d98cb;
 }
 
-.selected-col .avg-bottom {
-  /*background: #0077ba;*/
-  /*height: 20px;*/
-}
-
 .odd-column .avg-bottom-odd {
-  background: #f2f2f2;
+  /*background: #f2f2f2;*/
 }
 
 .grey-arrow {
@@ -529,19 +523,34 @@ div.selected-avg-bottom {
 
 /* MAIN CONTENT TABLE - BAR CHARTS */
 
-#bar-sales, #bar-vol, #bar-margin, #bar-profit, #bar-trans, #bar-impact,
-#brand-bar-sales, #brand-bar-vol, #brand-bar-margin {
-  height: 10px;
-  overflow: visible;
-  /*margin-right:1px;*/
-  /*margin-top: -28px;*/
+.bar-charts {
+  position: absolute;
+  z-index: 1;
+  top: 268px;
 }
 
-.bar-charts {
-  position: relative;
-  left: 195px;
-  top: 69px;
-  z-index: 1;
+#bar-sales {
+  left: 205px;
+}
+
+#bar-vol {
+  left: 292px;
+}
+
+#bar-margin {
+  left: 379px;
+}
+
+#bar-profit {
+  left: 466px;
+}
+
+#bar-trans {
+  left: 553px;
+}
+
+#bar-impact {
+  left: 640px;
 }
 
 .brand-bar-charts {

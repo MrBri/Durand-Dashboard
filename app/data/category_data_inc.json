@@ -5,7 +5,7 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 75,
+    "width": 85,
     "height": 311,
     "renderTo": "bar-sales"
   },
@@ -62,7 +62,7 @@
   "series": [{
     "data": [{
       "y": 34,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -77,7 +77,7 @@
       }
     }, {
       "y": 102,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -92,7 +92,7 @@
       }
     }, {
       "y": 147,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -107,7 +107,7 @@
       }
     }, {
       "y": 84,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -122,7 +122,7 @@
       }
     }, {
       "y": 44,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -137,7 +137,7 @@
       }
     }, {
       "y": 58,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -152,7 +152,7 @@
       }
     }, {
       "y": 77,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -167,7 +167,7 @@
       }
     }, {
       "y": 101,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -182,7 +182,7 @@
       }
     }, {
       "y": 13,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -197,7 +197,7 @@
       }
     }, {
       "y": 39,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -221,8 +221,8 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 100,
-    "height": 376,
+    "width": 85,
+    "height": 311,
     "renderTo": "bar-vol"
   },
   "title": {
@@ -234,7 +234,7 @@
       "shadow": false,
       "pointPadding": -1,
       "groupPadding": -1,
-      "pointWidth": 20,
+      "pointWidth": 16,
       "dataLabels": {
         "enabled": true
       }
@@ -278,7 +278,7 @@
   "series": [{
     "data": [{
       "y": -8,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -293,7 +293,7 @@
       }
     }, {
       "y": 17,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -308,7 +308,7 @@
       }
     }, {
       "y": -22,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -323,7 +323,7 @@
       }
     }, {
       "y": 7,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -338,7 +338,7 @@
       }
     }, {
       "y": 11,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -353,7 +353,7 @@
       }
     }, {
       "y": 7,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -368,7 +368,7 @@
       }
     }, {
       "y": 4,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -383,7 +383,7 @@
       }
     }, {
       "y": 21,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -398,7 +398,7 @@
       }
     }, {
       "y": 0,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -413,7 +413,7 @@
       }
     }, {
       "y": 6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -437,8 +437,8 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 100,
-    "height": 376,
+    "width": 85,
+    "height": 311,
     "renderTo": "bar-margin"
   },
   "title": {
@@ -450,7 +450,7 @@
       "shadow": false,
       "pointPadding": -1,
       "groupPadding": -1,
-      "pointWidth": 20,
+      "pointWidth": 16,
       "dataLabels": {
         "enabled": true
       }
@@ -494,7 +494,7 @@
   "series": [{
     "data": [{
       "y": 16,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -509,7 +509,7 @@
       }
     }, {
       "y": 59,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -524,7 +524,7 @@
       }
     }, {
       "y": 49,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -539,7 +539,7 @@
       }
     }, {
       "y": 31,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -554,7 +554,7 @@
       }
     }, {
       "y": 23,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -569,7 +569,7 @@
       }
     }, {
       "y": 66,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -584,7 +584,7 @@
       }
     }, {
       "y": 36,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -599,7 +599,7 @@
       }
     }, {
       "y": 43,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -614,7 +614,7 @@
       }
     }, {
       "y": 6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -629,7 +629,7 @@
       }
     }, {
       "y": 11,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -653,8 +653,8 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 100,
-    "height": 376,
+    "width": 85,
+    "height": 311,
     "renderTo": "bar-profit"
   },
   "title": {
@@ -666,7 +666,7 @@
       "shadow": false,
       "pointPadding": -1,
       "groupPadding": -1,
-      "pointWidth": 20,
+      "pointWidth": 16,
       "dataLabels": {
         "enabled": true
       }
@@ -710,7 +710,7 @@
   "series": [{
     "data": [{
       "y": -6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -725,7 +725,7 @@
       }
     }, {
       "y": 18,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -740,7 +740,7 @@
       }
     }, {
       "y": -6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -755,7 +755,7 @@
       }
     }, {
       "y": 7,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -770,7 +770,7 @@
       }
     }, {
       "y": 11,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -785,7 +785,7 @@
       }
     }, {
       "y": 7,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -800,7 +800,7 @@
       }
     }, {
       "y": 6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -815,7 +815,7 @@
       }
     }, {
       "y": 22,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -830,7 +830,7 @@
       }
     }, {
       "y": 1,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -845,7 +845,7 @@
       }
     }, {
       "y": 6,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -869,8 +869,8 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 100,
-    "height": 376,
+    "width": 85,
+    "height": 311,
     "renderTo": "bar-trans"
   },
   "title": {
@@ -882,7 +882,7 @@
       "shadow": false,
       "pointPadding": -1,
       "groupPadding": -1,
-      "pointWidth": 20,
+      "pointWidth": 16,
       "dataLabels": {
         "enabled": true
       }
@@ -926,7 +926,7 @@
   "series": [{
     "data": [{
       "y": 11,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -941,7 +941,7 @@
       }
     }, {
       "y": 17,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -956,7 +956,7 @@
       }
     }, {
       "y": 27,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -971,7 +971,7 @@
       }
     }, {
       "y": 43,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -986,7 +986,7 @@
       }
     }, {
       "y": 13,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1001,7 +1001,7 @@
       }
     }, {
       "y": 26,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1016,7 +1016,7 @@
       }
     }, {
       "y": 45,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1031,7 +1031,7 @@
       }
     }, {
       "y": 29,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1046,7 +1046,7 @@
       }
     }, {
       "y": 14,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1061,7 +1061,7 @@
       }
     }, {
       "y": 11,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1085,8 +1085,8 @@
   "chart": {
     "type": "bar",
     "backgroundColor": "transparent",
-    "width": 100,
-    "height": 376,
+    "width": 85,
+    "height": 311,
     "renderTo": "bar-impact"
   },
   "title": {
@@ -1098,7 +1098,7 @@
       "shadow": false,
       "pointPadding": -1,
       "groupPadding": -1,
-      "pointWidth": 20,
+      "pointWidth": 16,
       "dataLabels": {
         "enabled": true
       }
@@ -1142,7 +1142,7 @@
   "series": [{
     "data": [{
       "y": 1935,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1157,7 +1157,7 @@
       }
     }, {
       "y": 227,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1172,7 +1172,7 @@
       }
     }, {
       "y": 2541,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1187,7 +1187,7 @@
       }
     }, {
       "y": 2947,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1202,7 +1202,7 @@
       }
     }, {
       "y": 855,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1217,7 +1217,7 @@
       }
     }, {
       "y": 1721,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1232,7 +1232,7 @@
       }
     }, {
       "y": 2317,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1247,7 +1247,7 @@
       }
     }, {
       "y": 1401,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1262,7 +1262,7 @@
       }
     }, {
       "y": 513,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,
@@ -1277,7 +1277,7 @@
       }
     }, {
       "y": 390,
-      "pointWidth": 15,
+      "pointWidth": 16,
       "color": {
         "linearGradient": {
           "x1": 0,

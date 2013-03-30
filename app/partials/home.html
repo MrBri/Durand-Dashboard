@@ -86,27 +86,7 @@
           <td></td>
         </tr>
         <tr>
-          <div class="bar-charts">
-            <div class="" id="bar-sales">
-              <chart value='{{cat_inc_sales}}'></chart>
-            </div>
-<!--             <div class="" id="bar-vol">
-              <chart value='{{cat_inc_vol}}'></chart>
-            </div>
-            <div class="" id="bar-margin">
-              <chart value='{{cat_inc_margin}}'></chart>
-            </div>
-            <div class="" id="bar-profit">
-              <chart value='{{cat_inc_profit}}'></chart>
-            </div>
-            <div class="" id="bar-trans">
-              <chart value='{{cat_inc_trans}}'></chart>
-            </div>
-            <div class="" id="bar-impact">
-              <chart value='{{cat_inc_impact}}'></chart>
-            </div> -->
-          </div>
-        </tr>
+
         <tr class="sum-row" ng-controller="timeSeriesCtrl">
           <td colspan=2 class="row-title">Average</td>
 
@@ -235,6 +215,25 @@
         </tr>
       </tbody>
     </table>
+
+      <div class="bar-charts" id="bar-sales">
+        <chart value='{{cat_inc_sales}}'></chart>
+      </div>
+      <div class="bar-charts" id="bar-vol">
+        <chart value='{{cat_inc_vol}}'></chart>
+      </div>
+      <div class="bar-charts" id="bar-margin">
+        <chart value='{{cat_inc_margin}}'></chart>
+      </div>
+      <div class="bar-charts" id="bar-profit">
+        <chart value='{{cat_inc_profit}}'></chart>
+      </div>
+      <div class="bar-charts" id="bar-trans">
+        <chart value='{{cat_inc_trans}}'></chart>
+      </div>
+      <div class="bar-charts" id="bar-impact">
+        <chart value='{{cat_inc_impact}}'></chart>
+      </div>
 
     <div id="time-series" class=" time-series">
       <chart value='{{timeseries}}'></chart>
