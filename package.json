@@ -1,6 +1,6 @@
 {
   "name": "Durand-Dashboard",
-  "version": "0.1.0-4",
+  "version": "0.1.0-5",
   "dependences": {},
   "engines": {
     "node": "0.6.x"
@@ -25,10 +25,9 @@
     "HighCharts",
     "AngularJS"
   ],
-  "subdomain": "durand-dashboard",
+  "subdomain": "durand",
   "author": "Mike Adams, Tony Thomson, Raya Desawade, Tyler Briles",
   "license": "BSD",
   "gitHead": "3d1bbd72e598d182d2a92b16656215c75655caf0",
-  "readmeFilename": "README.md",
-  "subdomain": "durand"
+  "readmeFilename": "README.md"
 }
