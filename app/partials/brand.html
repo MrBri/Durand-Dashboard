@@ -69,37 +69,32 @@
       </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="brand in brands" class="table-row">
-          <td class="row-title"><a href="#">{{brand.item}}</a></td>
-          <td class="">{{brand.numberEvents}}</td>
-          <td class="oddColumn">
-            <!-- <div class="data"></div> -->
-          </td>
-          <td>
-            <!-- <div class="data"></div> -->
-          </td>
-          <td class="oddColumn">
-            <!-- <div class="data"></div> -->
-          </td>
-        </tr>
-        <!-- <div class="brand-bar-charts span9" style="position:relative; left:22%; top:61px; z-index: 9999;">
-            <div class="span3 brand-bar-charts" id="brand-bar-sales">
-              <chart value='{{brand_sales}}'></chart>
-            </div>
-            <div class="span3 brand-bar-charts" id="brand-bar-vol">
-              <chart value='{{brand_vol}}'></chart>
-            </div>
-            <div class="span3 brand-bar-charts" id="brand-bar-margin">
-              <chart value='{{brand_margin}}'></chart>
-            </div>
-        </div>
-        <tr>
-          <td class="row-title">Average</td>
-          <td class="span3"></td>
-          <td ng-repeat="average in averages" class="average span3">{{average}}</td>
-        </tr> -->
-      </tbody>
+      <tr ng-repeat="brand in brands" class="table-row">
+        <td class="row-title"><a href="#">{{brand.item}}</a></td>
+        <td class="">{{brand.numberEvents}}</td>
+        <td class="oddColumn"></td>
+        <td></td>
+        <td class="oddColumn"></td>
+      </tr>
+
+<!--       <tr>
+        <td class="row-title">Average</td>
+        <td class=""></td>
+        <td ng-repeat="average in averages" class="average">{{average}}</td>
+      </tr> -->
+    </tbody>
   </table>
+
+  <!-- BAR CHARTS OVERLAID ON GRAPH -->
+  <div class="brand-bar-charts" id="brand-bar-sales">
+    <chart value='{{brand_sales}}'></chart>
+  </div>
+  <div class="brand-bar-charts" id="brand-bar-vol">
+    <chart value='{{brand_vol}}'></chart>
+  </div>
+  <div class="brand-bar-charts" id="brand-bar-margin">
+    <chart value='{{brand_margin}}'></chart>
+  </div>
 
   <!-- TIME SERIES GRAPH -->
   <div id="time-series" class="time-series">
