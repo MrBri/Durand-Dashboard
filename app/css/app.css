@@ -530,31 +530,31 @@ div.selected-avg-bottom {
 .bar-charts {
   position: absolute;
   z-index: 1;
-  top: 268px;
+  top: 135px;
 }
 
 #bar-sales {
-  left: 205px;
+  left: 189px;
 }
 
 #bar-vol {
-  left: 292px;
+  left: 275px;
 }
 
 #bar-margin {
-  left: 379px;
+  left: 361px;
 }
 
 #bar-profit {
-  left: 466px;
+  left: 448px;
 }
 
 #bar-trans {
-  left: 553px;
+  left: 535px;
 }
 
 #bar-impact {
-  left: 640px;
+  left: 621px;
 }
 
 .brand-bar-charts {
