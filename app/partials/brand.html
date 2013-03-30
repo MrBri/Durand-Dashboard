@@ -45,9 +45,9 @@
           <tr>
             <th class="span2"><p>Parity</p></th>
             <th class="span2"><p># of Events</p></th>
-            <th class="column span3 top-border"><p>Incremental Sales<br/> $Thousands</p></th>
+            <th class="oddColumn span3 top-border"><p>Incremental Sales<br/> $Thousands</p></th>
             <th class="span3 top-border"><p>Incremental Volume<br/> $Thousands</p></th>
-            <th class="column span3 top-border"><p>Incremental Margin<br/> $Thousands</p></th>
+            <th class="oddColumn span3 top-border"><p>Incremental Margin<br/> $Thousands</p></th>
             <th></th>
           </tr>
         </thead>
@@ -55,13 +55,13 @@
           <tr ng-repeat="brand in brands">
             <td class="span2 row-title"><a href="#" style="text-decoration:none; color: #666">{{brand.item}}</a></td>
             <td class="span1">{{brand.numberEvents}}</td>
-            <td class="span1 column">
+            <td class="span1 oddColumn">
               <div class="data"></div>
             </td>
             <td class="span1">
               <div class="data"></div>
             </td>
-            <td class="span1 column">
+            <td class="span1 oddColumn">
               <div class="data"></div>
             </td>
           </tr>

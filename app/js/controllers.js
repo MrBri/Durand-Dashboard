@@ -139,8 +139,8 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc) {
   };
 
   $scope.concat = function(itemName) {
-    if(itemName.length > 7) {
-      return(itemName.slice(0,7) + "...");
+    if(itemName.length > 18) {
+      return(itemName.slice(0,18) + "...");
     } else {
       return(itemName);
     }
@@ -189,9 +189,21 @@ function brandCtrl($scope, $http, AverageSvc) {
 }
 
 function actionItemCtrl($scope) {
-    $scope.open = false;
+  $scope.open = false;
 
   $scope.toggleOpen = function () {
     $scope.open = ($scope.open) ? false : true;
   };
+}
+
+function timeSeriesCtrl($scope) {
+  $scope.toggleSelected = function (colNum) {
+    for (var i = 0; i < 6; i++) {
+      $scope.selected[i] = false;
+    };
+    $scope.selected[colNum] = true;
+  };
+  
+  $scope.selected = [];
+  $scope.selected[0] = true;
 }

@@ -7,7 +7,7 @@
         "type": "spline",
         "backgroundColor": "transparent",
         "renderTo": "time-series",
-        "height": 130
+        "height": 120
     },
     "title": {
         "text": ""
