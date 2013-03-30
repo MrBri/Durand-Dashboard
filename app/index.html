@@ -30,8 +30,7 @@
       <a class="brand" href="#"><img src="img/durand-small.png"></a>
     </div>
     <!-- PARTIAL: DISPLAY ONLY WHEN LOGGED IN -->
-    <div ng-show='isLoggedIn();' class="span3 header" ng-controller="loginCtrl">BLAH</div>
-    <div ng-hide='isLoggedIn();', class="span3 header", ng-controller="loginCtrl">HELLO THERE!!!!</div>
+    <div ng-show='isLoggedIn();' class="span3 header" account-links ng-controller="loginCtrl"></div>
 
     <!-- END PARTIAL -->
     <div class="divider span12"></div>

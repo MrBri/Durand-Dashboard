@@ -18,8 +18,7 @@ function loginCtrl($scope, $location, LogInSvc) {
   };
 
   $scope.isLoggedIn = function() {
-    console.log("Calling getlogin");
-    LogInSvc.getLoginStatus();
+    return LogInSvc.getLoginStatus();
   };
 
 }

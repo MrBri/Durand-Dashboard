@@ -34,19 +34,14 @@ angular.module('myApp.services', [])
   })
   .service('LogInSvc', function() {
     var isLoggedIn = false;
-    console.log("Initial: Login set to " + isLoggedIn);
     return {
       getLoginStatus: function() {
-        console.log("Service. Login status: " + isLoggedIn);
         return isLoggedIn;
       },
       setLogin: function(value) {
-        console.log("Login set to " + value);
         isLoggedIn = value; 
       }
     };
-    return isLoggedIn;
-
   })
   .service('CategoryAvgSvc', function() {
     this.calc = function(data) {
