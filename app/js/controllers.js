@@ -2,22 +2,26 @@
 
 /* Controllers */
 
-function indexCtrl ($scope, $location) {
+function indexCtrl ($scope, $location, LogInSvc ) {
   $scope.goHome = function() {
     $location.path("/home");
   };
 
-  //User is not logged in by default
-  $scope.isLoggedIn = false;
 }
-indexCtrl.$inject = ['$scope', '$location'];
 
-function loginCtrl($scope, $location) {
+function loginCtrl($scope, $location, LogInSvc) {
+
   $scope.login = function() {
-    $location.path("/twoBytwo");
+    LogInSvc.setLogin(true);
+   $location.path("/twoBytwo");
+ 
   };
+
+  $scope.isLoggedIn = function() {
+    return LogInSvc.getLoginStatus();
+  };
+
 }
-loginCtrl.$inject = ['$scope', '$location'];
 
 function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
   // $scope.categories = glb.categoryDataIncremental;
