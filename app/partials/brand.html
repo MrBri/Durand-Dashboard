@@ -127,20 +127,20 @@
       <p class="span3" ng-cloak>Action Required<span class="ng-cloak num-actions">{{(brands|filter:followUpIsNotNull).length + (brands|filter:actionIsNotNull).length}}</span></p>
     </div>
   </div>
-  <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
+  <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" ng-click="toggleOpen()" class="action-item {{actionItem.actionColor}}">
     <p ng-class="{'': !open, 'action-open': open}">
       <span class="actionLabel">Action: </span>{{actionItem.action}}
-        <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+        <span class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
     <p class="hidden-action" ng-show="open"}}>
       {{actionItem.hiddenAction}}
     </p>
   </div>
 
-  <div ng-repeat="followUpItem in brands | filter:followUpIsNotNull" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
+  <div ng-repeat="followUpItem in brands | filter:followUpIsNotNull" ng-controller="actionItemCtrl" ng-click="toggleOpen()" class="action-item {{followUpItem.actionColor}}">
     <p>
       <span class="actionLabel">Follow Up: </span>{{followUpItem.followUp}}
-      <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+      <span class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
     <p class="hidden-action" ng-show="open"}}>
       {{followUpItem.hiddenAction}}
