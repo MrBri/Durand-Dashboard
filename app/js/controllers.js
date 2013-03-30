@@ -194,6 +194,14 @@ function brandCtrl($scope, $http, AverageSvc) {
     $scope.brands = data;
     $scope.averages = AverageSvc.calc(data);
   });
+
+  $scope.actionIsNotNull = function(brand) {
+    return brand.action !== null;
+  };
+
+  $scope.followUpIsNotNull = function(brand) {
+    return brand.followUp !== null;
+  };
 }
 
 function actionItemCtrl($scope) {

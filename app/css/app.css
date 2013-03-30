@@ -384,8 +384,13 @@ body {
   width: 40px;
 }
 
-.dataColumn {
+.dataColCategories {
   width: 81px;
+  background: #fff;
+}
+
+.dataColBrands {
+  width: 170px;
   background: #fff;
 }
 
@@ -554,14 +559,26 @@ div.selected-avg-bottom {
 }
 
 .brand-bar-charts {
-  position: relative;
-  left: 150px;
-  top: -20px;
+  position: absolute;
+  top: 268px;
+  z-index: 1;
 }
 
-.brand-bar-charts:last-of-type {
-  left: 200px;
+#brand-bar-sales {
+  left: 205px;
 }
+
+#brand-bar-vol {
+  left: 375px;
+}
+
+#brand-bar-margin {
+  left: 545px;
+}
+
+/*.brand-bar-charts:last-of-type {
+  left: 200px;
+}*/
 
 .best-row {
   background-color: rgb(185,222,144);
@@ -586,7 +603,6 @@ div.selected-avg-bottom {
 }*/
 
 /* TIME SERIES*/
-
 
 #time-series {
   /*height: 130px;*/
@@ -754,6 +770,10 @@ background-image: -webkit-gradient(
 /* 2x2 Page */
 /************/
 
+.twoxtwopadding {
+  padding-bottom: 50px;
+}
+
 .matrixTitle {
   /*font-weight: lighter !important;*/
   text-align: center;
@@ -771,6 +791,7 @@ background-image: -webkit-gradient(
   text-align: center;
   font-size: 12pt;
   color: #4f5459;
+  font-weight: bold;
   -webkit-transform-origin: 50% 0;
   -moz-transform-origin: 50% 0;
   -o-transform-origin: 50% 0;
@@ -790,6 +811,7 @@ background-image: -webkit-gradient(
   font-size: 12pt;
   padding-top: 10px;
   color: #4f5459;
+  font-weight: bold;
 }
 
 .axisCircle {
@@ -804,19 +826,19 @@ background-image: -webkit-gradient(
 }
 
 .yAxisTop {
-  bottom: 525px;
-  left: 92px;
+  top: 225px;
+  left: 72px;
 }
 
 .yAxisBottom {
-  bottom: 49px;
-  left: 92px;
+  top: 684px;
+  left: 72px;
 }
 
 .xAxisRight {
-  bottom: 49px;
+  top: 684px;
   /*left: 92px;*/
-  right: 103px;
+  left: 930px;
 }
 
 .quadrant {
