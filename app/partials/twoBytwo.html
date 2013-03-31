@@ -1,23 +1,27 @@
 <sub-header></sub-header>
 
+  <!-- BEGIN MAIN CONTENT AREA -->
   <div class="span12 main-container twoxtwopadding">
+
   <!-- MAIN CONTENT HEADER -->
-    <div class="row">
-      <div  class="span12 main-container-header">
-        <p class="span7">Category</p>
-        <div class="control-group input-append span4 date-picker">
-          
-          <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-          <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-
-          <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-          <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-        </div>
+  <div class="row" ng-controller="datePickerCtrl">
+    <div class="span12 main-container-header">
+      <p class="span7">Category</p>
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">From:</label>
+        <input name="fromDate" type="text" class="input-small" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
-    </div> <!-- END MAIN CONTENT HEADER -->
-
-    <div class="row main-content-header">
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">To:</label>
+        <input name="toDate" class="input-small" type="text" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+      </div>
     </div>
+  </div> <!-- END MAIN CONTENT HEADER -->
+
+  <div class="row main-content-header">
+  </div>
     <div class="row-fluid">
       <div class="span12 matrixTitle"><h3>{{twoBytwo.title}}</h3>
       </div>
