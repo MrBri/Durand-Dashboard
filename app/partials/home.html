@@ -5,17 +5,17 @@
 <div class="span9 main-container">
 
   <!-- MAIN CONTENT HEADER -->
-  <div class="row">
+  <div class="row" ng-controller="datePickerCtrl">
     <div  class="span9 main-container-header">
       <p class="span4">Category</p>
       <div class="control-group input-append span2 date-picker">
         <label class="date-label" style="margin-right:6px;">From:</label>
-        <input name="fromDate" type="text" class="input-small" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <input name="fromDate" type="text" class="input-small" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
       <div class="control-group input-append span2 date-picker">
         <label class="date-label" style="margin-right:6px;">To:</label>
-        <input name="toDate" class="input-small" type="text" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <input name="toDate" class="input-small" type="text" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
     </div>
@@ -88,7 +88,9 @@
       <tr>
 
       <tr class="sum-row" ng-controller="timeSeriesCtrl">
-        <td colspan=2 class="row-title">Average</td>
+        <td colspan=2 class="row-title">Average<br>
+          <span class="row-avg-subtitle">{{timeSeriesTitle}}</span>
+        </td>
 
         <td ng-repeat="idx in [0,1,2,3,4,5]" class="average grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx], 'odd-column': isOdd(idx)}">
           <div class="avg-number" ng-show='curDurationBtn'>{{avg_total[idx]}}</div>

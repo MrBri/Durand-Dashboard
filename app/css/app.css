@@ -422,10 +422,18 @@ div.dropdown-menu {
   padding: 3px 0 4px 0;
 }
 
-.row-title a{
+.row-title a {
   font-weight: bold;
   color: #666;
   text-decoration: none;
+}
+
+.row-avg-subtitle {
+  float: right;
+  font-size: 10px;
+  margin-right: 10px;
+  margin-bottom: -10px;
+  text-transform: none;
 }
 
 .sum-row {
