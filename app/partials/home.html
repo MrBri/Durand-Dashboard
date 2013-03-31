@@ -7,14 +7,16 @@
   <!-- MAIN CONTENT HEADER -->
   <div class="row">
     <div  class="span9 main-container-header">
-      <p class="span5">Category</p>
-      <div class="control-group input-append span3 date-picker">
-        
-        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+      <p class="span4">Category</p>
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">From:</label>
+        <input name="fromDate" type="text" class="input-small" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-
-        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
-        <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
+      </div>
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">To:</label>
+        <input name="toDate" class="input-small" type="text" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+        <button type="button" class="btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
     </div>
   </div> <!-- END MAIN CONTENT HEADER -->
@@ -166,4 +168,4 @@
       {{followUpItem.hiddenAction}}
     </p>
   </div>
-</div> <!-- END SIDEBAR -->
+</div> <!-- END SIDEBAR
