@@ -5,15 +5,17 @@
 <div class="span9 main-container">
 
   <!-- MAIN CONTENT HEADER -->
-  <div class="row">
+  <div class="row" ng-controller="datePickerCtrl">
     <div class="span9 main-container-header">
-      <p class="span5">Brand</p>
-      <div class="control-group input-append span3 date-picker">
-
-        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+      <p class="span4">Brand</p>
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">From:</label>
+        <input name="fromDate" type="text" class="input-small" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
-
-        <input type="text" class="date-field" ng-controller="datePickerCtrl" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
+      </div>
+      <div class="control-group input-append span2 date-picker">
+        <label class="date-label" style="margin-right:6px;">To:</label>
+        <input name="toDate" type="text" class="input-small" ng-model="datepicker.toDate" data-date-format="mm/dd/yyyy" bs-datepicker>
         <button type="button" class="btn date-btn" data-toggle="datepicker"><i class="icon-calendar"></i></button>
       </div>
     </div>
@@ -79,16 +81,18 @@
       </tr>
 
       <tr class="sum-row" ng-controller="timeSeriesCtrl">
-        <td colspan=2 class="row-title">Average</td>
+        <td colspan=2 class="row-title">Average<br>
+          <span class="row-avg-subtitle">{{timeSeriesTitle}}</span>
+        </td>
 
-        <td ng-repeat="idx in [0,1,2]" class="average odd-column grey" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}">
+        <td ng-repeat="idx in [0,1,2]" class="average grey {{idx%2}}" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx], 'odd-column': isOdd(idx)}">
           <div class="avg-number">{{averages[idx]}}</div>
           <div class="avg-bottom">
             <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
           </div>
 
           <!-- FLOATING DIV FOR SELECTED AVG -->
-          <div class="average odd-column grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx]}" ng-show='selected[idx]'>
+          <div class="average grey selected-avg" ng-click="showSales();toggleSelected(idx)"  ng-class="{'': !selected[idx], 'selected-col': selected[idx], 'odd-column': isOdd(idx)}" ng-show='selected[idx]'>
             <div class="selected-avg-number">{{averages[idx]}}</div>
             <div class="selected-avg-bottom">
               <span class="grey-arrow" ng-class="{'arrow-up': selected[idx], 'arrow-down': !selected[idx]}"></span>
@@ -127,20 +131,20 @@
       <p class="span3" ng-cloak>Action Required<span class="ng-cloak num-actions">{{(brands|filter:followUpIsNotNull).length + (brands|filter:actionIsNotNull).length}}</span></p>
     </div>
   </div>
-  <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" class="action-item {{actionItem.actionColor}}">
+  <div ng-repeat="actionItem in brands | filter:actionIsNotNull" ng-controller="actionItemCtrl" ng-click="toggleOpen()" class="action-item {{actionItem.actionColor}}">
     <p ng-class="{'': !open, 'action-open': open}">
       <span class="actionLabel">Action: </span>{{actionItem.action}}
-        <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+        <span class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
     <p class="hidden-action" ng-show="open"}}>
       {{actionItem.hiddenAction}}
     </p>
   </div>
 
-  <div ng-repeat="followUpItem in brands | filter:followUpIsNotNull" ng-controller="actionItemCtrl" class="action-item {{followUpItem.actionColor}}">
+  <div ng-repeat="followUpItem in brands | filter:followUpIsNotNull" ng-controller="actionItemCtrl" ng-click="toggleOpen()" class="action-item {{followUpItem.actionColor}}">
     <p>
       <span class="actionLabel">Follow Up: </span>{{followUpItem.followUp}}
-      <span ng-click="toggleOpen()" class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
+      <span class="arrow" ng-class="{'arrow-up': open, 'arrow-down': !open}"></span>
     </p>
     <p class="hidden-action" ng-show="open"}}>
       {{followUpItem.hiddenAction}}

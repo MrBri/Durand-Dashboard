@@ -131,6 +131,11 @@ function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
     }
   };
 
+  $scope.isOdd = function(idx) {
+    if(idx%2 === 1) return false;
+    else return true;
+  }
+
 }
 
 //FIX - commenting this out for now since it breaks the CategoryAvgSvc
@@ -199,6 +204,11 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
   $scope.followUpIsNotNull = function(brand) {
     return brand.followUp !== null;
   };
+
+  $scope.isOdd = function(idx) {
+    if(idx%2 === 1) return false;
+    else return true;
+  };
 }
 
 function actionItemCtrl($scope) {
@@ -210,13 +220,21 @@ function actionItemCtrl($scope) {
 }
 
 function timeSeriesCtrl($scope) {
+  var timeSeriesTitles = [
+    "Incremental Sales Avg.", "Incremental Volume Avg.",
+    "Incremental Margin Avg.", "Incremental Profit Avg.",
+    "Incremental Transactions Avg.", "Incremental Impact Avg."
+  ];
+
   $scope.toggleSelected = function (colNum) {
     for (var i = 0; i < 6; i++) {
       $scope.selected[i] = false;
-    };
+    }
     $scope.selected[colNum] = true;
+    $scope.timeSeriesTitle = timeSeriesTitles[colNum];
   };
-  
+
   $scope.selected = [];
   $scope.selected[0] = true;
+  $scope.timeSeriesTitle = timeSeriesTitles[0];
 }
