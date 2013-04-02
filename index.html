@@ -1,0 +1,43 @@
+<html>
+<head>
+  <title>Durand Retail Sales and Promotions Dashboard for iPad</title>
+  <link rel="stylesheet" href="app/css/bootstrap.css"/>
+  <link rel="stylesheet" href="app/css/app.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="span9">
+      <h1>Durand<br>Retail Sales &amp; Promotions Dashboard</h1>
+      <h3>A demo application for iPad</h3>
+      <h5>Development Team:</h5>
+      <ul>
+        <li><a href="https://github.com/michaelglenadams">Mike Adams</a></li>
+        <li><a href="https://github.com/MrBri/">Tyler Briles</a></li>
+        <li><a href="https://github.com/rayalynn">Raya Desawade</a></li>
+        <li><a href="https://github.com/tonythomson">Tony Thomson</a></li>
+      </ul>
+      <h5>The brief:</h5>
+      <p>We were given a Photoshop file containing a handful of screens that provided the visual design for a proposed sales analytics dashboard for iPad, prepared for a fictional company. The app is not complete, and represents only functionality intended for demonstration.</p>
+      <h5>Navigation:</h5>
+      <ol>
+        <li>From the login page, click 'Sign In'.</li>
+        <li>On the Matrix page, select an item from the top left dropdown.</li>
+        <li>On the Category page, switch between Week and Total. Select the Average figure for different columns to update the time series graph. Open and close action items. Select an item from the second drop-down.</li>
+        <li>On the Brand page, functionality is similar to the previous page.</li>
+      </ol>
+      <h5>Tools:</h5>
+      <p>The application is built with the <a href="http://angularjs.org/">Angular.js</a> framework, and uses the <a href="http://www.highcharts.com/">Highcharts</a> library for graphs, loading data from a set of provided JSON files. While Angular was a project requirement, we selected Highcharts after working with D3 and Chart.js due largely to its extensive documentation and and convenience in creating the types of graphs we required.</p>
+      <p>We also a customized <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap</a> library (with add-ons) for styles. The app is served from a <a href="http://nodejs.org/">Node.js</a> server on <a href="https://www.nodejitsu.com/">Nodejitsu</a>.</p>
+      <h5>Challenges:</h5>
+      <p>The principal challenges for our team were:
+        <ul>
+          <li>Learning Angular: All of us were new to the Angular framework, and found that it required a very different approach than other client-side frameworks (e.g. Backbone).</li>
+          <li>Integrating Highcharts: While the Highcharts library was itself not too difficult to learn, we found that integrating the graphs into the UI in a fashion that would closely match the original designs was not straightforward.</li>
+        </ul></p>
+      <h5>More:</h5>
+      <p>The current implementation is optimized for a 1024x748 landscape iPad display. For more details on the project, as well as known issues, see the <a href="https://github.com/MrBri/Durand-Dashboard">principal repo</a> on Tyler's GitHub account, or one of the forked repos for Mike, Raya or Tony.</p>
+      <a href="app/index.html"><button class="btn btn-primary">See the app</button></a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,31 +1,29 @@
 # Durand Dashboard
 
-See it live here: [Durand Dashboard](http://durand.nodejitsu.com/app/index.html#/)  
+See it live here: [Durand Dashboard](http://durand.nodejitsu.com/)  
 
-Durand Dashboard is a prototype application which provides a high-level sales overview for managers to set promotion goals and measure their effectiveness.
+The Durand Dashboard is a prototype demo application that provides a high-level sales overview for managers to set promotion goals and measure their effectiveness.
 
-The dashboard enables managers to explore multiple sales and promotion metrics across various 
-categories and brands at a glance.  Managers can also drill down into categories to see the performace of 
-brands in the aggregate or over time and utalize an action menu for relevant information for upcoming promotion 
-planning. 
+The dashboard enables managers and executives to explore multiple sales and promotion metrics across various 
+categories and brands at a glance.  Managers can also drill down into categories to see the performance of 
+brands in the aggregate or over time and utilize an action menu for relevant information for upcoming promotion 
+planning.
+
+## Team
+* [Mike Adams](https://github.com/michaelglenadams)
+* [Tyler Briles](https://github.com/MrBri/)
+* [Raya Desawade](https://github.com/rayalynn)
+* [Tony Thomson](https://github.com/tonythomson)
 
 ## Technologies
-#### [AngularJS](http://angularjs.org/)  
-The Angular Framework enabled us to build a single page application with dynamically updated data. 
-
-#### [HighchartsJS](http://www.highcharts.com/)  
-After working with D3 and Chart.js, we chose to build all of our charts with Highcharts.js because of it's extensive documentation and convience in creating the types of charts in our application.
-
-#### [Twitter Bootstrap](http://twitter.github.com/bootstrap/)  
-Twitter Bootstrap provided us with convienent JS functions and consistent column/row based layouts.  
-
-#### [NodeJS](http://nodejs.org/)  
-NodeJS is badass... that is all.
-
+The application is built with the [Angular.js](http://angularjs.org/) framework, and uses the [Highcharts](http://www.highcharts.com) library for graphs, loading data from a set of provided JSON files. While Angular was a project requirement, we selected Highcharts after working with D3 and Chart.js due largely to its extensive documentation and and convenience in creating the types of graphs we required.
+We also a customized [Twitter Bootstrap](http://twitter.github.com/bootstrap) library (with add-ons) for styles. The app is served from a [Node.js](http://nodejs.org/) server on [Nodejitsu](https://www.nodejitsu.com/).
 
 ## Challenges
 
-Each technology we used came with it's own challenges, but AngularJS.
+The principal challenges for our team were:
 
-Doing it the right way and the challenges we ran into... why what we did is better vs. the alternatives.
+* **Learning Angular**: All of us were new to the Angular framework, and found that it required a very different approach than other client-side frameworks (e.g. Backbone).
+* **Integrating Highcharts**: While the Highcharts library was itself not too difficult to learn, we found that integrating the graphs into the UI in a fashion that would closely match the original designs was not straightforward.
+* **Bootstrap customization**: In order to match the visual design closely without the use of images, we customized the default Bootstrap grid. Extensive CSS was required to adapt Bootstrap UI elements to the design, or to create new ones.
 
