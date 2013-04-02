@@ -17,17 +17,7 @@ angular.module('myApp.directives', []).
   directive('subHeader', function() {
     return {
       restrict: 'E',
-      templateUrl: 'partials/subHeader.html',
-      link: function(scope, element, attrs) {
-        setTimeout(function(){
-          var $dropdowns = element.children().children().children('.dropdown-menu');
-          $.each( $dropdowns, function(){
-            if($(this).children().length === 0) {
-              $(this).parent().children().attr('disabled','disabled')
-            }
-          })
-        }, 100)
-      }
+      templateUrl: 'partials/subHeader.html'
     };
   }).
   directive('sidebar', function() {
