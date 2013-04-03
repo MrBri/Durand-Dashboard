@@ -1,6 +1,6 @@
 # Durand Dashboard
 
-See it live here: [Durand Dashboard](http://durand.nodejitsu.com/)  
+See it live here: [Durand Dashboard](http://durand.nodejitsu.com/index.html)  
 
 The Durand Dashboard is a prototype demo application that provides a high-level sales overview for managers to set promotion goals and measure their effectiveness.
 
