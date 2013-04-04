@@ -23,8 +23,13 @@ function loginCtrl($scope, $location, LogInSvc) {
 
 }
 
-function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc) {
+function homeCtrl ($scope, $http, $location, CategoryAvgSvc, timeChartSvc, FirstDropdown) {
   // $scope.categories = glb.categoryDataIncremental;
+  $scope.firstSelected = FirstDropdown.getSelected();
+
+  $scope.getSelected = function(val){
+    $scope.firstSelected = FirstDropdown.setSelected(val)
+  }
 
   //Set bool to determine whether incremental or total button is selected.
   //False = Incremental View, True = Total View
@@ -156,14 +161,20 @@ function datePickerCtrl($scope) {
   };
 }
 
-function twoBytwoCtrl($scope, $http) {
+function twoBytwoCtrl($scope, $http, FirstDropdown) {
   $http.get('data/twoByTwoData.js').success(function(data){
     $scope.twoBytwo = data;
   });
-}
-twoBytwoCtrl.$inject = ['$scope', '$http'];
 
-function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
+  $scope.firstSelected = FirstDropdown.getSelected();
+
+  $scope.getSelected = function(val){
+    $scope.firstSelected = FirstDropdown.setSelected(val)
+  }
+}
+twoBytwoCtrl.$inject = ['$scope', '$http', 'FirstDropdown'];
+
+function brandCtrl($scope, $http, AverageSvc, timeChartSvc, FirstDropdown) {
   $http.get('/app/data/brand_bar.json').success(function(data){
     var stringified = JSON.stringify(data);
     var colData = JSON.parse(stringified);
@@ -171,6 +182,12 @@ function brandCtrl($scope, $http, AverageSvc, timeChartSvc) {
     $scope.brand_vol = colData[1];
     $scope.brand_margin = colData[2];
   });
+
+  $scope.firstSelected = FirstDropdown.getSelected();
+
+  $scope.getSelected = function(val){
+    $scope.firstSelected = FirstDropdown.setSelected(val)
+  }
 
   // Retrieves total averages for Brands page table
   $http.get('/app/data/mod_brand_data.js').success(function(data) {

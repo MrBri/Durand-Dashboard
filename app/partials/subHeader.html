@@ -1,16 +1,16 @@
 <div class="span2 selector">
   <span class="dropdownLabel">Department </span><i class="icon-chevron-right icon-white"></i>
   <div class="btn-group btn-block">
-    <button class="btn selector-left ">Select one</button>
+    <button class="btn selector-left ">{{firstSelected}}</button>
     <button class="btn selector-right" data-toggle="dropdown">
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu">
-      <li><a href="#/home">Dry Grocery</a></li>
-      <li><a href="#/home">Dairy</a></li>
-      <li><a href="#/home">Frozen Food</a></li>
-      <li><a href="#/home">Pharmacy</a></li>
-      <li><a href="#/home">Deli &amp; Bakery</a></li>
+      <li><a href="#/home" ng-click="getSelected('Dry Grocery')">Dry Grocery</a></li>
+      <li><a href="#/home" ng-click="getSelected('Dairy')">Dairy</a></li>
+      <li><a href="#/home" ng-click="getSelected('Frozen Food')">Frozen Food</a></li>
+      <li><a href="#/home" ng-click="getSelected('Pharmacy')">Pharmacy</a></li>
+      <li><a href="#/home" ng-click="getSelected('Deli &amp; Bakery')">Deli &amp; Bakery</a></li>
     </ul>
   </div>
 </div>

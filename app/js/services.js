@@ -42,6 +42,18 @@ angular.module('myApp.services', ['ngResource'])
       }
     };
   })
+  .service('FirstDropdown', function() {
+    var value = "Select One";
+    return {
+      getSelected: function() {
+        return value;
+      },
+      setSelected: function(val) {
+        value = val;
+        return value;
+      }
+    };
+  })
   .service('CategoryAvgSvc', function() {
     this.calc = function(data) {
       var count = 0;
