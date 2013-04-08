@@ -1,12 +1,12 @@
 <sub-header></sub-header>
 
-  <!-- BEGIN MAIN CONTENT AREA -->
-  <div class="span12 main-container twoxtwopadding">
+<!-- BEGIN MAIN CONTENT AREA -->
+<div class="span12 main-container">
 
   <!-- MAIN CONTENT HEADER -->
   <div class="row" ng-controller="datePickerCtrl">
     <div class="span12 main-container-header">
-      <p class="span7">Category</p>
+      <p class="span7">Department</p>
       <div class="control-group input-append span2 date-picker">
         <label class="date-label" style="margin-right:6px;">From:</label>
         <input name="fromDate" type="text" class="input-small" ng-model="datepicker.fromDate" data-date-format="mm/dd/yyyy" bs-datepicker>
@@ -20,61 +20,59 @@
     </div>
   </div> <!-- END MAIN CONTENT HEADER -->
 
-  <div class="row main-content-header">
+  <div class="row">
+    <div class="span12 matrixTitle"><h3>{{twoBytwo.title}}</h3>
+    </div>
   </div>
-    <div class="row-fluid">
-      <div class="span12 matrixTitle"><h3>{{twoBytwo.title}}</h3>
+  <div class="row">
+    <div class="span1 y-axis-label">
+      <p>Incremental Sales</p>
+      <div class="axisCircle yAxisTop">+</div>
+      <div class="axisCircle yAxisBottom">-</div>
+    </div>
+    <!-- LEFT QUADRANTS -->
+    <div class="span5 matrixColumn">
+      <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 0 || $index == 2 " class="row">
+        <table class="{{cell.position}} {{cell.condition}} span5 quadrant">
+          <tr class="row qLabels">
+            <td class="qLabel">Events</td>
+            <td class="qLabel">Incremental<br>Sales $</td>
+            <td class="qLabel">Incremental<br>Margin $</td>
+          </tr>
+          <tr class="row qNums">
+            <td class="qNum">
+              <p>{{cell.events}}</p><br>
+              <span class="qSub">({{cell.events_sub}}%)</span></td>
+            <td class="qNum"><p>{{cell.incremental_sales}}M</p></td>
+            <td class="qNum"><p>{{cell.incremental_margin}}M</p></td>
+          </tr>
+        </table>
       </div>
     </div>
-    <div class="row-fluid">
-      <div class="span1 y-axis-label">
-        <p>Incremental Sales</p>
-        <div class="axisCircle yAxisTop">+</div>
-        <div class="axisCircle yAxisBottom">-</div>
-      </div>
-      <!-- LEFT QUADRANTS -->
-      <div class="span5 matrixColumn">
-        <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 0 || $index == 2 " class="fluid-row">
-          <div class=" {{cell.position}} {{cell.condition}} span12 quadrant">
-            <div class="fluid-row qLabels">
-              <div class="span4 qLabel"><p>Events</p></div>
-              <div class="span4 qLabel"><p>Incremental<br>Sales $</p></div>
-              <div class="span4 qLabel"><p>Incremental<br>Margin $</p></div>
-            </div>
-            <div class="fluid-row qNums">
-              <div class="span4 qNum">
-                <p>{{cell.events}}</p>
-                <p class="qSub">({{cell.events_sub}}%)</p></div>
-              <div class="span4 qNum"><p>{{cell.incremental_sales}}M</p></div>
-              <div class="span4 qNum"><p>{{cell.incremental_margin}}M</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- RIGHT QUADRANTS -->
-      <div class="span5 matrixColumn">
-        <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 1 || $index == 3 " class="fluid-row">
-          <div class=" {{cell.position}} {{cell.condition}} span12 quadrant">
-            <div class="fluid-row qLabels">
-              <div class="span4 qLabel"><p>Events</p></div>
-              <div class="span4 qLabel"><p>Incremental<br>Sales $</p></div>
-              <div class="span4 qLabel"><p>Incremental<br>Margin $</p></div>
-            </div>
-            <div class="fluid-row qNums">
-              <div class="span4 qNum">
-                <p>{{cell.events}}</p>
-                <p class="qSub">({{cell.events_sub}}%)</p></div>
-              <div class="span4 qNum"><p>{{cell.incremental_sales}}M</p></div>
-              <div class="span4 qNum"><p>{{cell.incremental_margin}}M</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="row-fluid">
-      <div class="span12">
-        <p class="x-axis-label">Incremental Margin</p>
-        <div class="axisCircle xAxisRight">+</div>
+    <!-- RIGHT QUADRANTS -->
+    <div class="span5 matrixColumn">
+      <div ng-repeat="cell in twoBytwo.cells" ng-show=" $index == 1 || $index == 3 " class="row">
+        <table class="{{cell.position}} {{cell.condition}} span5 quadrant">
+          <tr class="row qLabels">
+            <td class="qLabel">Events</td>
+            <td class="qLabel">Incremental<br>Sales $</td>
+            <td class="qLabel">Incremental<br>Margin $</td>
+          </tr>
+          <tr class="row qNums">
+            <td class="qNum">
+              <p>{{cell.events}}</p><br>
+              <span class="qSub">({{cell.events_sub}}%)</span></td>
+            <td class="qNum"><p>{{cell.incremental_sales}}M</p></td>
+            <td class="qNum"><p>{{cell.incremental_margin}}M</p></td>
+          </tr>
+        </table>
       </div>
     </div>
   </div>
+  <div class="row">
+    <div class="span12">
+      <p class="x-axis-label">Incremental Margin</p>
+      <div class="axisCircle xAxisRight">+</div>
+    </div>
+  </div>
+</div> <!-- END MAIN CONTENT AREA -->

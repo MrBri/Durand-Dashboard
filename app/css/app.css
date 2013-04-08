@@ -745,18 +745,16 @@ background-image: -webkit-gradient(
 
 /* 2x2 PAGE */
 
-.twoxtwopadding {
-  padding-bottom: 50px;
-}
-
-.matrixTitle {
+.matrixTitle h3{
   text-align: center;
+  font-size: 18px;
+  font-weight: normal;
   color: #0078bb;
 }
 
 .y-axis-label {
   border-right: 2px solid #e5e5e5;
-  height:465px;
+  height:445px;
   margin-right: 0;
 }
 
@@ -779,7 +777,7 @@ background-image: -webkit-gradient(
 }
 
 .x-axis-label {
-  margin: 0 6.5%;
+  margin: 0 63px;
   border-top: 2px solid #e5e5e5;
   text-align: center;
   font-size: 12pt;
@@ -805,12 +803,12 @@ background-image: -webkit-gradient(
 }
 
 .yAxisBottom {
-  top: 549px;
+  top: 535px;
   left: 51px;
 }
 
 .xAxisRight {
-  top: 549px;
+  top: 535px;
   left: 890px;
 }
 
@@ -819,45 +817,56 @@ background-image: -webkit-gradient(
   color: white;
   text-align: center;
   text-shadow: rgba(0,0,0,0.5) 0 1px;
+  border-collapse: separate;
 }
 
 .qLabels {
-  overflow: auto;
-  border-bottom: 1px solid rgba(100,100,100,0.2);
+  /*overflow: auto;*/
+  /*padding-bottom: 10px;*/
+  /*padding-left: 20px;*/
 }
 
 .qNums {
-  border-top: 1px solid rgba(255,255,255,0.2);
+  /*border-top: 1px solid rgba(255,255,255,0.2);*/
 }
 
 .qLabel {
-  height: 60px;
-  padding: 10px 0 0;
-  font-size: 12pt;
+  height: 50px;
+  width: 131px;
+  font-size: 13px;
+  vertical-align: center !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
 .qNum {
+  position: relative;
   height: 150px;
-  width: 33.3%;
-  font-size: 40pt;
-  margin: 0;
-}
-
-div .qNum:nth-child(1),div .qNum:nth-child(2) {
-  border-right: 1px solid rgba(100,100,100,0.2);
-}
-
-div .qNum:nth-child(2),div .qNum:nth-child(3) {
-  border-left: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(100,100,100,0.2);
+  font-size: 60px;
+  /*padding: 30px 0 0 0;*/
+  vertical-align: top;
 }
 
 .qNum p {
-  padding-top: 40px;
+  padding-top: 50px;
 }
 
-p.qSub {
+tr .qNum:nth-child(1),tr .qNum:nth-child(2) {
+  border-right: 1px solid rgba(100,100,100,0.2);
+}
+
+tr .qNum:nth-child(2),tr .qNum:nth-child(3) {
+  border-left: 1px solid rgba(255,255,255,0.1);
+}
+
+.qSub {
+  position: absolute;
+  /*display: block;*/
   font-size: 18pt;
-  padding-top: 20px;
+  text-align: center;
+  left: 30px;
+  bottom: 35px;
+  /*padding-top: 20px;*/
 }
 
 
